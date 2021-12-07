@@ -22,7 +22,12 @@
 		842A167027560A8B00F505E2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842A167227560A8B00F505E2 /* Localizable.strings */; };
 		842B2335275DE086009C888D /* SingUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B2334275DE086009C888D /* SingUp.swift */; };
 		8435ACEA275BFA4E0076F36A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435ACE9275BFA4D0076F36A /* Profile.swift */; };
-		845B1185275F5AA600746173 /* Vcode.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 845B1184275F5AA600746173 /* Vcode.mp4 */; };
+		845B118D275FDC6700746173 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B118C275FDC6700746173 /* Games.swift */; };
+		845B118F275FE2C400746173 /* honyBeeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B118E275FE2C400746173 /* honyBeeGame.swift */; };
+		845B1193275FE30E00746173 /* Mario.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 845B1190275FE30D00746173 /* Mario.mp3 */; };
+		845B1194275FE30E00746173 /* Laugh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 845B1191275FE30D00746173 /* Laugh.mp3 */; };
+		845B1195275FE30E00746173 /* on.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 845B1192275FE30E00746173 /* on.mp3 */; };
+		845B1197275FFF8D00746173 /* Sad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 845B1196275FFF8D00746173 /* Sad.mp3 */; };
 		84C2EE8927576B61005CF9BC /* struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2EE8827576B61005CF9BC /* struct.swift */; };
 		84C2EE8B27576B73005CF9BC /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2EE8A27576B73005CF9BC /* Controller.swift */; };
 		84E5312B2753880C00B45CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5312A2753880C00B45CCC /* AppDelegate.swift */; };
@@ -61,6 +66,7 @@
 		842A15EF2754ACFD00F505E2 /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
 		842A15F12754B26700F505E2 /* LessoneViedeo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessoneViedeo.swift; sourceTree = "<group>"; };
 		842A15F32754B29D00F505E2 /* LessonviedeoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonviedeoCell.swift; sourceTree = "<group>"; };
+		842A15F92754C8EB00F505E2 /* Vcode.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Vcode.mov; sourceTree = "<group>"; };
 		842A15FB2754E21400F505E2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		842A15FD2754E22200F505E2 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		842A16582754F89600F505E2 /* KidsName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidsName.swift; sourceTree = "<group>"; };
@@ -73,7 +79,12 @@
 		842A167327560A8E00F505E2 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		842B2334275DE086009C888D /* SingUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUp.swift; sourceTree = "<group>"; };
 		8435ACE9275BFA4D0076F36A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		845B1184275F5AA600746173 /* Vcode.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Vcode.mp4; path = Controller/Service/Test/Vcode.mp4; sourceTree = "<group>"; };
+		845B118C275FDC6700746173 /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		845B118E275FE2C400746173 /* honyBeeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = honyBeeGame.swift; sourceTree = "<group>"; };
+		845B1190275FE30D00746173 /* Mario.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mario.mp3; sourceTree = "<group>"; };
+		845B1191275FE30D00746173 /* Laugh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Laugh.mp3; sourceTree = "<group>"; };
+		845B1192275FE30E00746173 /* on.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = on.mp3; sourceTree = "<group>"; };
+		845B1196275FFF8D00746173 /* Sad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sad.mp3; sourceTree = "<group>"; };
 		84C2EE8827576B61005CF9BC /* struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = struct.swift; sourceTree = "<group>"; };
 		84C2EE8A27576B73005CF9BC /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		84E531272753880C00B45CCC /* KidsLogic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidsLogic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,10 +152,16 @@
 				84E5315E2753953E00B45CCC /* LessonCell.swift */,
 				84E531602753957D00B45CCC /* LessonModel.swift */,
 				84E5316E2753E5AD00B45CCC /* quizNames.swift */,
+				845B118E275FE2C400746173 /* honyBeeGame.swift */,
+				845B118C275FDC6700746173 /* Games.swift */,
 				8435ACE9275BFA4D0076F36A /* Profile.swift */,
+				842A16572754F87600F505E2 /* ScoreTable */,
 				84E531662753A16B00B45CCC /* grade.swift */,
 				84E5317D2754158700B45CCC /* More.swift */,
-				842A16572754F87600F505E2 /* ScoreTable */,
+				845B1191275FE30D00746173 /* Laugh.mp3 */,
+				845B1190275FE30D00746173 /* Mario.mp3 */,
+				845B1196275FFF8D00746173 /* Sad.mp3 */,
+				845B1192275FE30E00746173 /* on.mp3 */,
 				842A15F12754B26700F505E2 /* LessoneViedeo.swift */,
 				842A15F32754B29D00F505E2 /* LessonviedeoCell.swift */,
 			);
@@ -219,7 +236,6 @@
 		84E531292753880C00B45CCC /* KidsLogic */ = {
 			isa = PBXGroup;
 			children = (
-				845B1184275F5AA600746173 /* Vcode.mp4 */,
 				842A1674275743B100F505E2 /* Models */,
 				842A15EC2754AB5C00F505E2 /* Views */,
 				842A1675275743C700F505E2 /* Controller */,
@@ -252,6 +268,7 @@
 				84E53173275407AB00B45CCC /* ViewController.swift */,
 				84E5317B27540B3900B45CCC /* Assets.xcassets */,
 				84E53179275407C300B45CCC /* Main.storyboard */,
+				842A15F92754C8EB00F505E2 /* Vcode.mov */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -323,14 +340,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845B1194275FE30E00746173 /* Laugh.mp3 in Resources */,
 				84E531372753880E00B45CCC /* LaunchScreen.storyboard in Resources */,
-				845B1185275F5AA600746173 /* Vcode.mp4 in Resources */,
 				84E5317A275407C300B45CCC /* Main.storyboard in Resources */,
 				84E5313F275389E400B45CCC /* GoogleService-Info.plist in Resources */,
 				842A167027560A8B00F505E2 /* Localizable.strings in Resources */,
+				845B1197275FFF8D00746173 /* Sad.mp3 in Resources */,
+				845B1195275FE30E00746173 /* on.mp3 in Resources */,
 				84E531342753880E00B45CCC /* Assets.xcassets in Resources */,
 				84E5317C27540B3900B45CCC /* Assets.xcassets in Resources */,
 				84E531322753880C00B45CCC /* Main.storyboard in Resources */,
+				845B1193275FE30E00746173 /* Mario.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,9 +361,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845B118F275FE2C400746173 /* honyBeeGame.swift in Sources */,
 				842A15FE2754E22200F505E2 /* UserService.swift in Sources */,
 				84E5317E2754158700B45CCC /* More.swift in Sources */,
 				84E5315B2753950B00B45CCC /* Lesson.swift in Sources */,
+				845B118D275FDC6700746173 /* Games.swift in Sources */,
 				842A165C2754F89600F505E2 /* KidsName.swift in Sources */,
 				84E531502753910B00B45CCC /* Colors.swift in Sources */,
 				842B2335275DE086009C888D /* SingUp.swift in Sources */,

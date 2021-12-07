@@ -10,12 +10,9 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate {
-    
   var users: Array<User> = []
-    
   lazy var containerView: UIView = {
     let view = UIView()
-      
     view.translatesAutoresizingMaskIntoConstraints = false
 //    view.backgroundColor = .white
     view.layer.cornerRadius = 20

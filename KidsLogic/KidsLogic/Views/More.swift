@@ -60,7 +60,7 @@ lazy var levelOne: UIButton = {
         
         level3.layer.cornerRadius = 79
         level3.layer.masksToBounds = true
-        level3.addTarget(self, action: #selector(cartonButtonTapped), for: .touchUpInside)
+        level3.addTarget(self, action: #selector(TestButtonTapped), for: .touchUpInside)
         level3.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
         return level3
     }()
@@ -75,7 +75,7 @@ lazy var levelOne: UIButton = {
         
         level4.layer.cornerRadius = 79
         level4.layer.masksToBounds = true
-        level4.addTarget(self, action: #selector(TestButtonTapped), for: .touchUpInside)
+        level4.addTarget(self, action: #selector(VideoButtonTapped), for: .touchUpInside)
         level4.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
         return level4
     }()
@@ -145,8 +145,9 @@ lazy var levelOne: UIButton = {
             }
     
     @objc private func GameButtonTapped() {
-        let vc = GameVC()
-        vc.modalPresentationStyle = .pageSheet
+let vc = Games()
+//        let vc = GameVC()
+        vc.modalPresentationStyle = .automatic
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -155,7 +156,7 @@ lazy var levelOne: UIButton = {
         vc.modalPresentationStyle = .pageSheet
         self.present(vc, animated: true, completion: nil)
     }
-    @objc private func cartonButtonTapped() {
+    @objc private func TestButtonTapped() {
         let vc = VideoLessons()
         vc.modalPresentationStyle = .pageSheet
         self.present(vc, animated: true, completion: nil)
@@ -164,10 +165,8 @@ lazy var levelOne: UIButton = {
     
     
     //test app
-    @objc private func TestButtonTapped() {
-        let vc = TestViewController()
-        vc.modalPresentationStyle = .pageSheet
-        self.present(vc, animated: true, completion: nil)
+    @objc private func VideoButtonTapped() {
+//
 //        let application = UIApplication.shared
 //
 //        let secondAppPath = "second1://"
