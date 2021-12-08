@@ -55,7 +55,7 @@ class LogicCell: UICollectionViewCell {
         return image
     }()
     
-    private let authorName: UILabel = {
+    private let lessonNumb: UILabel = {
         let authorName             = UILabel()
         authorName.textColor       =  UIColor.secondaryLabel
         authorName.font            = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 16, weight: .medium))
@@ -80,7 +80,7 @@ class LogicCell: UICollectionViewCell {
         blogTitle.text          = card.title
         blogDescription.text    = card.desc
         authorImage.image       = UIImage(named: card.author)
-        authorName.text         = card.authorName
+        lessonNumb.text         = card.lessonNum
         
     }
     private func setupSizeForCellContent() {
@@ -92,7 +92,7 @@ class LogicCell: UICollectionViewCell {
         blogDescription.frame = CGRect(x: 14, y: self.frame.size.height / 1.74, width: self.frame.size.width - 24, height: 90)
         
         authorImage.frame = CGRect(x: 14, y: self.frame.size.height / 1.23, width: 50, height: 50)
-        authorName.frame = CGRect(x: authorImage.frame.maxX + 13, y: self.frame.size.height / 1.23, width: self.frame.size.width - 50, height: 50)
+        lessonNumb.frame = CGRect(x: authorImage.frame.maxX + 13, y: self.frame.size.height / 1.23, width: self.frame.size.width - 50, height: 50)
        
     }
     private func setupCell() {
@@ -101,7 +101,7 @@ class LogicCell: UICollectionViewCell {
         self.addSubview(blogCaption)
         self.addSubview(blogTitle)
         self.addSubview(authorImage)
-        self.addSubview(authorName)
+        self.addSubview(lessonNumb)
         self.layer.cornerRadius = 60
         self.layer.masksToBounds = true
     

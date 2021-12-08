@@ -24,7 +24,7 @@
 "More" = "المزيد";
 
 //MORE
-"GAME 🎮" = "لعبة 🎮" ;
+"GAME 🎮" = "العاب 🎮" ;
 "Video 📀" = "فيديو 📀" ;
 "Carton 🧩" = "فيلم كرتون 🧩" ;
 "Share 🔖 " = "شارك  🔖 " ;
@@ -83,7 +83,8 @@
 
 "FUNCTION" = "دالة" ;
 "13:Functions are self contained modules of code that accomplish a specific task. Functions usually take in data, process it, and return a result. Once a function is written, it can be used over and over and over again. Functions can be called from the inside of other functions." = "الوظائف هي وحدات قائمة بذاتها من التعليمات البرمجية التي تنجز مهمة محددة. عادةً ما تأخذ الوظائف البيانات وتعالجها و تعيد النتيجة. بمجرد كتابة الوظيفة ، يمكن استخدامها مرارًا وتكرارًا. يمكن استدعاء الوظائف من داخل وظائف أخرى." ;
-//
+
+
 //"OPACITY" = "";
 //"14: CSS, which stands for Cascading Style Sheets, is a language used alongside HTML to separate a webpage's content (the HTML part) from the design and formatting (the CSS part). It defines fonts, colors, margins, lines, height, width, backgrounds, images, positions and other visual aspects of a webpage, something which HTML was not originally designed to do. Simply put, CSS decides how your HTML is displayed." = "" ;
 //

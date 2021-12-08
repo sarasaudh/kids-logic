@@ -8,13 +8,16 @@ import Foundation
 
 import UIKit
 import SwiftUI
-
+import AVFoundation
 class LessonDetailVC: UIViewController {
     
-   
+    var audioPlayer = AVAudioPlayer()
     var lessonImage: String?
     var lessonTitle: String?
     var lessonDescription: String?
+    var LessonNumber: String?
+    
+    
     
     let bImage: UIImageView =  {
         let image           = UIImageView()
@@ -34,13 +37,26 @@ class LessonDetailVC: UIViewController {
     private let bDescription: UITextView = {
         let description             = UITextView()
         description.textColor       =  UIColor.systemIndigo
-        description.font            = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 50, weight: .regular))
-        description.textAlignment   = .left
+        description.font            = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 30, weight: .regular))
+        description.textAlignment   = .center
         description.backgroundColor = UIColor(named: "DarkColor")
         description.isEditable = false
         return description
     }()
-     
+    private let LNum: UILabel = {
+        let title = UILabel()
+        title.textColor     =  .systemMint
+        title.font          = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 20, weight: .bold))
+        title.textAlignment = .right
+        return title
+    }()
+    private let Lvoice: UIButton = {
+        let btn = UIButton()
+//        btn.translatesAutoresirzingMaskIntoConstraints = false
+        btn.setImage(UIImage(named: "nicepanda"), for: UIControl.State.normal)
+        btn.addTarget(self, action: #selector(pandaVPressed), for: .touchDown)
+        return btn
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,6 +72,10 @@ class LessonDetailVC: UIViewController {
         guard let lesImage = lessonImage else {return}
         guard let lesTitle = lessonTitle else {return}
         guard let lesDes = lessonDescription else {return}
+        guard let lesnum = LessonNumber else {return}
+
+        
+        //image
         bImage.translatesAutoresizingMaskIntoConstraints                                        = false
         
         view.addSubview(bImage)
@@ -63,6 +83,8 @@ class LessonDetailVC: UIViewController {
         bImage.widthAnchor.constraint(equalTo: view.widthAnchor).isActive                       = true
         bImage.heightAnchor.constraint(equalToConstant: view.frame.size.height / 3).isActive    = true
                 
+        
+        //title
         bTitle.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bTitle)
         
@@ -71,18 +93,69 @@ class LessonDetailVC: UIViewController {
         bTitle.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -19).isActive  = true
         bTitle.heightAnchor.constraint(equalToConstant: 40).isActive                            = true
         
+        Lvoice.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(Lvoice)
+        Lvoice.topAnchor.constraint(equalTo: bImage.bottomAnchor, constant: 20).isActive        = true
+        Lvoice.leadingAnchor.constraint(equalTo: view.trailingAnchor, constant: 19).isActive     = true
+        Lvoice.trailingAnchor.constraint(equalTo: bTitle.trailingAnchor, constant: -19).isActive  = true
+        Lvoice.heightAnchor.constraint(equalToConstant: 80).isActive                            = true
+        Lvoice.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        
+        //number
+        LNum.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(LNum)
+        
+        LNum.topAnchor.constraint(equalTo: bImage.bottomAnchor, constant: 20).isActive        = true
+        LNum.leadingAnchor.constraint(equalTo: bTitle.leadingAnchor, constant: 19).isActive     = true
+        LNum.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -19).isActive  = true
+        LNum.heightAnchor.constraint(equalToConstant: 40).isActive                            = true
+        
+        
+        
         
         bDescription.translatesAutoresizingMaskIntoConstraints                                 = false
         view.addSubview(bDescription)
-        bDescription.topAnchor.constraint(equalTo: bTitle.bottomAnchor, constant: 10).isActive          = true
+        bDescription.topAnchor.constraint(equalTo: LNum.bottomAnchor, constant: 10).isActive          = true
         bDescription.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 19).isActive       = true
         bDescription.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -19).isActive    = true
         bDescription.heightAnchor.constraint(equalToConstant: 400).isActive                             = true
-
+      
+    
         
         bImage.image        = UIImage(named: lesImage)
         bTitle.text         = lesTitle
         bDescription.text   = lesDes
-        
+        LNum.text           = lesnum
     }
+
+    @objc func pandaVPressed() {
+
+    print("Hello Panda 🐼!")
+               // Set the sound file name & extension
+               let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "nice", ofType: "mp3")!)
+               
+               do {
+                   // Preperation
+                   try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+               } catch _ {
+               }
+               do {
+                   try AVAudioSession.sharedInstance().setActive(true)
+               } catch _ {
+               }
+               
+               // Play the sound
+               do {
+                   audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+               } catch _{
+               }
+//        stop voice
+//        [self.webView loadRequest:NSURLRequestFromString(@"about:blank")]
+
+               audioPlayer.prepareToPlay()
+               audioPlayer.play()
+          
+           
+        }
+  
 }

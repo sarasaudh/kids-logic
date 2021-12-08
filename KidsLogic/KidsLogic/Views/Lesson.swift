@@ -16,7 +16,7 @@ class Lessons: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
          
-      
+            
             // Do any additional setup after loading the view.
                     configureCollectionView()
             self.title = (NSLocalizedString("Logic KID", comment: ""))
@@ -72,7 +72,7 @@ class Lessons: UIViewController {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LogicCell.ID, for: indexPath) as! LogicCell
 
             cell.setCell(card: LogicPosts.posts[indexPath.row])
-                
+            
                 return cell
             
         }
@@ -83,9 +83,11 @@ class Lessons: UIViewController {
             vc.lessonImage = LogicPosts.posts[indexPath.row].image
             vc.lessonTitle = LogicPosts.posts[indexPath.row].title
             vc.lessonDescription = LogicPosts.posts[indexPath.row].desc
+            vc.LessonNumber = LogicPosts.posts[indexPath.row].lessonNum
             self.navigationController?.pushViewController(vc, animated: true)
         }
-        
+       
+    
         
     }
 

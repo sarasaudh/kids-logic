@@ -55,7 +55,7 @@ class VideoLessons: UIViewController {
     }
     override func viewDidLayoutSubviews () {
         super.viewDidLayoutSubviews ()
-        collectionView? .frame = view.bounds
+        collectionView? .frame = view.frame
     }
     
 }
@@ -80,6 +80,7 @@ extension VideoLessons: UICollectionViewDataSource{
 
 extension VideoLessons: VideoCollectionViewCellDelegate{
     func didTapLikeButton(with model: VideoModel) {
+   
         print("like button tapped")
         let button = UIButton(type: .custom)
         let image = UIImage(named: "fav")?.withRenderingMode(.alwaysTemplate)
@@ -95,26 +96,6 @@ extension VideoLessons: VideoCollectionViewCellDelegate{
         self.present(vc, animated: true, completion: nil)
     }
     
-    func didTapShareButton(with model: VideoModel) {
-        print("share button tapped")
-        
-        let activityVC = UIActivityViewController(activityItems: [model.caption], applicationActivities: nil)
-        activityVC.popoverPresentationController?.sourceView = self.view
-        self.present(activityVC, animated: true, completion: nil)
-        
-    }
-    
-    func didTapCommentButton(with model: VideoModel) {
-        let alert1 = UIAlertController(
-              title: ("Report ⚠️"),message: "are you sure want to reporting this  ⁉️",preferredStyle: .alert)
-        alert1.addAction(UIAlertAction(title: "im sure",style: .cancel,handler: { action in
-              print("OK") } ) )
-        alert1.addAction(UIAlertAction(title: "cancel",style: .default,handler: { action in
-            
-            print("cancel") } ))
-            present(alert1, animated: true, completion: nil)
-          }
-    
-                                           }
+                                              }
 
 

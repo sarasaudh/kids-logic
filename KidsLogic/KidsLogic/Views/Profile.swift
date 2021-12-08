@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
-class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate {
+class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate ,UITextFieldDelegate{
   var users: Array<User> = []
   lazy var containerView: UIView = {
     let view = UIView()
@@ -110,11 +110,16 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
       
     return view
   }()
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameLabel.resignFirstResponder()
+        userStatusLabel.resignFirstResponder()
+    return true
+}
   override func viewDidLoad () {
     super.viewDidLoad()
       view.setGradiantView2()
-      
-   
+      nameLabel.delegate = self
+      userStatusLabel.delegate = self
 //            let image = UIImage(systemName: "person.crop.rectangle.fill")
 //            tabBarItem = .init(title: "profile", image: image, selectedImage: image)
     // Gesture to image

@@ -4,7 +4,7 @@
 //
 //  Created by sara saud on 23/04/1443 AH.
 //
-
+import WebKit
 import Foundation
 
 import UIKit
@@ -13,7 +13,7 @@ class MoreVC: UIViewController {
     
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "kid")
+        imageView.image = UIImage(named: "kids")
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
 //        imageView.backgroundColor = .quaternaryLabel
@@ -27,7 +27,7 @@ lazy var levelOne: UIButton = {
     level1.setTitle(NSLocalizedString("GAME 🎮", comment: ""), for: .normal)
     level1.setTitleColor(.white, for: .normal)
     level1.backgroundColor = UIColor(#colorLiteral(red: 0.7047290802, green: 0.4141619802, blue: 0.5999490619, alpha: 0.8470588235))
-    level1.layer.cornerRadius = 79
+    level1.layer.cornerRadius = 20
     level1.layer.masksToBounds = true
     level1.addTarget(self, action: #selector(GameButtonTapped), for: .touchUpInside)
     level1.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
@@ -43,7 +43,7 @@ lazy var levelOne: UIButton = {
         level2.setTitleColor(.white, for: .normal)
         level2.backgroundColor = UIColor(#colorLiteral(red: 0.3279541135, green: 0.6508837342, blue: 0.8242474198, alpha: 0.8470588235) )
         
-        level2.layer.cornerRadius = 79
+        level2.layer.cornerRadius = 20
         level2.layer.masksToBounds = true
         level2.addTarget(self, action: #selector(VedioButtonTapped), for: .touchUpInside)
         level2.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
@@ -58,7 +58,7 @@ lazy var levelOne: UIButton = {
         level3.setTitleColor(.white, for: .normal)
         level3.backgroundColor = UIColor( #colorLiteral(red: 0.4231500328, green: 0.6711993814, blue: 0.3329515457, alpha: 0.8470588235) )
         
-        level3.layer.cornerRadius = 79
+        level3.layer.cornerRadius = 20
         level3.layer.masksToBounds = true
         level3.addTarget(self, action: #selector(TestButtonTapped), for: .touchUpInside)
         level3.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
@@ -73,7 +73,7 @@ lazy var levelOne: UIButton = {
         level4.setTitleColor(.white, for: .normal)
         level4.backgroundColor = UIColor( #colorLiteral(red: 1, green: 0.8552523255, blue: 0.642039299, alpha: 1))
         
-        level4.layer.cornerRadius = 79
+        level4.layer.cornerRadius = 20
         level4.layer.masksToBounds = true
         level4.addTarget(self, action: #selector(VideoButtonTapped), for: .touchUpInside)
         level4.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
@@ -166,7 +166,11 @@ let vc = Games()
     
     //test app
     @objc private func VideoButtonTapped() {
-//
+       
+        let vc = TaskTabVC()
+        vc.modalPresentationStyle = .pageSheet
+        self.present(vc, animated: true, completion: nil)
+    }
 //        let application = UIApplication.shared
 //
 //        let secondAppPath = "second1://"
@@ -185,4 +189,9 @@ let vc = Games()
 //
 //        }
     }
-}
+
+
+ 
+
+
+

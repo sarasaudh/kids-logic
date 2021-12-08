@@ -9,9 +9,11 @@ import Foundation
 import UIKit
 import FirebaseAuth
 import SwiftUI
-
+//import DropDown
 
 class SignUpVC: UIViewController,UITextFieldDelegate {
+    
+//    let dropDown = DropDown()
     
     var emailTF: UITextField = {
         let tf = UITextField()
@@ -63,6 +65,11 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         btn.addTarget(self, action: #selector(registerBtnPressed), for: .touchUpInside)
         return btn
     }()
+//    let typeButton: UIButton = {
+//            let button = UIButton(type: .system)
+//            button.setupButton(with: NSLocalizedString("Select type", comment: ""))
+//            return button
+//        }()
     
     var imgUser: UIImageView = {
         let imageView = UIImageView()
@@ -80,6 +87,19 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         passwordTF.delegate = self
         
         view.backgroundColor = .white
+        
+//        @objc func tapChooseMenuItem(_ sender: UIButton) {//3
+//                dropDown.dataSource = [NSLocalizedString("Customer", comment: ""), NSLocalizedString("Manager", comment: "")]//4
+//              dropDown.anchorView = sender //5
+//              dropDown.bottomOffset = CGPoint(x: 0, y: sender.frame.size.height) //6
+//              dropDown.show() //7
+//              dropDown.selectionAction = { [weak self] (index: Int, item: String) in //8
+//                guard let _ = self else { return }
+//                sender.setTitle(item, for: .normal)
+//                  print(index)
+//                  self?.type = "\(index)"
+//              }
+//            }
         
         view.setGradiantView()
         view.addSubview(imgUser)
@@ -110,8 +130,17 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
             passwordTF.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             passwordTF.heightAnchor.constraint(equalToConstant: 50),
             
+//            typeButton.translatesAutoresizingMaskIntoConstraints = false
+//                    containerView.addSubview(typeButton)
+//
+//                    typeButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20).isActive = true
+//                    typeButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20).isActive = true
+//                    typeButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20).isActive = true
+//                    typeButton.heightAnchor.constraint(equalToConstant: 45).isActive = true
+//
+//                    typeButton.addTarget(self, action: #selector(tapChooseMenuItem), for: .touchUpInside)
             
-            registerBtn.topAnchor.constraint(equalTo: passwordTF.bottomAnchor, constant: 30),
+            registerBtn.topAnchor.constraint(equalTo: passwordTF.bottomAnchor, constant: 100),
             registerBtn.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
             registerBtn.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             registerBtn.heightAnchor.constraint(equalToConstant: 70),
@@ -137,7 +166,8 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
             return
         }
         
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+        Auth.auth().createUser(withEmail: email, password: password //type: self.type ?? "0"
+        ) { result, error in
             if error != nil {
                 print(error as Any)
                 return

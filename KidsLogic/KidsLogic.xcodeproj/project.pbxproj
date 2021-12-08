@@ -28,6 +28,19 @@
 		845B1194275FE30E00746173 /* Laugh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 845B1191275FE30D00746173 /* Laugh.mp3 */; };
 		845B1195275FE30E00746173 /* on.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 845B1192275FE30E00746173 /* on.mp3 */; };
 		845B1197275FFF8D00746173 /* Sad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 845B1196275FFF8D00746173 /* Sad.mp3 */; };
+		845B119C2760A16900746173 /* nice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 845B119B2760A16900746173 /* nice.mp3 */; };
+		845B119E2760A71400746173 /* Vcode.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 845B119D2760A71400746173 /* Vcode.mp4 */; };
+		845B11A02760AA7800746173 /* combatGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B119F2760AA7800746173 /* combatGame.swift */; };
+		845B11C42761369700746173 /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B11C32761369700746173 /* TaskService.swift */; };
+		845B11C6276136AC00746173 /* DayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B11C5276136AC00746173 /* DayService.swift */; };
+		845B11C8276136C900746173 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B11C7276136C900746173 /* Day.swift */; };
+		845B11CA276136DB00746173 /* DailyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B11C9276136DB00746173 /* DailyTask.swift */; };
+		845B11CC2761370100746173 /* TaskTabVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B11CB2761370100746173 /* TaskTabVc.swift */; };
+		845B11CE2761372400746173 /* DailyTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B11CD2761372400746173 /* DailyTaskVC.swift */; };
+		845B11D02761373D00746173 /* NewTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B11CF2761373D00746173 /* NewTaskVC.swift */; };
+		845B11D22761377600746173 /* NewDayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B11D12761377600746173 /* NewDayVC.swift */; };
+		845B11D42761379000746173 /* DayTasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B11D32761379000746173 /* DayTasksVC.swift */; };
+		845B11D62761379E00746173 /* DaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B11D52761379E00746173 /* DaysVC.swift */; };
 		84C2EE8927576B61005CF9BC /* struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2EE8827576B61005CF9BC /* struct.swift */; };
 		84C2EE8B27576B73005CF9BC /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2EE8A27576B73005CF9BC /* Controller.swift */; };
 		84E5312B2753880C00B45CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5312A2753880C00B45CCC /* AppDelegate.swift */; };
@@ -85,6 +98,19 @@
 		845B1191275FE30D00746173 /* Laugh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Laugh.mp3; sourceTree = "<group>"; };
 		845B1192275FE30E00746173 /* on.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = on.mp3; sourceTree = "<group>"; };
 		845B1196275FFF8D00746173 /* Sad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sad.mp3; sourceTree = "<group>"; };
+		845B119B2760A16900746173 /* nice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nice.mp3; sourceTree = "<group>"; };
+		845B119D2760A71400746173 /* Vcode.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Vcode.mp4; path = KidsLogic/Controller/Service/Test/Vcode.mp4; sourceTree = SOURCE_ROOT; };
+		845B119F2760AA7800746173 /* combatGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = combatGame.swift; sourceTree = "<group>"; };
+		845B11C32761369700746173 /* TaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
+		845B11C5276136AC00746173 /* DayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayService.swift; sourceTree = "<group>"; };
+		845B11C7276136C900746173 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		845B11C9276136DB00746173 /* DailyTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTask.swift; sourceTree = "<group>"; };
+		845B11CB2761370100746173 /* TaskTabVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTabVc.swift; sourceTree = "<group>"; };
+		845B11CD2761372400746173 /* DailyTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTaskVC.swift; sourceTree = "<group>"; };
+		845B11CF2761373D00746173 /* NewTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskVC.swift; sourceTree = "<group>"; };
+		845B11D12761377600746173 /* NewDayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDayVC.swift; sourceTree = "<group>"; };
+		845B11D32761379000746173 /* DayTasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTasksVC.swift; sourceTree = "<group>"; };
+		845B11D52761379E00746173 /* DaysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysVC.swift; sourceTree = "<group>"; };
 		84C2EE8827576B61005CF9BC /* struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = struct.swift; sourceTree = "<group>"; };
 		84C2EE8A27576B73005CF9BC /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		84E531272753880C00B45CCC /* KidsLogic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidsLogic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,12 +170,14 @@
 		842A15EC2754AB5C00F505E2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				845B11BD2761357C00746173 /* KidDailyEvaluation */,
 				84E5314727538B8000B45CCC /* Logs */,
 				84E531622753959E00B45CCC /* GameVC.swift */,
 				84E531682753A9BF00B45CCC /* Video.swift */,
 				84E5315A2753950B00B45CCC /* Lesson.swift */,
 				84E5315C2753952500B45CCC /* LessonDetails.swift */,
 				84E5315E2753953E00B45CCC /* LessonCell.swift */,
+				845B119F2760AA7800746173 /* combatGame.swift */,
 				84E531602753957D00B45CCC /* LessonModel.swift */,
 				84E5316E2753E5AD00B45CCC /* quizNames.swift */,
 				845B118E275FE2C400746173 /* honyBeeGame.swift */,
@@ -160,8 +188,10 @@
 				84E5317D2754158700B45CCC /* More.swift */,
 				845B1191275FE30D00746173 /* Laugh.mp3 */,
 				845B1190275FE30D00746173 /* Mario.mp3 */,
+				845B119D2760A71400746173 /* Vcode.mp4 */,
 				845B1196275FFF8D00746173 /* Sad.mp3 */,
 				845B1192275FE30E00746173 /* on.mp3 */,
+				845B119B2760A16900746173 /* nice.mp3 */,
 				842A15F12754B26700F505E2 /* LessoneViedeo.swift */,
 				842A15F32754B29D00F505E2 /* LessonviedeoCell.swift */,
 			);
@@ -206,6 +236,63 @@
 				842A15FF2754E22B00F505E2 /* Service */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		845B11BD2761357C00746173 /* KidDailyEvaluation */ = {
+			isa = PBXGroup;
+			children = (
+				845B11C02761362800746173 /* Controllers */,
+				845B11BF2761361B00746173 /* Models */,
+				845B11BE2761360A00746173 /* Service */,
+			);
+			path = KidDailyEvaluation;
+			sourceTree = "<group>";
+		};
+		845B11BE2761360A00746173 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				845B11C32761369700746173 /* TaskService.swift */,
+				845B11C5276136AC00746173 /* DayService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		845B11BF2761361B00746173 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				845B11C7276136C900746173 /* Day.swift */,
+				845B11C9276136DB00746173 /* DailyTask.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		845B11C02761362800746173 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				845B11C22761364D00746173 /* DailyTask */,
+				845B11C12761364500746173 /* Days */,
+				845B11CB2761370100746173 /* TaskTabVc.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		845B11C12761364500746173 /* Days */ = {
+			isa = PBXGroup;
+			children = (
+				845B11D12761377600746173 /* NewDayVC.swift */,
+				845B11D32761379000746173 /* DayTasksVC.swift */,
+				845B11D52761379E00746173 /* DaysVC.swift */,
+			);
+			path = Days;
+			sourceTree = "<group>";
+		};
+		845B11C22761364D00746173 /* DailyTask */ = {
+			isa = PBXGroup;
+			children = (
+				845B11CD2761372400746173 /* DailyTaskVC.swift */,
+				845B11CF2761373D00746173 /* NewTaskVC.swift */,
+			);
+			path = DailyTask;
 			sourceTree = "<group>";
 		};
 		84C2EE8727576B3B005CF9BC /* platform */ = {
@@ -348,9 +435,11 @@
 				845B1197275FFF8D00746173 /* Sad.mp3 in Resources */,
 				845B1195275FE30E00746173 /* on.mp3 in Resources */,
 				84E531342753880E00B45CCC /* Assets.xcassets in Resources */,
+				845B119C2760A16900746173 /* nice.mp3 in Resources */,
 				84E5317C27540B3900B45CCC /* Assets.xcassets in Resources */,
 				84E531322753880C00B45CCC /* Main.storyboard in Resources */,
 				845B1193275FE30E00746173 /* Mario.mp3 in Resources */,
+				845B119E2760A71400746173 /* Vcode.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845B11A02760AA7800746173 /* combatGame.swift in Sources */,
 				845B118F275FE2C400746173 /* honyBeeGame.swift in Sources */,
 				842A15FE2754E22200F505E2 /* UserService.swift in Sources */,
 				84E5317E2754158700B45CCC /* More.swift in Sources */,
@@ -374,26 +464,36 @@
 				842A15FC2754E21400F505E2 /* User.swift in Sources */,
 				84E53178275407B700B45CCC /* QuestionBank.swift in Sources */,
 				8435ACEA275BFA4E0076F36A /* Profile.swift in Sources */,
+				845B11D62761379E00746173 /* DaysVC.swift in Sources */,
 				842A15F02754ACFD00F505E2 /* Light.swift in Sources */,
 				842A15E82754AAAF00F505E2 /* Theme.swift in Sources */,
 				84E5312B2753880C00B45CCC /* AppDelegate.swift in Sources */,
 				84E531632753959E00B45CCC /* GameVC.swift in Sources */,
+				845B11D42761379000746173 /* DayTasksVC.swift in Sources */,
 				84E531712754026F00B45CCC /* Test.swift in Sources */,
+				845B11CC2761370100746173 /* TaskTabVc.swift in Sources */,
+				845B11CA276136DB00746173 /* DailyTask.swift in Sources */,
 				84C2EE8927576B61005CF9BC /* struct.swift in Sources */,
 				84E531672753A16B00B45CCC /* grade.swift in Sources */,
 				84E531612753957D00B45CCC /* LessonModel.swift in Sources */,
 				84E5315F2753953E00B45CCC /* LessonCell.swift in Sources */,
 				842A165D2754F89600F505E2 /* ScoreViewController.swift in Sources */,
+				845B11C8276136C900746173 /* Day.swift in Sources */,
 				84E53174275407AC00B45CCC /* ViewController.swift in Sources */,
 				84E5312D2753880C00B45CCC /* SceneDelegate.swift in Sources */,
 				84C2EE8B27576B73005CF9BC /* Controller.swift in Sources */,
+				845B11D22761377600746173 /* NewDayVC.swift in Sources */,
+				845B11D02761373D00746173 /* NewTaskVC.swift in Sources */,
+				845B11C6276136AC00746173 /* DayService.swift in Sources */,
 				84E531692753A9C000B45CCC /* Video.swift in Sources */,
 				84E5316F2753E5AD00B45CCC /* quizNames.swift in Sources */,
 				842A165F2754F89600F505E2 /* contactCell.swift in Sources */,
 				842A15EE2754ACF600F505E2 /* Dark.swift in Sources */,
 				84E5315D2753952500B45CCC /* LessonDetails.swift in Sources */,
+				845B11CE2761372400746173 /* DailyTaskVC.swift in Sources */,
 				84E531652753994400B45CCC /* Logs.swift in Sources */,
 				842A15F22754B26700F505E2 /* LessoneViedeo.swift in Sources */,
+				845B11C42761369700746173 /* TaskService.swift in Sources */,
 				842A15F42754B29D00F505E2 /* LessonviedeoCell.swift in Sources */,
 				842A15EA2754AB1E00F505E2 /* ThemeProtocol.swift in Sources */,
 				84E53159275394C400B45CCC /* TabVC.swift in Sources */,

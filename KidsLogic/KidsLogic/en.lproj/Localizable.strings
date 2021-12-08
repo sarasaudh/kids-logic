@@ -29,7 +29,7 @@
 
 //Lessons
 "ALGORITHM" = "ALGORITHM";
-"1: Think of it this way: many introductory lessons introduce algorithms as mathematical “recipes”; and like a recipe, algorithms contain clear steps working towards an established result. " = "bhjjbjhbv";
+"1: Think of it this way: many introductory lessons introduce algorithms as mathematical “recipes”; and like a recipe, algorithms contain clear steps working towards an established result. " = "1: Think of it this way: many introductory lessons introduce algorithms as mathematical “recipes”; and like a recipe, algorithms contain clear steps working towards an established result. " ;
 
 "BOOLEAN" = "BOOLEAN";
 "2: Booleans are “truth values” — they’re a data type that can represent one of two outcomes: true or false. (In some languages, true and false can be represented as 1 or 0, but the takeaway message is the same.)" = "2: Booleans are “truth values” — they’re a data type that can represent one of two outcomes: true or false. (In some languages, true and false can be represented as 1 or 0, but the takeaway message is the same.)";
@@ -110,6 +110,34 @@ He hover effect is the alteration of the appearance of a component of the graphi
 
 
 
+
+"1" = "1" ;
+"2" = "2" ;
+"3" = "3" ;
+"4" = "4" ;
+"5" = "5" ;
+"6" = "6" ;
+"7" = "7" ;
+"8" = "8" ;
+"9" = "9" ;
+"10" = "10" ;
+"11" = "11" ;
+"12" = "12" ;
+"13" = "13" ;
+"14" = "14" ;
+"15" = "15" ;
+"16" = "16" ;
+"17" = "17" ;
+"18" = "18" ;
+"19" = "19" ;
+"20" = "20" ;
+"21" = "21" ;
+"22" = "22" ;
+"23" = "23" ;
+"24" = "24" ;
+"25" = "25" ;
+"26" = "26" ;
+"27" ="27";
 
 
 
