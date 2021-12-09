@@ -46,8 +46,7 @@ class GradeVC: UIViewController {
          lbl.textAlignment = .center
           lbl.textColor = .white
          lbl.shadowColor = .black
-//         lbl.backgroundColor = UIColor(#colorLiteral(red: 0.4051097035, green: 0.6975014806, blue: 0.8082057238, alpha: 1) )
-          lbl.font.withSize(30)
+          lbl.font.withSize(100)
          lbl.translatesAutoresizingMaskIntoConstraints = false
          lbl.text = NSLocalizedString("How Old Are You ?", comment: "")
           return lbl
@@ -121,9 +120,9 @@ lazy var levelOne: UIButton = {
         NSLayoutConstraint.activate([
             levelsLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10),
 
-            levelsLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
-            levelsLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
-            levelsLabel.heightAnchor.constraint(equalToConstant: 100),
+            levelsLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
+            levelsLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
+            levelsLabel.heightAnchor.constraint(equalToConstant: 200),
         ])
         
         
@@ -180,7 +179,7 @@ lazy var levelOne: UIButton = {
         self.present(vc, animated: true, completion: nil)
     }
     @objc private func level2ButtonTapped() {
-        let vc = TabVC()
+        let vc = TabVC2()
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
 

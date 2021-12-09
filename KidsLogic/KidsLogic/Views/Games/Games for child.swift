@@ -1,13 +1,14 @@
 //
-//  Games.swift
+//  Games for child.swift
 //  KidsLogic
 //
-//  Created by sara saud on 03/05/1443 AH.
+//  Created by sara saud on 05/05/1443 AH.
 //
+
 
 import Foundation
 import UIKit
-class Games:UIViewController {
+class Games2:UIViewController {
     
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()

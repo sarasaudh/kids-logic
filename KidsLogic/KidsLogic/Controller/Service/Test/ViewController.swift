@@ -2,6 +2,13 @@
 import UIKit
 
 class TestViewController: UIViewController {
+    
+    let allQuestions = QuestionBank()
+    var questionNumber: Int = 0
+    var score: Int = 0
+    var selectedAnswer: Int = 0
+    
+    
     @IBOutlet weak var questionCounter: UILabel?
     @IBOutlet weak var scoreLabel: UILabel?
     @IBOutlet weak var progressView: UIView?
@@ -14,21 +21,23 @@ class TestViewController: UIViewController {
     @IBOutlet weak var optionC: UIButton?
     @IBOutlet weak var optionD: UIButton?
     
-    let allQuestions = QuestionBank()
-    var questionNumber: Int = 0
-    var score: Int = 0
-    var selectedAnswer: Int = 0
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateQuestion()
         updateUI()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
     
     @IBAction func answerPressed(_ sender: UIButton) {
         if sender.tag == selectedAnswer {

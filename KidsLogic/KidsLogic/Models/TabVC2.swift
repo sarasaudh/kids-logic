@@ -1,19 +1,21 @@
 //
-//  TabVC.swift
+//  TabVC2.swift
 //  KidsLogic
 //
-//  Created by sara saud on 23/04/1443 AH.
+//  Created by sara saud on 05/05/1443 AH.
 //
+
+import Foundation
 
 import UIKit
 
-class TabVC: UITabBarController {
+class TabVC2: UITabBarController {
    
     
   fileprivate func createNavController(for rootViewController: UIViewController,
                            title: String,
                            image: UIImage) -> UIViewController {
-      
+
       let navController = UINavigationController(rootViewController: rootViewController)
       
       navController.tabBarItem.title = title
@@ -29,9 +31,9 @@ class TabVC: UITabBarController {
       
      viewControllers = [
 
-//        createNavController(for:Lessons(), title: NSLocalizedString("Lesson", comment: ""), image: UIImage(systemName: "list.bullet.rectangle.fill")!),
+        createNavController(for:Lessons(), title: NSLocalizedString("Lesson", comment: ""), image: UIImage(systemName: "list.bullet.rectangle.fill")!),
       
-        createNavController(for:MoreVC(), title: NSLocalizedString("More", comment: ""), image: UIImage(systemName: "star")!),
+        createNavController(for:MoreVC2(), title: NSLocalizedString("More", comment: ""), image: UIImage(systemName: "star")!),
         
        createNavController(for:MyProfileVC(), title: NSLocalizedString("profile", comment: ""), image: UIImage(systemName: "person")!),
      ]

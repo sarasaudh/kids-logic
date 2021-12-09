@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import FirebaseFirestore
 class DTasksVC: UIViewController {
     var tasks: Array<Tasks> = []
 
@@ -16,6 +16,7 @@ class DTasksVC: UIViewController {
         t.delegate = self
         t.dataSource = self
         t.register(UITableViewCell.self, forCellReuseIdentifier: "TaskCell")
+        t.setGradiantView3()
         return t
     }()
     
@@ -23,11 +24,12 @@ class DTasksVC: UIViewController {
         let b = UIButton()
         b.addTarget(self, action: #selector(addTask), for: .touchUpInside)
         b.translatesAutoresizingMaskIntoConstraints = false
-        b.setTitle("NEW Task➕", for: .normal)
+        b.setTitle(NSLocalizedString("NEW Task➕", comment: ""), for: .normal)
         b.backgroundColor = .systemMint
+        b.layer.cornerRadius = 20
         return b
     }()
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         view.setGradiantView3()
@@ -61,20 +63,45 @@ class DTasksVC: UIViewController {
         present(newTaskVC, animated: true, completion: nil)
     }
     //delete
-    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deletAction = UIContextualAction(style: .destructive, title: "DELETE",handler: { [self]
-            (ac:UIContextualAction,view:UIView,success:(Bool)->Void)in
-            tasks.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .left)
-            success(true)
-            
-        } )
-//deleteAction.backgroundColor = .systemPink
-        return
-        UISwipeActionsConfiguration(actions: [deletAction])
-           
-    }
-}
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+         let cell = tasks[indexPath.row]
+         let alertcontroller = UIAlertController(title: "Delete Task"
+                             , message: "Are you sure you want to delete this Task?"
+                             , preferredStyle: UIAlertController.Style.alert
+         )
+            alertcontroller.addAction(
+                UIAlertAction(title: "cancel",
+                       style: UIAlertAction.Style.default,
+                       handler: { Action in print("...")
+           })
+         )
+         alertcontroller.addAction(
+           UIAlertAction(title: "Delete",
+                  style: UIAlertAction.Style.destructive,
+                  handler: { Action in
+             if editingStyle == .delete {
+                 Firestore.firestore().collection("students").document(cell.id).delete()
+             }
+             self.tasksTV.reloadData()
+           })
+         )
+         self.present(alertcontroller, animated: true, completion: nil)
+       }
+     }
+//    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//        let deletAction = UIContextualAction(style: .destructive, title: "DELETE",handler: { [self]
+//            (ac:UIContextualAction,view:UIView,success:(Bool)->Void)in
+//            tasks.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .left)
+//            success(true)
+//
+//        } )
+////deleteAction.backgroundColor = .systemPink
+//        return
+//        UISwipeActionsConfiguration(actions: [deletAction])
+//
+//    }
+
 
 extension DTasksVC: UITableViewDataSource, UITableViewDelegate {
 

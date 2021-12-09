@@ -156,7 +156,7 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
         scoreButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
         scoreButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
 
-        scoreButton.topAnchor.constraint(equalTo: saveButton.bottomAnchor, constant: 50),
+        scoreButton.topAnchor.constraint(equalTo: singOutButton.bottomAnchor, constant: 20),
         scoreButton.widthAnchor.constraint(equalToConstant: 100),
         scoreButton.heightAnchor.constraint(equalToConstant: 100),
       ])

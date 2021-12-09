@@ -27,8 +27,11 @@
 "GAME 🎮" = "العاب 🎮" ;
 "Video 📀" = "فيديو 📀" ;
 "Carton 🧩" = "فيلم كرتون 🧩" ;
-"Share 🔖 " = "شارك  🔖 " ;
-
+"Self diary 🔖 " = "المفكرة الذاتية🔖 " ;
+"CrunchZilla 📟 " = "كرنش زيلا 📟 " ;
+"EdrakLearning 💎" = "إدراك 💎" ;
+"NEW Task➕" = "مهمة يومية" ;
+"NEW Task➕" = "يوم جديد" ;
 //Lesson
 "ALGORITHM" = "الخوارزمية";
 

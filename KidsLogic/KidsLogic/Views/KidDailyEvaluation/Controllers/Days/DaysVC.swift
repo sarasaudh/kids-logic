@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+import FirebaseFirestore
 
 class DaysVC: UIViewController {
     var days: Array<Day> = []
@@ -19,6 +19,7 @@ class DaysVC: UIViewController {
         tv.delegate = self
         tv.dataSource = self
         tv.register(UITableViewCell.self, forCellReuseIdentifier: "DayCell")
+        tv.setGradiantView3()
         return tv
     }()
     
@@ -26,8 +27,9 @@ class DaysVC: UIViewController {
         let b = UIButton()
         b.addTarget(self, action: #selector(addDay), for: .touchUpInside)
         b.translatesAutoresizingMaskIntoConstraints = false
-        b.setTitle("NEW Day🕑", for: .normal)
+        b.setTitle(NSLocalizedString("NEW Task➕", comment: ""), for: .normal)
         b.backgroundColor = .systemMint
+        b.layer.cornerRadius = 20
         return b
     }()
     
@@ -87,18 +89,45 @@ extension DaysVC: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deletAction = UIContextualAction(style: .destructive, title: "DELETE",handler: { [self]
-            (ac:UIContextualAction,view:UIView,success:(Bool)->Void)in
-            days.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .left)
-            success(true)
-        } )
-//deleteAction.backgroundColor = .systemPink
-        return
-        UISwipeActionsConfiguration(actions: [deletAction])
-           
-    }
+    //delete
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+         let cell = days[indexPath.row]
+         let alertcontroller = UIAlertController(title: "Delete Favorite Book"
+                             , message: "Are you sure you want to delete this Book?"
+                             , preferredStyle: UIAlertController.Style.alert
+         )
+            alertcontroller.addAction(
+                UIAlertAction(title: "cancel",
+                       style: UIAlertAction.Style.default,
+                       handler: { Action in print("...")
+           })
+         )
+         alertcontroller.addAction(
+           UIAlertAction(title: "Delete",
+                  style: UIAlertAction.Style.destructive,
+                  handler: { Action in
+             if editingStyle == .delete {
+                 Firestore.firestore().collection("days").document(cell.id).delete()
+             }
+             self.daysTV.reloadData()
+           })
+         )
+         self.present(alertcontroller, animated: true, completion: nil)
+       }
+     
+
+//    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//        let deletAction = UIContextualAction(style: .destructive, title: "DELETE",handler: { [self]
+//            (ac:UIContextualAction,view:UIView,success:(Bool)->Void)in
+//            days.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .left)
+//            success(true)
+//        } )
+////deleteAction.backgroundColor = .systemPink
+//        return
+//        UISwipeActionsConfiguration(actions: [deletAction])
+//
+//    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let day = days[indexPath.row]
         

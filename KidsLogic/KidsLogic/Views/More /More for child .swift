@@ -9,7 +9,7 @@ import Foundation
 
 import UIKit
 
-class MoreVC: UIViewController {
+class MoreVC2: UIViewController {
     
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -69,17 +69,46 @@ lazy var levelOne: UIButton = {
         
         
         level4.translatesAutoresizingMaskIntoConstraints = false
-        level4.setTitle(NSLocalizedString("Share 🔖 ", comment: ""), for: .normal)
+        level4.setTitle(NSLocalizedString("Self diary 🔖 ", comment: ""), for: .normal)
         level4.setTitleColor(.white, for: .normal)
         level4.backgroundColor = UIColor( #colorLiteral(red: 1, green: 0.8552523255, blue: 0.642039299, alpha: 1))
         
         level4.layer.cornerRadius = 20
         level4.layer.masksToBounds = true
-        level4.addTarget(self, action: #selector(VideoButtonTapped), for: .touchUpInside)
+        level4.addTarget(self, action: #selector(diaryButtonTapped), for: .touchUpInside)
         level4.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
         return level4
     }()
- 
+    lazy var EdrakLearning: UIButton = {
+        let level4 = UIButton()
+        
+        level4.translatesAutoresizingMaskIntoConstraints = false
+        level4.setTitle(NSLocalizedString("EdrakLearning 💎", comment: ""), for: .normal)
+        level4.setTitleColor(.white, for: .normal)
+        level4.backgroundColor = UIColor( #colorLiteral(red: 0.3914309144, green: 0.9054350257, blue: 0.9928495288, alpha: 1))
+        
+        level4.layer.cornerRadius = 20
+        level4.layer.masksToBounds = true
+        level4.addTarget(self, action: #selector(CrunchZillaButtonTapped), for: .touchUpInside)
+        level4.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+        return level4
+    }()
+    
+    lazy var CrunchCodeing: UIButton = {
+        let level4 = UIButton()
+      
+        level4.translatesAutoresizingMaskIntoConstraints = false
+        level4.setTitle(NSLocalizedString("CrunchZilla 📟 ", comment: ""), for: .normal)
+        level4.setTitleColor(.white, for: .normal)
+        level4.backgroundColor = UIColor(#colorLiteral(red: 0.851674974, green: 0.7002084255, blue: 0.6727494597, alpha: 1) )
+        
+        level4.layer.cornerRadius = 20
+        level4.layer.masksToBounds = true
+        level4.addTarget(self, action: #selector(CrunchZillaButtonTapped), for: .touchUpInside)
+        level4.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+        return level4
+    }()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -91,7 +120,6 @@ lazy var levelOne: UIButton = {
         
         view.addSubview(imageView)
         
-        
         NSLayoutConstraint.activate([
             imageView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             imageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
@@ -99,53 +127,77 @@ lazy var levelOne: UIButton = {
             imageView.widthAnchor.constraint(equalToConstant: 300),
             imageView.heightAnchor.constraint(equalToConstant:300),
         ])
+        //dairy constraint
+        view.addSubview(levelfour)
+        NSLayoutConstraint.activate([
+            
+            levelfour.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5),
+//            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
+
+            levelfour.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
+            levelfour.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
+            levelfour.heightAnchor.constraint(equalToConstant: 70),
+        ])
+        
         //Constraint loginButton
         view.addSubview(levelOne)
         NSLayoutConstraint.activate([
-            levelOne.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10),
+            levelOne.topAnchor.constraint(equalTo: levelfour.bottomAnchor,constant: 15),
 //            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
 
             levelOne.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             
             levelOne.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
-            levelOne.heightAnchor.constraint(equalToConstant: 100),
+            levelOne.heightAnchor.constraint(equalToConstant: 50),
         ])
         
         //Constraint registerButton
         view.addSubview(levelTwo)
         NSLayoutConstraint.activate([
             
-            levelTwo.topAnchor.constraint(equalTo: levelOne.bottomAnchor, constant: 10),
+            levelTwo.topAnchor.constraint(equalTo: levelOne.bottomAnchor, constant: 5),
 //            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
 
             levelTwo.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             levelTwo.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
-            levelTwo.heightAnchor.constraint(equalToConstant: 100),
+            levelTwo.heightAnchor.constraint(equalToConstant: 50),
         ])
         view.addSubview(levelthree)
         NSLayoutConstraint.activate([
             
-            levelthree.topAnchor.constraint(equalTo: levelTwo.bottomAnchor, constant: 10),
+            levelthree.topAnchor.constraint(equalTo: levelTwo.bottomAnchor, constant: 5),
 //            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
 
             levelthree.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             levelthree.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
-            levelthree.heightAnchor.constraint(equalToConstant: 100),
+            levelthree.heightAnchor.constraint(equalToConstant: 50),
         ])
-        view.addSubview(levelfour)
+       
+        
+        view.addSubview(EdrakLearning)
+        view.addSubview(CrunchCodeing)
         NSLayoutConstraint.activate([
-            
-            levelfour.topAnchor.constraint(equalTo: levelthree.bottomAnchor, constant: 10),
+            EdrakLearning.topAnchor.constraint(equalTo: levelthree.bottomAnchor, constant: 5),
 //            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
 
-            levelfour.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
-            levelfour.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
-            levelfour.heightAnchor.constraint(equalToConstant: 100),
+            EdrakLearning.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
+            EdrakLearning.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
+            EdrakLearning.heightAnchor.constraint(equalToConstant: 50),
         ])
+      
+        NSLayoutConstraint.activate([
+            CrunchCodeing.topAnchor.constraint(equalTo: EdrakLearning.bottomAnchor, constant: 5),
+//            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
+
+            CrunchCodeing.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
+            CrunchCodeing.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
+            CrunchCodeing.heightAnchor.constraint(equalToConstant: 50),
+        ])
+                
             }
     
     @objc private func GameButtonTapped() {
-let vc = Games()
+let vc = Games2()
 //        let vc = GameVC()
         vc.modalPresentationStyle = .automatic
         self.present(vc, animated: true, completion: nil)
@@ -165,7 +217,7 @@ let vc = Games()
     
     
     //test app
-    @objc private func VideoButtonTapped() {
+    @objc private func diaryButtonTapped() {
        
         let vc = TaskTabVC()
         vc.modalPresentationStyle = .pageSheet
@@ -188,6 +240,13 @@ let vc = Games()
 //            application.open(websiteUrl)
 //
 //        }
+    
+    @objc private func CrunchZillaButtonTapped() {
+       
+        let vc = crunchzilla()
+        vc.modalPresentationStyle = .pageSheet
+        self.present(vc, animated: true, completion: nil)
+    }
     }
 
 

@@ -140,7 +140,7 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
 //
 //                    typeButton.addTarget(self, action: #selector(tapChooseMenuItem), for: .touchUpInside)
             
-            registerBtn.topAnchor.constraint(equalTo: passwordTF.bottomAnchor, constant: 100),
+            registerBtn.topAnchor.constraint(equalTo: passwordTF.bottomAnchor, constant:20),
             registerBtn.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
             registerBtn.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             registerBtn.heightAnchor.constraint(equalToConstant: 70),
