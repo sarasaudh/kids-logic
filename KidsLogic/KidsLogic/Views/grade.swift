@@ -55,13 +55,13 @@ class GradeVC: UIViewController {
 lazy var levelOne: UIButton = {
     let level1 = UIButton()
     level1.translatesAutoresizingMaskIntoConstraints = false
-    level1.setTitle(NSLocalizedString("younger than 6 years old", comment: ""), for: .normal)
+    level1.setTitle(NSLocalizedString("Baby", comment: ""), for: .normal)
     level1.setTitleColor(.white, for: .normal)
     level1.backgroundColor = UIColor(#colorLiteral(red: 0.8162642121, green: 0.6648833156, blue: 0.7066509128, alpha: 1))
     level1.layer.cornerRadius = 20
     level1.layer.masksToBounds = true
     level1.addTarget(self, action: #selector(level1ButtonTapped), for: .touchUpInside)
-    level1.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+    level1.titleLabel?.font = .systemFont(ofSize: 40, weight: .medium)
     return level1
 }()
     
@@ -70,14 +70,14 @@ lazy var levelOne: UIButton = {
         
         
         level2.translatesAutoresizingMaskIntoConstraints = false
-        level2.setTitle(NSLocalizedString("7 years and older", comment: ""), for: .normal)
+        level2.setTitle(NSLocalizedString("Child", comment: ""), for: .normal)
         level2.setTitleColor(.white, for: .normal)
         level2.backgroundColor = UIColor(#colorLiteral(red: 0.8785117269, green: 0.7318091393, blue: 0.647349894, alpha: 1))
         level2.addTarget(self, action: #selector(level2ButtonTapped), for: .touchUpInside)
         level2.layer.cornerRadius = 20
         level2.layer.masksToBounds = true
 
-        level2.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+        level2.titleLabel?.font = .systemFont(ofSize: 40, weight: .medium)
         return level2
     }()
 //    lazy var levelthree: UIButton = {

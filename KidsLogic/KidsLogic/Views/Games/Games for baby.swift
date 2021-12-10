@@ -48,33 +48,33 @@ lazy var honyboo: UIButton = {
 }()
   
     
-    var MonkyGameName: UILabel = {
-       let lbl = UILabel()
-        lbl.textAlignment = .center
-        lbl.textColor =  .black
-       lbl.shadowColor = .lightGray
-//        lbl.backgroundColor = UIColor(#colorLiteral(red: 0.3951109648, green: 0.6936698556, blue: 0.7874156833, alpha: 1))
-         lbl.font.withSize(15)
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = NSLocalizedString("Monky Game", comment: "")
-         return lbl
-         
-    }()
-    
-    lazy var game2: UIButton = {
-        let btn = UIButton()
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.setTitle(NSLocalizedString("Monky 🙉", comment: ""), for: .normal)
-        btn.setImage(UIImage(named: "monky"), for: UIControl.State.normal)
-        btn.setTitleColor(.white, for: .normal)
-        btn.backgroundColor = UIColor(#colorLiteral(red: 0.3279541135, green: 0.6508837342, blue: 0.8242474198, alpha: 0.8470588235) )
-        
-        btn.layer.cornerRadius = 20
-        btn.layer.masksToBounds = true
-        btn.addTarget(self, action: #selector(MonkyGameButtonTapped), for: .touchUpInside)
-        btn.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
-        return btn
-    }()
+//    var MonkyGameName: UILabel = {
+//       let lbl = UILabel()
+//        lbl.textAlignment = .center
+//        lbl.textColor =  .black
+//       lbl.shadowColor = .lightGray
+////        lbl.backgroundColor = UIColor(#colorLiteral(red: 0.3951109648, green: 0.6936698556, blue: 0.7874156833, alpha: 1))
+//         lbl.font.withSize(15)
+//        lbl.translatesAutoresizingMaskIntoConstraints = false
+//        lbl.text = NSLocalizedString("Monky Game", comment: "")
+//         return lbl
+//
+//    }()
+//
+//    lazy var game2: UIButton = {
+//        let btn = UIButton()
+//        btn.translatesAutoresizingMaskIntoConstraints = false
+//        btn.setTitle(NSLocalizedString("Monky 🙉", comment: ""), for: .normal)
+//        btn.setImage(UIImage(named: "monky"), for: UIControl.State.normal)
+//        btn.setTitleColor(.white, for: .normal)
+//        btn.backgroundColor = UIColor(#colorLiteral(red: 0.3279541135, green: 0.6508837342, blue: 0.8242474198, alpha: 0.8470588235) )
+//
+//        btn.layer.cornerRadius = 20
+//        btn.layer.masksToBounds = true
+//        btn.addTarget(self, action: #selector(MonkyGameButtonTapped), for: .touchUpInside)
+//        btn.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+//        return btn
+//    }()
     
     var GoldenFishName: UILabel = {
        let lbl = UILabel()
@@ -111,8 +111,8 @@ lazy var honyboo: UIButton = {
         view.addSubview(imageView)
         view.addSubview(honyboo)
         view.addSubview(honyGameName)
-        view.addSubview(game2)
-        view.addSubview(MonkyGameName)
+//        view.addSubview(game2)
+//        view.addSubview(MonkyGameName)
         view.addSubview(GoldenFishName)
         view.addSubview(game3)
        
@@ -136,16 +136,16 @@ lazy var honyboo: UIButton = {
            
             
             
-            game2.topAnchor.constraint(equalTo: honyGameName.bottomAnchor, constant: 20),
-            game2.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
-            game2.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
-            game2.heightAnchor.constraint(equalToConstant: 100),
-      
-            MonkyGameName.topAnchor.constraint(equalTo: game2.bottomAnchor, constant:10),
-            MonkyGameName.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
-            MonkyGameName.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
-      
-            game3.topAnchor.constraint(equalTo: MonkyGameName.bottomAnchor, constant: 20),
+//            game2.topAnchor.constraint(equalTo: honyGameName.bottomAnchor, constant: 20),
+//            game2.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
+//            game2.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
+//            game2.heightAnchor.constraint(equalToConstant: 100),
+//
+//            MonkyGameName.topAnchor.constraint(equalTo: game2.bottomAnchor, constant:10),
+//            MonkyGameName.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
+//            MonkyGameName.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
+//
+            game3.topAnchor.constraint(equalTo: honyGameName.bottomAnchor, constant: 20),
             game3.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             game3.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
             game3.heightAnchor.constraint(equalToConstant: 100),

@@ -8,12 +8,13 @@ import WebKit
 import Foundation
 
 import UIKit
+import SwiftUI
 
 class MoreVC2: UIViewController {
     
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "kids")
+        imageView.image = UIImage(named: "kidPro")
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
 //        imageView.backgroundColor = .quaternaryLabel
@@ -79,34 +80,29 @@ lazy var levelOne: UIButton = {
         level4.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
         return level4
     }()
-    lazy var EdrakLearning: UIButton = {
-        let level4 = UIButton()
-        
-        level4.translatesAutoresizingMaskIntoConstraints = false
-        level4.setTitle(NSLocalizedString("EdrakLearning 💎", comment: ""), for: .normal)
-        level4.setTitleColor(.white, for: .normal)
-        level4.backgroundColor = UIColor( #colorLiteral(red: 0.3914309144, green: 0.9054350257, blue: 0.9928495288, alpha: 1))
-        
-        level4.layer.cornerRadius = 20
-        level4.layer.masksToBounds = true
-        level4.addTarget(self, action: #selector(CrunchZillaButtonTapped), for: .touchUpInside)
-        level4.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
-        return level4
-    }()
+//    lazy var EdrakLearning: UIButton = {
+//        let level4 = UIButton()
+//
+//        level4.translatesAutoresizingMaskIntoConstraints = false
+//        level4.setTitle(NSLocalizedString("EdrakLearning 💎", comment: ""), for: .normal)
+//        level4.setTitleColor(.white, for: .normal)
+//        level4.backgroundColor = UIColor( #colorLiteral(red: 0.3914309144, green: 0.9054350257, blue: 0.9928495288, alpha: 1))
+//
+//        level4.layer.cornerRadius = 20
+//        level4.layer.masksToBounds = true
+//        level4.addTarget(self, action: #selector(CrunchZillaButtonTapped), for: .touchUpInside)
+//        level4.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+//        return level4
+//    }()
     
-    lazy var CrunchCodeing: UIButton = {
-        let level4 = UIButton()
-      
-        level4.translatesAutoresizingMaskIntoConstraints = false
-        level4.setTitle(NSLocalizedString("CrunchZilla 📟 ", comment: ""), for: .normal)
-        level4.setTitleColor(.white, for: .normal)
-        level4.backgroundColor = UIColor(#colorLiteral(red: 0.851674974, green: 0.7002084255, blue: 0.6727494597, alpha: 1) )
-        
-        level4.layer.cornerRadius = 20
-        level4.layer.masksToBounds = true
-        level4.addTarget(self, action: #selector(CrunchZillaButtonTapped), for: .touchUpInside)
-        level4.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
-        return level4
+    var Swipelabel: UILabel = {
+       let lbl = UILabel()
+        lbl.textColor =  .lightGray
+//        lbl.backgroundColor = UIColor(#colorLiteral(red: 0.715143621, green: 0.4925160408, blue: 0.5837199092, alpha: 1))
+         lbl.font.withSize(50)
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.text = NSLocalizedString("Swipe To Quiz ", comment: "")
+        return lbl
     }()
   
     override func viewDidLoad() {
@@ -174,28 +170,42 @@ lazy var levelOne: UIButton = {
         ])
        
         
-        view.addSubview(EdrakLearning)
-        view.addSubview(CrunchCodeing)
-        NSLayoutConstraint.activate([
-            EdrakLearning.topAnchor.constraint(equalTo: levelthree.bottomAnchor, constant: 5),
-//            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
-
-            EdrakLearning.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
-            EdrakLearning.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
-            EdrakLearning.heightAnchor.constraint(equalToConstant: 50),
-        ])
+//        view.addSubview(EdrakLearning)
+        view.addSubview(Swipelabel)
+//        NSLayoutConstraint.activate([
+//            EdrakLearning.topAnchor.constraint(equalTo: levelthree.bottomAnchor, constant: 5),
+////            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
+//
+//            EdrakLearning.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
+//            EdrakLearning.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
+//            EdrakLearning.heightAnchor.constraint(equalToConstant: 50),
+//        ])
       
         NSLayoutConstraint.activate([
-            CrunchCodeing.topAnchor.constraint(equalTo: EdrakLearning.bottomAnchor, constant: 5),
-//            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
+            
 
-            CrunchCodeing.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
-            CrunchCodeing.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
-            CrunchCodeing.heightAnchor.constraint(equalToConstant: 50),
+            Swipelabel.topAnchor.constraint(equalTo: levelthree.bottomAnchor, constant: 50),
+            Swipelabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            Swipelabel.heightAnchor.constraint(equalToConstant: 20),
+            
+          
         ])
-                
-            }
-    
+        let swipelift = UISwipeGestureRecognizer(
+              target: self,
+              action: #selector(openQuiz))
+            swipelift.direction = .left
+            view.addGestureRecognizer(swipelift)
+            view.isUserInteractionEnabled = true
+          
+    }
+     
+            
+@objc private func openQuiz() {
+    let quizVC = QuizviewController()
+    quizVC.modalPresentationStyle = .fullScreen
+    self.present(quizVC, animated: true, completion: nil)
+}
+
     @objc private func GameButtonTapped() {
 let vc = Games2()
 //        let vc = GameVC()
@@ -251,6 +261,7 @@ let vc = Games2()
 
 
  
+
 
 
 

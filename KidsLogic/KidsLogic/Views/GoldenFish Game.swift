@@ -18,7 +18,10 @@ class GoldenFishGame: UIViewController {
     
     var xxContraint: NSLayoutConstraint?
     var yyContraint : NSLayoutConstraint?
-  
+
+    var yyyContraint : NSLayoutConstraint?
+    var xxxContraint : NSLayoutConstraint?
+    
     var count:Float = 0
     
     
@@ -30,6 +33,16 @@ class GoldenFishGame: UIViewController {
         lbl.font = .systemFont(ofSize: 40)
         lbl.textAlignment = .center
         return lbl
+    
+    }()
+    lazy var Faster: UILabel = {
+        let lbl = UILabel ()
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.text = "Faster"
+        lbl.textColor = .white
+        lbl.font = .systemFont(ofSize: 40)
+        lbl.textAlignment = .center
+        return lbl
     }()
     
     lazy var button: UIButton = {
@@ -37,6 +50,7 @@ class GoldenFishGame: UIViewController {
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setImage(UIImage(named: "startFish"), for: UIControl.State.normal)
         btn.addTarget(self, action: #selector(StartPressed), for: .touchDown)
+        btn.tintColor = .red
         return btn
     }()
    var Gold: UIButton = {
@@ -65,13 +79,24 @@ class GoldenFishGame: UIViewController {
         btn.addTarget(self, action: #selector(blueFishPressed), for: .touchDown)
         return btn
     }()
+    lazy var blueFish2: UIButton = {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        //        btn.setTitle(NSLocalizedString("honey bee 🐝", comment: ""), for: .normal)
+        btn.setImage(UIImage(named:"RedFish"), for: UIControl.State.normal)
+        btn.addTarget(self, action: #selector(RedFishPressed), for: .touchDown)
+        btn.sizeToFit()
+//        btn.addTarget(self, action: #selector(move3), for: .touchDown)
+        return btn
+    }()
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        self.move2()
+        self.move()
+        self.move3()
         // Do any additional setup after loading the view.
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "bkGolden")
@@ -82,6 +107,7 @@ class GoldenFishGame: UIViewController {
         view.addSubview(button)
         view.addSubview(Goldfish)
         view.addSubview(blueFish)
+        view.addSubview(blueFish2)
         view.addSubview(Gold)
 
         NSLayoutConstraint.activate([
@@ -101,6 +127,9 @@ class GoldenFishGame: UIViewController {
            
             blueFish.widthAnchor.constraint(equalToConstant: 100) ,
             blueFish.heightAnchor.constraint(equalToConstant: 100),
+            
+            blueFish2.widthAnchor.constraint(equalToConstant: 100) ,
+            blueFish2.heightAnchor.constraint(equalToConstant: 100),
             
             Goldfish.widthAnchor.constraint(equalToConstant: 70) ,
             Goldfish.heightAnchor.constraint(equalToConstant: 70),
@@ -161,9 +190,47 @@ class GoldenFishGame: UIViewController {
         self.yContraint?.isActive = true
         self.xContraint?.isActive = true
         
+        xxxContraint = blueFish2.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        yyyContraint = blueFish2.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        self.yyyContraint?.isActive = true
+        self.xxxContraint?.isActive = true
         
     }
     
+    @objc func move3() {
+        
+        
+        //   label1.text = "\((Int(self.label1.text ?? "0") ?? 0) + 1)"
+        
+        
+        let viewHalfWidth = view.bounds.size.width / 2
+        let viewHalfHeight = view.bounds.size.height / 2
+        
+        let randomX = CGFloat.random(in: -viewHalfWidth..<viewHalfWidth)
+        let randomY = CGFloat.random(in: -viewHalfHeight..<viewHalfHeight)
+        
+        let maxTime: TimeInterval
+        let minTime: TimeInterval
+        
+        if count > 20 {
+            maxTime = 0.5
+            minTime = 1.2
+        }else{
+            maxTime = 0.25
+            minTime = 0.1
+        }
+        let randomTime = TimeInterval.random(in: minTime...maxTime)
+        
+        UIView.animate(withDuration: 3, delay: 0.1, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.2, options: [.curveLinear, .allowUserInteraction]) {
+           
+            self.xxxContraint?.constant = randomY
+            self.yyyContraint?.constant = randomX
+            
+            self.view.layoutIfNeeded()
+        } completion: { [self] _ in
+            self.move3()
+        }
+    }
     @objc func move() {
         
         
@@ -233,7 +300,9 @@ class GoldenFishGame: UIViewController {
             self.move2()
         }
         
+        
     }
+    
  
     @objc func blueFishPressed() {
         
@@ -269,7 +338,7 @@ class GoldenFishGame: UIViewController {
     @objc func StartPressed() {
         self.move()
         self.move2()
-        
+        self.move3()
         print("Hello Fish🐠!")
         // Set the sound file name & extension
         let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "on", ofType: "mp3")!)
@@ -330,14 +399,42 @@ class GoldenFishGame: UIViewController {
     
 }
 
-
+    @objc func RedFishPressed() {
+        
+        label1.text = "\((Int(self.label1.text ?? "0") ?? 0) + 1)"
+        
+        // Set the sound file name & extension
+        let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "GFish", ofType: "mp3")!)
+        
+        do {
+            // Preperation
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+        } catch _ {
+        }
+        do {
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch _ {
+        }
+        
+        // Play the sound
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+        } catch _{
+        }
+        
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+        
+        
+        
+    }
 
     @objc func GFishPressed(){
         
         label1.text = "\((Int(self.label1.text ?? "0") ?? 0) + 1)"
         
         // Set the sound file name & extension
-        let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "GFish", ofType: "mp3")!)
+        let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource:"Laugh", ofType: "mp3")!)
         
         do {
             // Preperation

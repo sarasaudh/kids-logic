@@ -12,8 +12,8 @@ class Games2:UIViewController {
     
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "pandaPlay")
-        imageView.contentMode = .scaleAspectFill
+        imageView.image = UIImage(named: "gaming")
+        imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
 //        imageView.backgroundColor = .quaternaryLabel
         imageView.layer.cornerRadius = 30
@@ -49,7 +49,7 @@ lazy var honyboo: UIButton = {
 }()
   
     
-    var MonkyGameName: UILabel = {
+    var FishGameName: UILabel = {
        let lbl = UILabel()
         lbl.textAlignment = .center
          lbl.textColor = .white
@@ -57,22 +57,22 @@ lazy var honyboo: UIButton = {
         lbl.backgroundColor = UIColor(#colorLiteral(red: 0.3951109648, green: 0.6936698556, blue: 0.7874156833, alpha: 1))
          lbl.font.withSize(15)
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = NSLocalizedString("Monky Game", comment: "")
+        lbl.text = NSLocalizedString("Golden Fish", comment: "")
          return lbl
          
     }()
     
-    lazy var game2: UIButton = {
+    lazy var Fishgame: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.setTitle(NSLocalizedString("Monky 🙉", comment: ""), for: .normal)
-        btn.setImage(UIImage(named: "monky"), for: UIControl.State.normal)
+        btn.setTitle(NSLocalizedString("Golden Fish", comment: ""), for: .normal)
+        btn.setImage(UIImage(named: "startFish"), for: UIControl.State.normal)
         btn.setTitleColor(.white, for: .normal)
         btn.backgroundColor = UIColor(#colorLiteral(red: 0.3279541135, green: 0.6508837342, blue: 0.8242474198, alpha: 0.8470588235) )
         
         btn.layer.cornerRadius = 20
         btn.layer.masksToBounds = true
-        btn.addTarget(self, action: #selector(MonkyGameButtonTapped), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(GoldenFishTapped), for: .touchUpInside)
         btn.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
         return btn
     }()
@@ -108,20 +108,23 @@ lazy var honyboo: UIButton = {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.setGradiantView3()
+        view.setGradiantView4()
+        
+        
         view.addSubview(imageView)
         view.addSubview(honyboo)
         view.addSubview(honyGameName)
-        view.addSubview(game2)
-        view.addSubview(MonkyGameName)
+        view.addSubview(Fishgame)
+        view.addSubview(FishGameName)
         view.addSubview(CodeCombatName)
         view.addSubview(game3)
        
         NSLayoutConstraint.activate([
             
-            imageView.topAnchor.constraint(equalTo: view.topAnchor),
-            imageView.widthAnchor.constraint(equalToConstant: 300),
-            imageView.heightAnchor.constraint(equalToConstant:300),
+            imageView.topAnchor.constraint(equalTo: view.topAnchor,constant: -2),
+            imageView.widthAnchor.constraint(equalToConstant: 500),
+            imageView.heightAnchor.constraint(equalToConstant:200),
+            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             
             honyboo.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant:20),
@@ -137,16 +140,16 @@ lazy var honyboo: UIButton = {
            
             
             
-            game2.topAnchor.constraint(equalTo: honyGameName.bottomAnchor, constant: 20),
-            game2.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
-            game2.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
-            game2.heightAnchor.constraint(equalToConstant: 100),
+            Fishgame.topAnchor.constraint(equalTo: honyGameName.bottomAnchor, constant: 20),
+            Fishgame.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
+            Fishgame.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
+            Fishgame.heightAnchor.constraint(equalToConstant: 100),
       
-            MonkyGameName.topAnchor.constraint(equalTo: game2.bottomAnchor, constant:10),
-            MonkyGameName.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
-            MonkyGameName.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
+            FishGameName.topAnchor.constraint(equalTo: Fishgame.bottomAnchor, constant:10),
+            FishGameName.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
+            FishGameName.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
       
-            game3.topAnchor.constraint(equalTo: MonkyGameName.bottomAnchor, constant: 20),
+            game3.topAnchor.constraint(equalTo: FishGameName.bottomAnchor, constant: 20),
             game3.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             game3.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
             game3.heightAnchor.constraint(equalToConstant: 100),
@@ -163,8 +166,8 @@ let vc = honyBeeGame()
         vc.modalPresentationStyle = .automatic
         self.present(vc, animated: true, completion: nil)
     }
-    @objc private func MonkyGameButtonTapped() {
-        let vc = GameVC()
+    @objc private func GoldenFishTapped() {
+        let vc = GoldenFishGame()
         vc.modalPresentationStyle = .automatic
         self.present(vc, animated: true, completion: nil)
     }

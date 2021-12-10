@@ -27,11 +27,16 @@ enum colors2 {
     static let backgroundRightcolor = UIColor(#colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1))
 }
 enum colors3 {
-    static let backgroundLightcolor = UIColor(#colorLiteral(red: 0.7368935943, green: 0.8787849545, blue: 0.2236331105, alpha: 1))// UIColor(#colorLiteral(red: 0.2987808883, green: 0.6151955128, blue: 0.008943102323, alpha: 1))
+    static let backgroundLightcolor = UIColor(#colorLiteral(red: 0.7368935943, green: 0.8787849545, blue: 0.2236331105, alpha: 1))
     static let backgroundleftColor = UIColor(#colorLiteral(red: 0.8015808463, green: 0.9898696542, blue: 0.8042283654, alpha: 1))
     static let backgroundRightcolor = UIColor(#colorLiteral(red: 0.8015808463, green: 0.9898696542, blue: 0.8042283654, alpha: 1))
     static let backgroundRightcolor2 = UIColor(#colorLiteral(red: 0.8015808463, green: 0.9898696542, blue: 0.8042283654, alpha: 1))
 
+}
+enum colors4{
+    static let backgroundDarckcolor  = UIColor(#colorLiteral(red: 0.9998961091, green: 1, blue: 0.01913678646, alpha: 1))
+   static let backgroundLightcolor  = UIColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
+    static let backgroundLightcolor2  = UIColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
 }
 // Gradiant background
 
@@ -63,6 +68,12 @@ extension UIView {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.bounds
         gradientLayer.colors = [colors3.backgroundLightcolor.cgColor,colors3.backgroundleftColor.cgColor]
+        layer.insertSublayer(gradientLayer, at: 0)
+    }
+    func setGradiantView4() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.bounds
+        gradientLayer.colors = [colors4.backgroundLightcolor2.cgColor,colors4.backgroundLightcolor.cgColor, colors4.backgroundDarckcolor.cgColor]
         layer.insertSublayer(gradientLayer, at: 0)
     }
    

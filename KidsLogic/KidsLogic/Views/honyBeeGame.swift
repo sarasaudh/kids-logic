@@ -63,16 +63,23 @@ class honyBeeGame: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.move()
+        view.isUserInteractionEnabled = true
+        
     
+               let backgroundImage2 = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage2.image = UIImage(named: "hony")
+        backgroundImage2.contentMode = UIView.ContentMode.scaleAspectFill
+               self.view.insertSubview(backgroundImage2, at: 0)
+     
+              
+        
+        
         view.isUserInteractionEnabled = true
     
-     
     
         // Do any additional setup after loading the view.
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "hony")
-        backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
+      
         
         view.addSubview(label1)
         view.addSubview(button)
@@ -152,9 +159,13 @@ class honyBeeGame: UIViewController {
         self.xContraint?.isActive = true
         
         
-    }
+    
   
-
+}
+ 
+ 
+   
+    
     @objc func move() {
         
         

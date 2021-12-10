@@ -27,7 +27,7 @@ class DaysVC: UIViewController {
         let b = UIButton()
         b.addTarget(self, action: #selector(addDay), for: .touchUpInside)
         b.translatesAutoresizingMaskIntoConstraints = false
-        b.setTitle(NSLocalizedString("NEW Task➕", comment: ""), for: .normal)
+        b.setTitle(NSLocalizedString("NEW Day 🕚", comment: ""), for: .normal)
         b.backgroundColor = .systemMint
         b.layer.cornerRadius = 20
         return b
