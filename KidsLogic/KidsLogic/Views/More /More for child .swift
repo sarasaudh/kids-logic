@@ -70,7 +70,7 @@ lazy var levelOne: UIButton = {
         
         
         level4.translatesAutoresizingMaskIntoConstraints = false
-        level4.setTitle(NSLocalizedString("Self diary 🔖 ", comment: ""), for: .normal)
+        level4.setTitle(NSLocalizedString("Self evaluation🔖 ", comment: ""), for: .normal)
         level4.setTitleColor(.white, for: .normal)
         level4.backgroundColor = UIColor( #colorLiteral(red: 1, green: 0.8552523255, blue: 0.642039299, alpha: 1))
         

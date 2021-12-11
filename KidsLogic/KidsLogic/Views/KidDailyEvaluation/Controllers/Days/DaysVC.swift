@@ -11,7 +11,7 @@ import FirebaseFirestore
 
 class DaysVC: UIViewController {
     var days: Array<Day> = []
-    var studentCount = 0
+    var taskCount = 0
     
     lazy var daysTV: UITableView = {
         let tv = UITableView()
@@ -40,8 +40,8 @@ class DaysVC: UIViewController {
             self.days = newDays
             self.daysTV.reloadData()
         }
-        TasksService.shared.listenToStudentCount { newStudentCount in
-            self.studentCount = newStudentCount
+        TasksService.shared.listenToTasktCount { newTaskCount in
+            self.taskCount = newTaskCount
             self.daysTV.reloadData()
         }
         
@@ -81,8 +81,9 @@ extension DaysVC: UITableViewDelegate, UITableViewDataSource {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "DayCell")
         
         let day = days[indexPath.row]
-        let pStudentCount = day.pStudents.count
-        let aStudentCount = studentCount - pStudentCount
+        let pStudentCount = day.pStudents
+            .count
+        let aStudentCount = taskCount - pStudentCount
         
         cell.textLabel?.text = day.getNiceDate()
         cell.detailTextLabel?.text = " \(pStudentCount)  ✅ ➖  \(aStudentCount) ❎"

@@ -55,8 +55,8 @@ class DayAttendanceVC: UIViewController {
             self.updateViews()
         }
         
-        TasksService.shared.listenToStudents { newStudents in
-            self.tasks = newStudents
+        TasksService.shared.listenToTasks{ newTasks in
+            self.tasks = newTasks
             self.updateViews()
         }
         
@@ -79,8 +79,8 @@ class DayAttendanceVC: UIViewController {
         ])
     }
     
-    func checkStudentPresent(studentId: String) -> Bool {
-        return day?.pStudents.contains(studentId) ?? false
+    func checkTaskDone(taskId: String) -> Bool {
+        return day?.pStudents.contains(taskId) ?? false
     }
     
     func getPStudentsCount() -> Int {
@@ -111,8 +111,8 @@ extension DayAttendanceVC: UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = task.name
         
         
-        let isStudentPresent = checkStudentPresent(studentId: task.id)
-        if isStudentPresent {
+        let isTaskDone = checkTaskDone(taskId: task.id)
+        if isTaskDone {
             cell.accessoryType = .checkmark
         } else {
             cell.accessoryType = .none

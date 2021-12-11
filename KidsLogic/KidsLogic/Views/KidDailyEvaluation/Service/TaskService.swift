@@ -15,33 +15,33 @@ class TasksService {
     //add student
     static let shared = TasksService()
     
-    let studentsCollection = Firestore.firestore().collection("students")
+    let tasksCollection = Firestore.firestore().collection("tasks")
     
-    func addStudent(student: Tasks) {
+    func addTask(task: Tasks) {
         //firestore
-        studentsCollection.document(student.id).setData([
-            "name": student.name,
-            "id": student.id
+        tasksCollection.document(task.id).setData([
+            "name": task.name,
+            "id": task.id
         ])
    
     }
     
     //delete student
     
-    func deleteStudent(studentId : String) {
+    func deletetask(tasktId : String) {
         //firbase
-        studentsCollection.document(studentId).delete()
+        tasksCollection.document(tasktId).delete()
 
     }
 //    switch student status
     
 //    lessson to students
     
-    func listenToStudents(completion: @escaping (([Tasks]) -> Void)) {
+    func listenToTasks(completion: @escaping (([Tasks]) -> Void)) {
         
         //fairbase
         
-        studentsCollection.addSnapshotListener { snapshot, error in
+        tasksCollection.addSnapshotListener { snapshot, error in
             if error != nil {
                 return
             }
@@ -63,9 +63,9 @@ class TasksService {
     }
     
 //    get students cunt
-    func listenToStudentCount(completion: @escaping ((Int) -> Void)) {
-        listenToStudents { students in
-            completion(students.count)
+    func listenToTasktCount(completion: @escaping ((Int) -> Void)) {
+        listenToTasks { tasks in
+            completion(tasks.count)
         }
     }
     

@@ -33,7 +33,7 @@ class DTasksVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.setGradiantView3()
-        TasksService.shared.listenToStudents { newTasks in
+        TasksService.shared.listenToTasks { newTasks in
             self.tasks = newTasks
             self.tasksTV.reloadData()
         }
@@ -80,7 +80,7 @@ class DTasksVC: UIViewController {
                   style: UIAlertAction.Style.destructive,
                   handler: { Action in
              if editingStyle == .delete {
-                 Firestore.firestore().collection("students").document(cell.id).delete()
+                 Firestore.firestore().collection("tasks").document(cell.id).delete()
              }
              self.tasksTV.reloadData()
            })

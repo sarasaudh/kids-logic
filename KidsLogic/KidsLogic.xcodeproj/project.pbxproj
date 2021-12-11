@@ -41,7 +41,7 @@
 		845B11D42761379000746173 /* DayTasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B11D32761379000746173 /* DayTasksVC.swift */; };
 		845B11D62761379E00746173 /* DaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B11D52761379E00746173 /* DaysVC.swift */; };
 		849945D92761DC7200135446 /* Vcode.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 849945D82761DC7200135446 /* Vcode.mp4 */; };
-		849945DB2761DCD200135446 /* TabVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849945DA2761DCD200135446 /* TabVC2.swift */; };
+		849945DB2761DCD200135446 /* TabChildVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849945DA2761DCD200135446 /* TabChildVC2.swift */; };
 		849945DE2761DEC300135446 /* More for baby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849945DD2761DEC300135446 /* More for baby.swift */; };
 		849945E12761DFD200135446 /* Games for child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849945E02761DFD200135446 /* Games for child.swift */; };
 		849945E32761E58A00135446 /* GoldenFish Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849945E22761E58A00135446 /* GoldenFish Game.swift */; };
@@ -54,7 +54,6 @@
 		84C2EE8B27576B73005CF9BC /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C2EE8A27576B73005CF9BC /* Controller.swift */; };
 		84E5312B2753880C00B45CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5312A2753880C00B45CCC /* AppDelegate.swift */; };
 		84E5312D2753880C00B45CCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5312C2753880C00B45CCC /* SceneDelegate.swift */; };
-		84E531322753880C00B45CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E531302753880C00B45CCC /* Main.storyboard */; };
 		84E531342753880E00B45CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E531332753880E00B45CCC /* Assets.xcassets */; };
 		84E531372753880E00B45CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E531352753880E00B45CCC /* LaunchScreen.storyboard */; };
 		84E5313F275389E400B45CCC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84E5313E275389E300B45CCC /* GoogleService-Info.plist */; };
@@ -62,7 +61,7 @@
 		84E5314427538B7300B45CCC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 84E5314327538B7300B45CCC /* FirebaseAuth */; };
 		84E5314627538B7300B45CCC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 84E5314527538B7300B45CCC /* FirebaseFirestore */; };
 		84E531502753910B00B45CCC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5314C2753910B00B45CCC /* Colors.swift */; };
-		84E53159275394C400B45CCC /* TabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E53158275394C400B45CCC /* TabVC.swift */; };
+		84E53159275394C400B45CCC /* TabBabyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E53158275394C400B45CCC /* TabBabyVC.swift */; };
 		84E5315B2753950B00B45CCC /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5315A2753950B00B45CCC /* Lesson.swift */; };
 		84E5315D2753952500B45CCC /* LessonDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5315C2753952500B45CCC /* LessonDetails.swift */; };
 		84E5315F2753953E00B45CCC /* LessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5315E2753953E00B45CCC /* LessonCell.swift */; };
@@ -93,7 +92,6 @@
 		842A16592754F89600F505E2 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		842A165A2754F89600F505E2 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		842A165B2754F89600F505E2 /* contactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contactCell.swift; sourceTree = "<group>"; };
-		842A166E27560A7C00F505E2 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		842A166F27560A7C00F505E2 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		842A167127560A8B00F505E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		842A167327560A8E00F505E2 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -118,7 +116,7 @@
 		845B11D32761379000746173 /* DayTasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTasksVC.swift; sourceTree = "<group>"; };
 		845B11D52761379E00746173 /* DaysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysVC.swift; sourceTree = "<group>"; };
 		849945D82761DC7200135446 /* Vcode.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vcode.mp4; sourceTree = "<group>"; };
-		849945DA2761DCD200135446 /* TabVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabVC2.swift; sourceTree = "<group>"; };
+		849945DA2761DCD200135446 /* TabChildVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabChildVC2.swift; sourceTree = "<group>"; };
 		849945DD2761DEC300135446 /* More for baby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "More for baby.swift"; sourceTree = "<group>"; };
 		849945E02761DFD200135446 /* Games for child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Games for child.swift"; sourceTree = "<group>"; };
 		849945E22761E58A00135446 /* GoldenFish Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoldenFish Game.swift"; sourceTree = "<group>"; };
@@ -132,13 +130,12 @@
 		84E531272753880C00B45CCC /* KidsLogic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidsLogic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E5312A2753880C00B45CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84E5312C2753880C00B45CCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		84E531312753880C00B45CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84E531332753880E00B45CCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84E531362753880E00B45CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84E531382753880E00B45CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84E5313E275389E300B45CCC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84E5314C2753910B00B45CCC /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		84E53158275394C400B45CCC /* TabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabVC.swift; sourceTree = "<group>"; };
+		84E53158275394C400B45CCC /* TabBabyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBabyVC.swift; sourceTree = "<group>"; };
 		84E5315A2753950B00B45CCC /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		84E5315C2753952500B45CCC /* LessonDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetails.swift; sourceTree = "<group>"; };
 		84E5315E2753953E00B45CCC /* LessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCell.swift; sourceTree = "<group>"; };
@@ -201,9 +198,9 @@
 				842A16572754F87600F505E2 /* ScoreTable */,
 				84E531662753A16B00B45CCC /* grade.swift */,
 				849945DC2761DE8800135446 /* More  */,
-				849945D72761DBDA00135446 /* Media */,
 				842A15F12754B26700F505E2 /* LessoneViedeo.swift */,
 				842A15F32754B29D00F505E2 /* LessonviedeoCell.swift */,
+				849945D72761DBDA00135446 /* Media */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,8 +232,6 @@
 			children = (
 				842A16582754F89600F505E2 /* KidsName.swift */,
 				84E531702754026E00B45CCC /* Test.swift */,
-				84E53158275394C400B45CCC /* TabVC.swift */,
-				849945DA2761DCD200135446 /* TabVC2.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,6 +239,8 @@
 		842A1675275743C700F505E2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				84E53158275394C400B45CCC /* TabBabyVC.swift */,
+				849945DA2761DCD200135446 /* TabChildVC2.swift */,
 				842A15FF2754E22B00F505E2 /* Service */,
 			);
 			path = Controller;
@@ -375,7 +372,6 @@
 				84E5313E275389E300B45CCC /* GoogleService-Info.plist */,
 				84E5312A2753880C00B45CCC /* AppDelegate.swift */,
 				84E5312C2753880C00B45CCC /* SceneDelegate.swift */,
-				84E531302753880C00B45CCC /* Main.storyboard */,
 				84E531332753880E00B45CCC /* Assets.xcassets */,
 				84E531352753880E00B45CCC /* LaunchScreen.storyboard */,
 				84E531382753880E00B45CCC /* Info.plist */,
@@ -486,7 +482,6 @@
 				845B119C2760A16900746173 /* nice.mp3 in Resources */,
 				84E5317C27540B3900B45CCC /* Assets.xcassets in Resources */,
 				8499461D276291BD00135446 /* evil.mp3 in Resources */,
-				84E531322753880C00B45CCC /* Main.storyboard in Resources */,
 				845B1193275FE30E00746173 /* Mario.mp3 in Resources */,
 				849945D92761DC7200135446 /* Vcode.mp4 in Resources */,
 			);
@@ -541,7 +536,7 @@
 				842A15EE2754ACF600F505E2 /* Dark.swift in Sources */,
 				84E5315D2753952500B45CCC /* LessonDetails.swift in Sources */,
 				845B11CE2761372400746173 /* DailyTaskVC.swift in Sources */,
-				849945DB2761DCD200135446 /* TabVC2.swift in Sources */,
+				849945DB2761DCD200135446 /* TabChildVC2.swift in Sources */,
 				84E531652753994400B45CCC /* Logs.swift in Sources */,
 				842A15F22754B26700F505E2 /* LessoneViedeo.swift in Sources */,
 				845B11C42761369700746173 /* TaskService.swift in Sources */,
@@ -549,7 +544,7 @@
 				842A15F42754B29D00F505E2 /* LessonviedeoCell.swift in Sources */,
 				842A15EA2754AB1E00F505E2 /* ThemeProtocol.swift in Sources */,
 				849945E72761F0F100135446 /* EdraakLearning.swift in Sources */,
-				84E53159275394C400B45CCC /* TabVC.swift in Sources */,
+				84E53159275394C400B45CCC /* TabBabyVC.swift in Sources */,
 				849945E52761F01D00135446 /* Crunchzilla.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,15 +559,6 @@
 				842A167327560A8E00F505E2 /* ar */,
 			);
 			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-		84E531302753880C00B45CCC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				84E531312753880C00B45CCC /* Base */,
-				842A166E27560A7C00F505E2 /* ar */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		84E531352753880E00B45CCC /* LaunchScreen.storyboard */ = {

@@ -9,7 +9,7 @@ import UIKit
 
 class NewTaskVC: UIViewController, UITextFieldDelegate {
     
-    lazy var studentNameTF: UITextField = {
+    lazy var taskNameTF: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.placeholder = " Write New Task ✍🏻 "
@@ -23,21 +23,21 @@ class NewTaskVC: UIViewController, UITextFieldDelegate {
         self.title = "ADD NEW NAME 🙋"
         view.backgroundColor = .quaternaryLabel
         
-        view.addSubview(studentNameTF)
+        view.addSubview(taskNameTF)
         NSLayoutConstraint.activate([
-            studentNameTF.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            studentNameTF.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            studentNameTF.heightAnchor.constraint(equalToConstant: 48),
-            studentNameTF.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -48)
+            taskNameTF.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            taskNameTF.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            taskNameTF.heightAnchor.constraint(equalToConstant: 48),
+            taskNameTF.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -48)
         ])
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        let name = studentNameTF.text ?? ""
+        let name = taskNameTF.text ?? ""
         let uuid = UUID().uuidString
 
-        TasksService.shared.addStudent(
-            student: Tasks(name: name, id: uuid)
+        TasksService.shared.addTask(
+            task: Tasks(name: name, id: uuid)
         )
         
         dismiss(animated: true, completion: nil)

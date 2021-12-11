@@ -22,7 +22,7 @@
                                     <constraint firstAttribute="height" constant="283" id="FEN-tG-iXi"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KIDs Logic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zV1-XO-1vc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KIDs Logic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zV1-XO-1vc">
                                 <rect key="frame" x="20" y="593" width="354" height="149"/>
                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="50"/>
                                 <color key="textColor" systemColor="linkColor"/>
