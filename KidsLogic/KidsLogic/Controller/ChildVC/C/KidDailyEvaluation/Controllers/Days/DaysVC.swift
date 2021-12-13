@@ -123,7 +123,7 @@ extension DaysVC: UITableViewDelegate, UITableViewDataSource {
         let day = days[indexPath.row]
         
         let navigationController = UINavigationController(
-            rootViewController: DayAttendanceVC(dayId: day.id)
+            rootViewController: DayTasksVC(dayId: day.id)
         )
         navigationController.navigationBar.prefersLargeTitles = true
         

@@ -40,7 +40,7 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
     let label = UITextField()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.placeholder = (NSLocalizedString("name", comment: ""))
-      label.textColor = .gray
+      label.textColor = .systemGray6
       label.borderStyle = .bezel
       label.textAlignment = .center
     return label
@@ -58,7 +58,7 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
     let label = UITextField()
     label.translatesAutoresizingMaskIntoConstraints = false
       label.placeholder = (NSLocalizedString("status", comment: ""))
-      label.textColor = .gray
+      label.textColor = .systemGray6
       label.borderStyle = .bezel
       label.textAlignment = .center
     return label

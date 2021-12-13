@@ -11,6 +11,7 @@ import Foundation
 
 import UIKit
 
+
 class MoreVC: UIViewController {
     
     lazy var imageView: UIImageView = {

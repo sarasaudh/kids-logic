@@ -9,7 +9,7 @@ import Foundation
 
 import UIKit
 
-class DayAttendanceVC: UIViewController {
+class DayTasksVC: UIViewController {
 
     var dayId: String
     let cellId = "DayTasksCell"
@@ -99,7 +99,7 @@ class DayAttendanceVC: UIViewController {
     }
 }
 
-extension DayAttendanceVC: UITableViewDataSource, UITableViewDelegate {
+extension DayTasksVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count
     }

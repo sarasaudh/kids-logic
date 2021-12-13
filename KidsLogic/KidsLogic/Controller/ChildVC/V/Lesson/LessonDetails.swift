@@ -28,7 +28,7 @@ class LessonDetailVC: UIViewController {
     
     private let bTitle: UILabel = {
         let title = UILabel()
-        title.textColor     =  .blue
+        title.textColor     =  .systemOrange
         title.font          = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 27, weight: .bold))
         title.textAlignment = .center
         return title
@@ -36,9 +36,9 @@ class LessonDetailVC: UIViewController {
     
     private let bDescription: UITextView = {
         let description             = UITextView()
-        description.textColor       =  UIColor.systemIndigo
+        description.textColor       =  UIColor.systemGray6
         description.font            = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 30, weight: .regular))
-        description.textAlignment   = .center
+        description.textAlignment   = .justified
         description.backgroundColor = UIColor(named: "DarkColor")
         description.isEditable = false
         return description

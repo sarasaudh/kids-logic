@@ -19,6 +19,7 @@
 
 //TabVC
 "profile" = "الملف الشخصي";
+"Home" = "الرئيسية";
 //"Users" = "المستخدمين";
 "Lesson" = "الدروس";
 "Logic KID" = "الدروس";
@@ -53,6 +54,8 @@
 "CSS" = "CSS";
 
 "DEBUG" = "DEBUG";
+
+
 
 //الدروس
 "1: Think of it this way: many introductory lessons introduce algorithms as mathematical “recipes”; and like a recipe, algorithms contain clear steps working towards an established result. " = "فكر في الأمر بهذه الطريقة: تقدم العديد من الدروس التمهيدية الخوارزميات باعتبارها (وصفات) رياضية ؛ ومثل الوصفة ، تحتوي الخوارزميات على خطوات واضحة تعمل على تحقيق نتيجة ثابتة.";
