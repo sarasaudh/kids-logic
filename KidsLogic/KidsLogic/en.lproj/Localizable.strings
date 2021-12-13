@@ -10,6 +10,7 @@
 "Register" = "Register Now !";
 "email" = "Email...";
 "password" = "Password...";
+"Your Name" = "Your Name" ;
 //Profile
 "name" = "Your Name 🧒🏻";
 "status" = "Your Status ✨";
@@ -28,8 +29,12 @@
 "Self evaluation🔖 " = "self evaluation 🔖 " ;
 "CrunchZilla 📟 " = "CrunchZilla 📟 " ;
 "EdrakLearning 💎" = "EdrakLearning 💎" ;
+//KidDailyEvaluation
 "NEW Task➕" = "NEW Task➕" ;
 "NEW Day 🕚" = "NEW Day 🕚" ;
+"Quiz 🧩" = "Quiz 🧩" ;
+"Tasks" = "Tasks" ;
+"Days" = "Days" ;
 //Lessons
 "ALGORITHM" = "ALGORITHM";
 "1: Think of it this way: many introductory lessons introduce algorithms as mathematical “recipes”; and like a recipe, algorithms contain clear steps working towards an established result. " = "1: Think of it this way: many introductory lessons introduce algorithms as mathematical “recipes”; and like a recipe, algorithms contain clear steps working towards an established result. " ;

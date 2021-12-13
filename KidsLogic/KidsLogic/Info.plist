@@ -11,27 +11,25 @@
 			<key>UIWindowSceneSessionRoleApplication</key>
 			<array>
 				<dict>
-					<key>UISceneConfigurationName</key>
-					<string>Default Configuration</string>
-					<key>UISceneDelegateClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
-					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
-					<key>LSApplicationQueriesSchemes</key>
-					<array>
-						<string>second1</string>
-					</array>
 					<key>CFBundleURLTypes</key>
 					<array>
 						<dict>
+							<key>CFBundleURLName</key>
+							<string></string>
 							<key>CFBundleURLSchemes</key>
 							<array>
 								<string>primary1</string>
 							</array>
-							<key>CFBundleURLName</key>
-							<string></string>
 						</dict>
 					</array>
+					<key>LSApplicationQueriesSchemes</key>
+					<array>
+						<string>second1</string>
+					</array>
+					<key>UISceneConfigurationName</key>
+					<string>Default Configuration</string>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 				</dict>
 			</array>
 		</dict>
