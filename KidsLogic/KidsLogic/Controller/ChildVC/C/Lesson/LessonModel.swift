@@ -45,7 +45,7 @@ class LogicPosts {
 
         Logic(image: "11", caption: "🐸", title: (NSLocalizedString("HEX COLOR",comment: "")), desc: (NSLocalizedString("11:Hex colors are a way of representing colors from various color models through hexadecimal values. A hexadecimal color follows the format #RRGGBB, where RR is red, GG is green, and BB is blue. These hexadecimal integers can be in a range of 00 to FF to specify the intensity of the color.",comment: "")) , author: "🐼", lessonNum: "11"),
 
-        Logic(image: "12", caption: "🦨", title: (NSLocalizedString("HEIGHT",comment: "")), desc:(NSLocalizedString("12: A box's backgrounds, but not its border-image, are clipped to the appropriate curve (as determined by ‘background-clip’). Other effects that clip to the border or padding edge (such as ‘overflow’ other than ‘visible’) also must clip to the curve. The content of replaced elements is always trimmed to the content edge curve. Also, the area outside the curve of the border edge does not accept mouse events on behalf of the element.",comment: "")), author: "🐼", lessonNum: "12"),
+        Logic(image: "12", caption: "🦨", title: (NSLocalizedString("HEIGHT",comment: "")), desc:(NSLocalizedString("12: how tall an element or opject is",comment: "")), author: "🐼", lessonNum: "12"),
 
         Logic(image: "13", caption: "🐼", title: (NSLocalizedString("FUNCTION",comment: "")), desc: (NSLocalizedString("13:Functions are self contained modules of code that accomplish a specific task. Functions usually take in data, process it, and return a result. Once a function is written, it can be used over and over and over again. Functions can be called from the inside of other functions.",comment: "")), author: "🐼", lessonNum: "13"),
 //
@@ -79,7 +79,7 @@ class LogicPosts {
 //
 //        Logic(image: "90", caption: "🤖", title: (NSLocalizedString("STRING",comment: "")), desc: (NSLocalizedString("27: In IT, a bug refers to an error, fault or flaw in any computer program or a hardware system. A bug produces unexpected results or causes a system to behave unexpectedly. In short it is any behavior or result that.",comment: "")),author: "🐼", lessonNum: "27"),
 
-        Logic(image: "🐼", caption: "⏳", title: "", desc: "SOON",author: "🐼", lessonNum: " Good job ✅")
+        Logic(image: "exl", caption: "⏳", title: "", desc: "SOON",author: "🐼", lessonNum: " Good job ✅")
 
     ]
     

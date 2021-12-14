@@ -96,6 +96,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
 
     @objc private func LinkPressed() {
-        UIApplication.shared.openURL(NSURL(string: "https://sites.google.com/view/sarasaudh/home")! as URL)
+        UIApplication.shared.openURL(NSURL(string: "https://sites.google.com/view/kidslogic/home")! as URL)
        }
 }

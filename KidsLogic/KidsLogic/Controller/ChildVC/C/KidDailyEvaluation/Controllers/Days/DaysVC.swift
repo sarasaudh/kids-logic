@@ -82,7 +82,7 @@ extension DaysVC: UITableViewDelegate, UITableViewDataSource {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "DayCell")
         
         let day = days[indexPath.row]
-        let pStudentCount = day.pStudents
+        let pStudentCount = day.pTasks 
             .count
         let aStudentCount = taskCount - pStudentCount
         

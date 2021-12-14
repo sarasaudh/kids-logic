@@ -39,7 +39,7 @@ lazy var honyboo: UIButton = {
 //    btn.setTitle(NSLocalizedString("", comment: ""), for: .normal)
     btn.setImage(UIImage(named: "h"), for: UIControl.State.normal)
     btn.setTitleColor(.white, for: .normal)
-    btn.backgroundColor = UIColor(#colorLiteral(red: 0.7047290802, green: 0.4141619802, blue: 0.5999490619, alpha: 0.8470588235))
+//    btn.backgroundColor = UIColor(#colorLiteral(red: 0.7047290802, green: 0.4141619802, blue: 0.5999490619, alpha: 0.8470588235))
     btn.layer.cornerRadius = 20
     btn.layer.masksToBounds = true
     btn.addTarget(self, action: #selector(honyBeeTapped), for: .touchUpInside)
@@ -67,7 +67,7 @@ lazy var honyboo: UIButton = {
 //        btn.setTitle(NSLocalizedString("Golden Fish", comment: ""), for: .normal)
         btn.setImage(UIImage(named: "startFish"), for: UIControl.State.normal)
         btn.setTitleColor(.white, for: .normal)
-        btn.backgroundColor = UIColor(#colorLiteral(red: 0.3279541135, green: 0.6508837342, blue: 0.8242474198, alpha: 0.8470588235) )
+//        btn.backgroundColor = UIColor(#colorLiteral(red: 0.3279541135, green: 0.6508837342, blue: 0.8242474198, alpha: 0.8470588235) )
         
         btn.layer.cornerRadius = 20
         btn.layer.masksToBounds = true
@@ -79,8 +79,15 @@ lazy var honyboo: UIButton = {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.setGradiantView3()
-        view.addSubview(imageView)
+        
+                   let backgroundImage2 = UIImageView(frame: UIScreen.main.bounds)
+            backgroundImage2.image = UIImage(named: "BK")
+            backgroundImage2.contentMode = UIView.ContentMode.scaleAspectFill
+                   self.view.insertSubview(backgroundImage2, at: 0)
+         
+                  
+//        view.setGradiantView3()
+//        view.addSubview(imageView)
         view.addSubview(honyboo)
         view.addSubview(honyGameName)
 //        view.addSubview(game2)
@@ -89,18 +96,18 @@ lazy var honyboo: UIButton = {
         view.addSubview(game3)
        
         NSLayoutConstraint.activate([
+//
+//            imageView.topAnchor.constraint(equalTo: view.topAnchor),
+//            imageView.widthAnchor.constraint(equalToConstant: 300),
+//            imageView.heightAnchor.constraint(equalToConstant:100),
+//            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor) ,
+//
             
-            imageView.topAnchor.constraint(equalTo: view.topAnchor),
-            imageView.widthAnchor.constraint(equalToConstant: 300),
-            imageView.heightAnchor.constraint(equalToConstant:300),
-            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor) ,
-            
-            
-            honyboo.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant:20),
+            honyboo.topAnchor.constraint(equalTo: view.topAnchor, constant:350),
             honyboo.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             honyboo.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
             honyboo.heightAnchor.constraint(equalToConstant: 100),
-           
+            honyboo.widthAnchor.constraint(equalToConstant: 40),
         
             honyGameName.topAnchor.constraint(equalTo: honyboo.bottomAnchor, constant:10),
             honyGameName.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
@@ -108,11 +115,12 @@ lazy var honyboo: UIButton = {
             
            
             
-            game3.topAnchor.constraint(equalTo: honyGameName.bottomAnchor, constant: 60),
+            game3.topAnchor.constraint(equalTo: honyGameName.bottomAnchor, constant: 120),
             game3.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             game3.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
             game3.heightAnchor.constraint(equalToConstant: 100),
-      
+            game3.widthAnchor.constraint(equalToConstant: 50),
+            
             GoldenFishName.topAnchor.constraint(equalTo: game3.bottomAnchor, constant:10),
             GoldenFishName.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             GoldenFishName.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),

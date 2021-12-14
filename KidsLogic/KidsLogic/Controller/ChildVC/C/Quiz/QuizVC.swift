@@ -105,7 +105,7 @@ class QuizviewController: UIViewController {
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle(NSLocalizedString("C ", comment: ""), for: .normal)
         btn.setTitleColor(.white, for: .normal)
-        btn.backgroundColor = UIColor( #colorLiteral(red: 1, green: 0.8552523255, blue: 0.642039299, alpha: 1))
+        btn.backgroundColor = UIColor( #colorLiteral(red: 0.689653337, green: 0.6372394562, blue: 0.293028295, alpha: 1) )
         btn.tag = 3
         btn.layer.cornerRadius = 20
         btn.layer.masksToBounds = true
@@ -119,7 +119,7 @@ class QuizviewController: UIViewController {
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle(NSLocalizedString(" D", comment: ""), for: .normal)
         btn.setTitleColor(.white, for: .normal)
-        btn.backgroundColor = UIColor( #colorLiteral(red: 0.3914309144, green: 0.9054350257, blue: 0.9928495288, alpha: 1))
+        btn.backgroundColor = UIColor(#colorLiteral(red: 0.5469058156, green: 0.43541646, blue: 0.6977834105, alpha: 1) )
         btn.tag = 4
         btn.layer.cornerRadius = 20
         btn.layer.masksToBounds = true

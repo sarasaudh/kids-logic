@@ -64,7 +64,7 @@ class NewDayVC: UIViewController {
             day: Day(
                 id: uuid,
                 timestamp: Timestamp(date: date),
-                pStudents: []
+                pTasks: []
             )
         )
         

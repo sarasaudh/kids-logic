@@ -72,7 +72,7 @@
 "BUG" = "خطأ برمجي";
 "4: In IT, a bug refers to an error, fault or flaw in any computer program or a hardware system. A bug produces unexpected results or causes a system to behave unexpectedly. In short it is any behavior or result that." = "في تكنولوجيا المعلومات ، يشير الخطأ إلى خطأ أو خطأ أو عيب في أي برنامج كمبيوتر أو نظام أجهزة. ينتج عن الخطأ نتائج غير متوقعة أو يتسبب في تصرف النظام بشكل غير متوقع. باختصار هو أي سلوك أو نتيجة ذلك." ;
 
-"CSS" = "صفحات التنسيق النمطية";
+"CSS" = " التنسيق النمطي";
 "5: CSS, which stands for Cascading Style Sheets, is a language used alongside HTML to separate a webpage's content (the HTML part) from the design and formatting (the CSS part). It defines fonts, colors, margins, lines, height, width, backgrounds, images, positions and other visual aspects of a webpage, something which HTML was not originally designed to do. Simply put, CSS decides how your HTML is displayed." = "
  Cascading Style Sheets)‏ اختصارًا: سي إس إس (بالإنجليزية: CSS)‏؛ هي لغة تنسيق لصفحات الويب تهتم بشكل وتصميم المواقع، صممت خصيصا لفصل التنسيق (الألوان - الخطوط - الأزرار.. عن محتوى المستند المكتوب (بلغة مثلا إتش تي إم إل HTML) وينطبق ذلك على الألوان والخطوط والصور والخلفيات التي تستخدم في الصفحات، بمرونة وسهولة تامة.
 هذه التقنية تعنى بالمظهر الكلي لصفحات مواقع الويب من ألوان وصور وغيره
@@ -86,18 +86,18 @@
 "DEFAULT"= "افتراضي";
 "7:Default values are standards values that are universal to all instances of the device or model and intended to make the device as accessible as possible (out of the box) without necessitating a lengthy configuration process prior to use. The user only has to modify the default settings according to their personal preferences. In many devices, the user has the option to restore these default settings for one or all options. Such an assignment makes the choice of that setting or value more likely, this is called the default effect." = "القيم الافتراضية هي قيم معيارية عامة لجميع مثيلات الجهاز أو الطراز وتهدف إلى جعل الجهاز متاحًا قدر الإمكان خارج الصندوق دون الحاجة إلى عملية تكوين مطولة قبل الاستخدام. يتعين على المستخدم فقط تعديل الإعدادات الافتراضية وفقًا لتفضيلاته الشخصية. في العديد من الأجهزة ، يكون لدى المستخدم خيار استعادة هذه الإعدادات الافتراضية لواحد أو لجميع الخيارات. مثل هذا التخصيص يجعل اختيار هذا الإعداد أو القيمة أكثر احتمالًا ، وهذا ما يسمى التأثير الافتراضي.";
 
-"HTML5" = "  لغة تكوين صفحات مواقع الويب";
+"HTML5" = " تكوين صفحات الويب";
 "8: HTML5 is a markup language used for structuring and presenting content on the World Wide Web. It is the fifth and last[3] major HTML version that is a World Wide Web Consortium (W3C) recommendation. The current specification is known as the HTML Living Standard. It is maintained by the Web Hypertext Application Technology Working Group (WHATWG), a consortium of the major browser vendors (Apple, Google, Mozilla, and Microsoft). " = " تش تي إم إل (بالإنجليزية: Hyper Text Markup Language)‏ وتختصر إلى HTML، وهي لغة تكوين صفحات مواقع الويب.
 و في الإصدار إتش تي إم إل 5 الجديد، يتم تقديم عدد من العناصر الجديدة والتي تسهل من فكرة تكوين الصفحات، حسب ما نقوم به يدوياً في XHTML 1.0 بالإضافة إلى تسهيل الأمور على محركات البحث في قراءة الصفحات ومعرفة ما هي أجزاء الصفحة الفعلية (الجزء العلوي (Header)، القائمة (Navigation) أو (nav)، الجزء الرئيسي (Main)، المحتوى (Sections) والجزء السفلي (Footer).
 كما توفر إتش تي إم إل 5 عدد من بيئات العمل المختلفة لتكوين الرسوميات والفيديو والعديد من المميزات التي تسهل الكثير مما يتم القيام به حالياً.
 " ;
 
-"HTML" = "لغة ترميز النص التشعيبي";
+"HTML" = "ترميز النص التشعيبي";
 "9: The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document." = "yperText Markup Language)‏ (اختصار إتش تي إم إل HTML)، هي لغة ترميز تستخدم في إنشاء وتصميم صفحات ومواقع الويب، وتعتبر هذه اللّغة من أقدم اللّغات وأوسعها استخداما في تصميم صفحات الويب. HTML هيكل صفحة الويب وتعطي متصفّح الإنترنت وصفا لكيفيّة عرضه لمحتوياتها، يمكن أن تساعده تقنيات مثل أوراق الأنماط المتتالية (CSS) ولغات البرمجة النصية مثل جافا سكريبت تستقبل متصفحات الويب مستندات HTML من خادم الويب أو من نظام الملفات وتعرضها، ووظيفة لغة HTML هي وصف بنية صفحات الويب هيكليًا.
 العناصر في HTML هي اللبنة الأساسية لبناء مستندات HTML،
 " ;
 
-"HOVER" = "يحوم";
+"HOVER" = "HOVER";
 "10:                                              He hover effect is the alteration of the appearance of a component of the graphical interface once the mouse is hovering over it, even if it has not been selected. For example, if you hover your mouse over this word you will see that it changes color, giving you to understand that it will refer you to another link if you click on it, but you still cannot visualize what is hidden behind this word. All the user will need to visualize your effect is a mouse. It is very original when we place this effect in the caption. The e fecto hover t It is also known as hovering." = "
 تأثير التمرير هو تغيير مظهر أحد مكونات الواجهة الرسومية بمجرد تحريك الماوس فوقه ، حتى لو لم يتم تحديده. على سبيل المثال ، إذا قمت بتمرير الماوس فوق هذه الكلمة ، فسترى أنها تغير لونها ، مما يتيح لك فهم أنها ستحيلك إلى ارتباط آخر إذا قمت بالنقر فوقه ، ولكن لا يزال يتعذر عليك تصور ما هو مخفي وراء هذه الكلمة. كل ما سيحتاجه المستخدم لتصور تأثيرك هو الماوس. إنه أصلي للغاية عندما نضع هذا التأثير في التسمية التوضيحية. يُعرف أيضًا باسم hovering.";
 
@@ -105,7 +105,7 @@
 "11:Hex colors are a way of representing colors from various color models through hexadecimal values. A hexadecimal color follows the format #RRGGBB, where RR is red, GG is green, and BB is blue. These hexadecimal integers can be in a range of 00 to FF to specify the intensity of the color." = "الألوان السداسية هي طريقة لتمثيل الألوان من نماذج الألوان المختلفة من خلال القيم السداسية العشرية. يتبع اللون السداسي العشري التنسيق #RRGGBB ، حيث يكون RR أحمر ، GG أخضر ، BB أزرق. يمكن أن تكون هذه الأعداد الصحيحة السداسية العشرية في نطاق من 00 إلى FF لتحديد كثافة اللون." ;
 
 "HEIGHT" = "الارتفاع";
-"12: how tall an element or opject is" = "ما هو ارتفاع العنصر أو الكائن" ;
+"12: how tall an element or opject is" = " هو ارتفاع العنصر أو الكائن" ;
 
 "FUNCTION" = "دالة" ;
 "13:Functions are self contained modules of code that accomplish a specific task. Functions usually take in data, process it, and return a result. Once a function is written, it can be used over and over and over again. Functions can be called from the inside of other functions." = "الوظائف هي وحدات قائمة بذاتها من التعليمات البرمجية التي تنجز مهمة محددة. عادةً ما تأخذ الوظائف البيانات وتعالجها و تعيد النتيجة. بمجرد كتابة الوظيفة ، يمكن استخدامها مرارًا وتكرارًا. يمكن استدعاء الوظائف من داخل وظائف أخرى." ;

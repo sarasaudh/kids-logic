@@ -95,9 +95,9 @@ class LessonDetailVC: UIViewController {
         
         Lvoice.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(Lvoice)
-        Lvoice.topAnchor.constraint(equalTo: bImage.bottomAnchor, constant: 20).isActive        = true
-        Lvoice.leadingAnchor.constraint(equalTo: view.trailingAnchor, constant: 19).isActive     = true
-        Lvoice.trailingAnchor.constraint(equalTo: bTitle.trailingAnchor, constant: -19).isActive  = true
+        Lvoice.topAnchor.constraint(equalTo: bImage.bottomAnchor ).isActive        = true
+        Lvoice.leadingAnchor.constraint(equalTo: view.trailingAnchor).isActive     = true
+        Lvoice.trailingAnchor.constraint(equalTo: bTitle.trailingAnchor).isActive  = true
         Lvoice.heightAnchor.constraint(equalToConstant: 80).isActive                            = true
         Lvoice.widthAnchor.constraint(equalToConstant: 80).isActive = true
         

@@ -240,9 +240,9 @@
 		845B11C02761362800746173 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				845B11CB2761370100746173 /* TaskTabVc.swift */,
 				845B11C22761364D00746173 /* DailyTask */,
 				845B11C12761364500746173 /* Days */,
-				845B11CB2761370100746173 /* TaskTabVc.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -333,7 +333,6 @@
 		8479B8CC2765F6CB00AD8CA7 /* V */ = {
 			isa = PBXGroup;
 			children = (
-				8479B8C32765F55300AD8CA7 /* Lesson */,
 				84E531682753A9BF00B45CCC /* Video.swift */,
 			);
 			path = V;
@@ -346,6 +345,7 @@
 				849945E02761DFD200135446 /* Games for child.swift */,
 				84E5317D2754158700B45CCC /* More for child .swift */,
 				8479B8D2276660F400AD8CA7 /* MapVC.swift */,
+				8479B8C32765F55300AD8CA7 /* Lesson */,
 				84E531722754075800B45CCC /* Quiz */,
 				8479B8D12765F80C00AD8CA7 /* LessonCareon */,
 				845B11BD2761357C00746173 /* KidDailyEvaluation */,

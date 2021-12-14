@@ -6,12 +6,12 @@
 //
 import WebKit
 import Foundation
-
+import FirebaseFirestore
 import UIKit
 import SwiftUI
 
 class MoreVC2: UIViewController {
-    
+    var score = 0
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "kidPro")
@@ -90,6 +90,15 @@ lazy var levelOne: UIButton = {
         lbl.text = NSLocalizedString("Swipe To Carton 📽 ", comment: "")
         return lbl
     }()
+//    var scorelabel: UILabel = {
+//       let lbl = UILabel()
+//        lbl.textColor =  .lightGray
+////        lbl.backgroundColor = UIColor(#colorLiteral(red: 0.715143621, green: 0.4925160408, blue: 0.5837199092, alpha: 1))
+//         lbl.font.withSize(50)
+//        lbl.translatesAutoresizingMaskIntoConstraints = false
+//        lbl.text = NSLocalizedString("your score \(showScore) ", comment: "")
+//        return lbl
+//    }()
     let MapImage:UIImage? = UIImage(named: "map")
     lazy var MapButton: UIButton = {
         let button = UIButton (type: .system)
@@ -170,7 +179,7 @@ lazy var levelOne: UIButton = {
         
 //        view.addSubview(EdrakLearning)
         view.addSubview(Swipelabel)
-
+//        view.addSubview(scorelabel)
       
         NSLayoutConstraint.activate([
             
@@ -178,9 +187,14 @@ lazy var levelOne: UIButton = {
             Swipelabel.topAnchor.constraint(equalTo: levelthree.bottomAnchor, constant: 50),
             Swipelabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             Swipelabel.heightAnchor.constraint(equalToConstant: 20),
-            
-          
         ])
+//            NSLayoutConstraint.activate([
+//                scorelabel.topAnchor.constraint(equalTo: Swipelabel.bottomAnchor, constant: 50),
+//                scorelabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//                scorelabel.heightAnchor.constraint(equalToConstant: 20),
+                
+      
+            
         view.addSubview(MapButton)
         NSLayoutConstraint.activate([
      
@@ -200,7 +214,22 @@ lazy var levelOne: UIButton = {
           
     }
      
-            
+//    @objc func showScore() {
+//        Firestore
+//            .firestore()
+//            .collection("users")
+//            .whereField("score", isEqualTo: "user")
+//            .addSnapshotListener { sanpshot, error in
+//                if error != nil {
+//                    print(error)
+//                    return
+//                }
+//                let saved = sanpshot?.documents.first?.data()
+//                let singleValue = (saved!["name"] ?? "nothing")
+//                self.scorelabel.text = "\(String(describing: singleValue))"
+//            }
+//    }
+
 @objc private func openQuiz() {
     let quizVC = QuizviewController()
     quizVC.modalPresentationStyle = .fullScreen

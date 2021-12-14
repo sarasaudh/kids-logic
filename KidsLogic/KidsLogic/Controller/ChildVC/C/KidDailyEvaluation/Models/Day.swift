@@ -12,7 +12,7 @@ import FirebaseFirestore
 struct Day {
     let id: String
     let timestamp: Timestamp
-    var pStudents: Array<String>
+    var pTasks: Array<String>
     
     func getNiceDate() -> String {
         let dateFormatter = DateFormatter()

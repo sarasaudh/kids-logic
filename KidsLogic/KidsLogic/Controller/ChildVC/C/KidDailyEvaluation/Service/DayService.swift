@@ -16,20 +16,20 @@ class DaysService {
     
     // swich student status
     func switchStudentStatus(day: Day, studentId: String) {
-        let isStudentPresent = day.pStudents.contains(studentId)
+        let isStudentPresent = day.pTasks.contains(studentId)
         
         if isStudentPresent {
-            let newPStudents = day.pStudents.filter { id in id != studentId }
+            let newPStudents = day.pTasks.filter { id in id != studentId }
             
             daysCollection.document(day.id).updateData([
-                "pStudents": newPStudents
+                "pTasks": newPStudents
             ])
         } else {
-            var newPStudents = day.pStudents
+            var newPStudents = day.pTasks
             newPStudents.append(studentId)
             
             daysCollection.document(day.id).updateData([
-                "pStudents": newPStudents
+                "pTasks": newPStudents
             ])
         }
     }
@@ -50,7 +50,7 @@ class DaysService {
                 let day = Day(
                     id: (data["id"] as? String) ?? "No id",
                     timestamp: (data["timestamp"] as? Timestamp) ?? Timestamp(),
-                    pStudents: (data["pStudents"] as? [String]) ?? []
+                    pTasks: (data["pTasks"] as? [String]) ?? []
                 )
                 days.append(day)
             }
@@ -73,7 +73,7 @@ class DaysService {
             let day = Day(
                 id: (data["id"] as? String) ?? "No id",
                 timestamp: (data["timestamp"] as? Timestamp) ?? Timestamp(),
-                pStudents: (data["pStudents"] as? [String]) ?? []
+                pTasks: (data["pTasks"] as? [String]) ?? []
             )
             completion(day)
         }
@@ -84,7 +84,7 @@ class DaysService {
         daysCollection.document(day.id).setData([
             "timestamp": day.timestamp,
             "id": day.id,
-            "pStudents": day.pStudents,
+            "pTasks": day.pTasks,
         ])
     }
     

@@ -80,11 +80,11 @@ class DayTasksVC: UIViewController {
     }
     
     func checkTaskDone(taskId: String) -> Bool {
-        return day?.pStudents.contains(taskId) ?? false
+        return day?.pTasks.contains(taskId) ?? false
     }
     
     func getPStudentsCount() -> Int {
-        return day?.pStudents.count ?? 0
+        return day?.pTasks.count ?? 0
     }
     
     func getAStudentsCount() -> Int {
