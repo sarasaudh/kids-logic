@@ -53,6 +53,22 @@ lazy var GameButton: UIButton = {
         return level3
     }()
 
+    lazy var baackButton: UIButton = {
+        let btn = UIButton()
+        
+        
+        btn.translatesAutoresizingMaskIntoConstraints = false
+//        btn.setTitle(NSLocalizedString("Back", comment: ""), for: .normal)
+        btn.setImage(UIImage(named: "back"), for: UIControl.State.normal)
+        btn.setTitleColor(.red , for: .normal)
+//        level3.backgroundColor = UIColor(  #colorLiteral(red: 0.7520335913, green: 0.6473677754, blue: 0.5675167441, alpha: 1) )
+        
+//        level3.layer.cornerRadius = 20
+//        level3.layer.masksToBounds = true
+        btn.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+        btn.titleLabel?.font = .systemFont(ofSize: 40, weight: .medium)
+        return btn
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -91,10 +107,21 @@ lazy var GameButton: UIButton = {
             CartonButton.widthAnchor.constraint(equalToConstant: 300),
         ])
 
+        
+        view.addSubview(baackButton)
+        NSLayoutConstraint.activate([
+            
+            baackButton.topAnchor.constraint(equalTo: CartonButton.bottomAnchor, constant: 100),
+            baackButton.centerXAnchor.constraint(equalTo: view.centerXAnchor) ,
+            baackButton.heightAnchor.constraint(equalToConstant: 50),
+            baackButton.widthAnchor.constraint(equalToConstant: 50),
+        ])
+        
+        
             }
     
     @objc private func GameButtonTapped() {
-let vc = Games()
+let vc = Games2()
 //        let vc = GameVC()
         vc.modalPresentationStyle = .automatic
         self.present(vc, animated: true, completion: nil)
@@ -119,12 +146,15 @@ let vc = Games()
         let vc = TaskTabVC()
         vc.modalPresentationStyle = .pageSheet
         self.present(vc, animated: true, completion: nil)
+        
     }
 
+    @objc private func backButtonTapped() {
+    self.dismiss(animated: true, completion: nil)
     }
 
 
- 
+}
 
 
 

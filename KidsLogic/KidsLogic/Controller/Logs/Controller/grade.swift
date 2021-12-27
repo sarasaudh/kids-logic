@@ -47,14 +47,14 @@ class GradeVC: UIViewController {
          lbl.shadowColor = .black
           lbl.font.withSize(100)
          lbl.translatesAutoresizingMaskIntoConstraints = false
-         lbl.text = NSLocalizedString("How Old Are You ?", comment: "")
+//         lbl.text = NSLocalizedString("How Old Are You ?", comment: "")
           return lbl
             
     }()
 lazy var levelOne: UIButton = {
     let level1 = UIButton()
     level1.translatesAutoresizingMaskIntoConstraints = false
-    level1.setTitle(NSLocalizedString("Baby", comment: ""), for: .normal)
+    level1.setTitle(NSLocalizedString("Games", comment: ""), for: .normal)
     level1.setTitleColor(.white, for: .normal)
     level1.backgroundColor = UIColor(#colorLiteral(red: 0.8162642121, green: 0.6648833156, blue: 0.7066509128, alpha: 1))
     level1.layer.cornerRadius = 20
@@ -69,7 +69,7 @@ lazy var levelOne: UIButton = {
         
         
         level2.translatesAutoresizingMaskIntoConstraints = false
-        level2.setTitle(NSLocalizedString("Child", comment: ""), for: .normal)
+        level2.setTitle(NSLocalizedString("Lessons", comment: ""), for: .normal)
         level2.setTitleColor(.white, for: .normal)
         level2.backgroundColor = UIColor(#colorLiteral(red: 0.8785117269, green: 0.7318091393, blue: 0.647349894, alpha: 1))
         level2.addTarget(self, action: #selector(level2ButtonTapped), for: .touchUpInside)
@@ -82,7 +82,7 @@ lazy var levelOne: UIButton = {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.setGradiantView2()
+        view.setGradiantView3()
         
         
         //Constraint imageView
@@ -94,14 +94,14 @@ lazy var levelOne: UIButton = {
             imageView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             imageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
             imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
-            imageView.widthAnchor.constraint(equalToConstant: 200),
-            imageView.heightAnchor.constraint(equalToConstant: 200),
+            imageView.widthAnchor.constraint(equalToConstant: 150),
+            imageView.heightAnchor.constraint(equalToConstant: 150),
         ])
         
         // constrant label
         view.addSubview(levelsLabel)
         NSLayoutConstraint.activate([
-            levelsLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10),
+            levelsLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 3),
 
             levelsLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
             levelsLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
@@ -113,15 +113,15 @@ lazy var levelOne: UIButton = {
         //Constraint loginButton
         view.addSubview(levelOne)
         NSLayoutConstraint.activate([
-            levelOne.topAnchor.constraint(equalTo: levelsLabel.bottomAnchor, constant: 20),
+            levelOne.topAnchor.constraint(equalTo: levelsLabel.bottomAnchor, constant: 10),
 
             levelOne.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -90),
             levelOne.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
-            levelOne.heightAnchor.constraint(equalToConstant: 50),
+            levelOne.heightAnchor.constraint(equalToConstant: 70),
         ])
         view.addSubview(level1Image)
         NSLayoutConstraint.activate([
-            level1Image.topAnchor.constraint(equalTo: levelsLabel.bottomAnchor, constant: 5),
+            level1Image.topAnchor.constraint(equalTo: levelsLabel.bottomAnchor, constant: 1),
 
             level1Image.rightAnchor.constraint(equalTo: levelOne.rightAnchor, constant:60),
 //            level1Image.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
@@ -135,7 +135,7 @@ lazy var levelOne: UIButton = {
 
             levelTwo.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -90),
             levelTwo.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
-            levelTwo.heightAnchor.constraint(equalToConstant: 50),
+            levelTwo.heightAnchor.constraint(equalToConstant: 70),
         ])
         view.addSubview(level2Image)
         NSLayoutConstraint.activate([
@@ -148,7 +148,7 @@ lazy var levelOne: UIButton = {
             }
     
     @objc private func level1ButtonTapped() {
-        let vc = TabVC()
+        let vc = HomeVC()
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }

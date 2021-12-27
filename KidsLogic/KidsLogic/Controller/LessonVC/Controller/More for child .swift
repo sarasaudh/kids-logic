@@ -22,18 +22,18 @@ class MoreVC2: UIViewController {
         
         return imageView
     }()
-lazy var levelOne: UIButton = {
-    let level1 = UIButton()
-    level1.translatesAutoresizingMaskIntoConstraints = false
-    level1.setTitle(NSLocalizedString("GAME 🎮", comment: ""), for: .normal)
-    level1.setTitleColor(.white, for: .normal)
-    level1.backgroundColor = UIColor(#colorLiteral(red: 0.7047290802, green: 0.4141619802, blue: 0.5999490619, alpha: 0.8470588235))
-    level1.layer.cornerRadius = 20
-    level1.layer.masksToBounds = true
-    level1.addTarget(self, action: #selector(GameButtonTapped), for: .touchUpInside)
-    level1.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
-    return level1
-}()
+//lazy var levelOne: UIButton = {
+//    let level1 = UIButton()
+//    level1.translatesAutoresizingMaskIntoConstraints = false
+//    level1.setTitle(NSLocalizedString("GAME 🎮", comment: ""), for: .normal)
+//    level1.setTitleColor(.white, for: .normal)
+//    level1.backgroundColor = UIColor(#colorLiteral(red: 0.7047290802, green: 0.4141619802, blue: 0.5999490619, alpha: 0.8470588235))
+//    level1.layer.cornerRadius = 20
+//    level1.layer.masksToBounds = true
+//    level1.addTarget(self, action: #selector(GameButtonTapped), for: .touchUpInside)
+//    level1.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+//    return level1
+//}()
     
     lazy var levelTwo: UIButton = {
         let level2 = UIButton()
@@ -87,7 +87,7 @@ lazy var levelOne: UIButton = {
 //        lbl.backgroundColor = UIColor(#colorLiteral(red: 0.715143621, green: 0.4925160408, blue: 0.5837199092, alpha: 1))
          lbl.font.withSize(50)
         lbl.translatesAutoresizingMaskIntoConstraints = false
-        lbl.text = NSLocalizedString("Swipe To Carton 📽 ", comment: "")
+        lbl.text = NSLocalizedString("Swipe To Back 📽 ", comment: "")
         return lbl
     }()
 //    var scorelabel: UILabel = {
@@ -111,7 +111,22 @@ lazy var levelOne: UIButton = {
         button.layer.masksToBounds = true
         return button
     }()
-    
+//    lazy var baackButton: UIButton = {
+//        let btn = UIButton()
+//
+//
+//        btn.translatesAutoresizingMaskIntoConstraints = false
+////        btn.setTitle(NSLocalizedString("Back", comment: ""), for: .normal)
+//        btn.setImage(UIImage(named: "back"), for: UIControl.State.normal)
+//        btn.setTitleColor(.red , for: .normal)
+////        level3.backgroundColor = UIColor(  #colorLiteral(red: 0.7520335913, green: 0.6473677754, blue: 0.5675167441, alpha: 1) )
+//
+////        level3.layer.cornerRadius = 20
+////        level3.layer.masksToBounds = true
+//        btn.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
+//        btn.titleLabel?.font = .systemFont(ofSize: 40, weight: .medium)
+//        return btn
+//    }()
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -134,7 +149,7 @@ lazy var levelOne: UIButton = {
         view.addSubview(levelfour)
         NSLayoutConstraint.activate([
             
-            levelfour.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5),
+            levelfour.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
 //            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
 
             levelfour.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
@@ -143,22 +158,22 @@ lazy var levelOne: UIButton = {
         ])
         
         //Constraint loginButton
-        view.addSubview(levelOne)
-        NSLayoutConstraint.activate([
-            levelOne.topAnchor.constraint(equalTo: levelfour.bottomAnchor,constant: 15),
-//            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
-
-            levelOne.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
-            
-            levelOne.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
-            levelOne.heightAnchor.constraint(equalToConstant: 50),
-        ])
+//        view.addSubview(levelOne)
+//        NSLayoutConstraint.activate([
+//            levelOne.topAnchor.constraint(equalTo: levelfour.bottomAnchor,constant: 15),
+////            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
+//
+//            levelOne.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
+//
+//            levelOne.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
+//            levelOne.heightAnchor.constraint(equalToConstant: 50),
+//        ])
         
         //Constraint registerButton
         view.addSubview(levelTwo)
         NSLayoutConstraint.activate([
             
-            levelTwo.topAnchor.constraint(equalTo: levelOne.bottomAnchor, constant: 5),
+            levelTwo.topAnchor.constraint(equalTo: levelfour.bottomAnchor, constant: 20),
 //            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
 
             levelTwo.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
@@ -168,7 +183,7 @@ lazy var levelOne: UIButton = {
         view.addSubview(levelthree)
         NSLayoutConstraint.activate([
             
-            levelthree.topAnchor.constraint(equalTo: levelTwo.bottomAnchor, constant: 5),
+            levelthree.topAnchor.constraint(equalTo: levelTwo.bottomAnchor, constant: 20),
 //            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
 
             levelthree.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
@@ -205,9 +220,20 @@ lazy var levelOne: UIButton = {
         MapButton.heightAnchor.constraint(equalToConstant: 50),
         ])
         
+        
+//        view.addSubview(baackButton)
+//        NSLayoutConstraint.activate([
+//
+//            baackButton.topAnchor.constraint(equalTo: Swipelabel.bottomAnchor, constant: 25),
+//            baackButton.centerXAnchor.constraint(equalTo: view.centerXAnchor,constant: -30) ,
+//            baackButton.heightAnchor.constraint(equalToConstant: 60),
+//            baackButton.widthAnchor.constraint(equalToConstant: 60),
+//        ])
+        
+        
         let swipelift = UISwipeGestureRecognizer(
               target: self,
-              action: #selector(cartonButtonTapped))
+              action: #selector(backButtonTapped))
             swipelift.direction = .left
             view.addGestureRecognizer(swipelift)
             view.isUserInteractionEnabled = true
@@ -236,22 +262,23 @@ lazy var levelOne: UIButton = {
     self.present(quizVC, animated: true, completion: nil)
 }
 
-    @objc private func GameButtonTapped() {
-let vc = Games2()
-//        let vc = GameVC()
-        vc.modalPresentationStyle = .automatic
-        self.present(vc, animated: true, completion: nil)
-    }
+//    @objc private func GameButtonTapped() {
+//let vc = Games2()
+////        let vc = GameVC()
+//        vc.modalPresentationStyle = .automatic
+//        self.present(vc, animated: true, completion: nil)
+//    }
     
     @objc private func VedioButtonTapped() {
         let vc = Vedio()
         vc.modalPresentationStyle = .pageSheet
         self.present(vc, animated: true, completion: nil)
     }
-    @objc private func cartonButtonTapped() {
-        let vc = VideoLessons()
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+    @objc private func backButtonTapped() {
+        self.dismiss(animated: true, completion: nil)
+//        let vc = VideoLessons()
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true, completion: nil)
     }
     
     
@@ -270,6 +297,7 @@ let vc = Games2()
         vc.modalPresentationStyle = .pageSheet
         self.present(vc, animated: true, completion: nil)
     }
+  
 }
 
 

@@ -44,7 +44,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         return button
     }()
 
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         let me = MKPointAnnotation()

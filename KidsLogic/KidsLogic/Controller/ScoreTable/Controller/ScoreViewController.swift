@@ -13,7 +13,7 @@ class ScoreViewController: UITableViewController {
  var Allkids : [Kids] = [Kids]()
 override func viewDidLoad() {
  super.viewDidLoad()
-    view.backgroundColor = UIColor(named: "DarkColor")
+    view.backgroundColor = UIColor(named: "Darkcolorr")
 
  createProductArray()
  tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)

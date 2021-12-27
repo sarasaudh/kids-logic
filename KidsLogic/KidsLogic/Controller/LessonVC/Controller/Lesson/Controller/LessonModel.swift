@@ -70,7 +70,7 @@ class LogicPosts {
 //
 //        Logic(image: "90", caption: "🤖", title: (NSLocalizedString("STRING",comment: "")), desc: (NSLocalizedString("27: In IT, a bug refers to an error, fault or flaw in any computer program or a hardware system. A bug produces unexpected results or causes a system to behave unexpectedly. In short it is any behavior or result that.",comment: "")),author: "🐼", lessonNum: "27"),
 
-        Logic(image: "exl", caption: "⏳", title: "", desc: "SOON",author: "🐼", lessonNum: " Good job ✅")
+        Logic(image: "exl", caption: "⏳", title: "Good job", desc: "SOON",author: "🐼", lessonNum: " ✅")
 
     ]
     

@@ -71,8 +71,11 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         let btn = UIButton()
         btn.setTitleColor(.black, for: .normal)
         btn.layer.cornerRadius = .maximumMagnitude(20, 20)
+
+//        btn.layer.cornerRadius = 50
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle((NSLocalizedString("Register", comment: "")), for: .normal)
+        btn.titleLabel?.font = UIFont(name:"Rockwell", size: 20)
         btn.backgroundColor = UIColor(red: 89/255, green: 128/255, blue: 148/255, alpha: 1.5)
         btn.addTarget(self, action: #selector(registerBtnPressed), for: .touchUpInside)
         return btn
@@ -131,14 +134,14 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
             passwordTF.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             passwordTF.heightAnchor.constraint(equalToConstant: 50),
             
-       
-            registerBtn.topAnchor.constraint(equalTo: passwordTF.bottomAnchor, constant:20),
+            
+            registerBtn.topAnchor.constraint(equalTo: passwordTF.bottomAnchor, constant: 20),
             registerBtn.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
             registerBtn.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
-            registerBtn.heightAnchor.constraint(equalToConstant: 70),
-
+            registerBtn.heightAnchor.constraint(equalToConstant: 60),
             
-            loginBtn.topAnchor.constraint(equalTo: registerBtn.bottomAnchor, constant: 10),
+            
+            loginBtn.topAnchor.constraint(equalTo: registerBtn.bottomAnchor, constant: 5),
             loginBtn.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
             loginBtn.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             loginBtn.heightAnchor.constraint(equalToConstant: 70),

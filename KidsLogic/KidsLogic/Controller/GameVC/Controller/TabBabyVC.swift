@@ -30,9 +30,9 @@ class TabVC: UITabBarController {
      viewControllers = [
 
       
-        createNavController(for:HomeVC(), title: NSLocalizedString("Home", comment: ""), image: UIImage(systemName: "star")!),
+        createNavController(for:HomeVC(), title: NSLocalizedString("Home", comment: ""), image: UIImage(systemName: "star")!)
         
-       createNavController(for:MyProfileVC(), title: NSLocalizedString("profile", comment: ""), image: UIImage(systemName: "person")!),
+//       createNavController(for:MyProfileVC(), title: NSLocalizedString("profile", comment: ""), image: UIImage(systemName: "person")!),
      ]
    }
     
