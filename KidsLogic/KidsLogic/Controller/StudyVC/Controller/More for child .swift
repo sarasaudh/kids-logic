@@ -35,19 +35,26 @@ class MoreVC2: UIViewController {
 //    return level1
 //}()
     
+      let imageNormal3:UIImage? = UIImage(named: "yallwo")
+    let imageNormal:UIImage? = UIImage(named: "blue")
+    let imageNormal2:UIImage? = UIImage(named: "red")
+    
+    
     lazy var levelTwo: UIButton = {
         let level2 = UIButton()
         
         
         level2.translatesAutoresizingMaskIntoConstraints = false
         level2.setTitle(NSLocalizedString("Video 📀", comment: ""), for: .normal)
-        level2.setTitleColor(.white, for: .normal)
-        level2.backgroundColor = UIColor(#colorLiteral(red: 0.3279541135, green: 0.6508837342, blue: 0.8242474198, alpha: 0.8470588235) )
+        level2.setTitleColor(.systemGray2, for: .normal)
+//        level2.backgroundColor = UIColor(#colorLiteral(red: 0.3279541135, green: 0.6508837342, blue: 0.8242474198, alpha: 0.8470588235) )
         
+        level2.setBackgroundImage(imageNormal, for: UIControl.State.normal)
         level2.layer.cornerRadius = 20
         level2.layer.masksToBounds = true
         level2.addTarget(self, action: #selector(VedioButtonTapped), for: .touchUpInside)
-        level2.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+        
+        level2.titleLabel?.font = UIFont(name:"Copperplate", size: 30)
         return level2
     }()
     lazy var levelthree: UIButton = {
@@ -56,13 +63,15 @@ class MoreVC2: UIViewController {
         
         level3.translatesAutoresizingMaskIntoConstraints = false
         level3.setTitle(NSLocalizedString("Quiz 🧩", comment: ""), for: .normal)
-        level3.setTitleColor(.white, for: .normal)
-        level3.backgroundColor = UIColor( #colorLiteral(red: 0.4231500328, green: 0.6711993814, blue: 0.3329515457, alpha: 0.8470588235) )
+        level3.setTitleColor(.systemGray2, for: .normal)
+//        level3.backgroundColor = UIColor( #colorLiteral(red: 0.4231500328, green: 0.6711993814, blue: 0.3329515457, alpha: 0.8470588235) )
         
+        level3.setBackgroundImage(imageNormal3, for: UIControl.State.normal)
         level3.layer.cornerRadius = 20
         level3.layer.masksToBounds = true
         level3.addTarget(self, action: #selector(openQuiz), for: .touchUpInside)
-        level3.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+        
+        level3.titleLabel?.font = UIFont(name:"Copperplate", size: 30)
         return level3
     }()
     lazy var levelfour: UIButton = {
@@ -71,13 +80,15 @@ class MoreVC2: UIViewController {
         
         level4.translatesAutoresizingMaskIntoConstraints = false
         level4.setTitle(NSLocalizedString("Self evaluation🔖 ", comment: ""), for: .normal)
-        level4.setTitleColor(.white, for: .normal)
-        level4.backgroundColor = UIColor(#colorLiteral(red: 0.5568159819, green: 0.5498092175, blue: 0.5621412396, alpha: 0.8470588235))
+        level4.setTitleColor(.systemGray2, for: .normal)
+//        level4.backgroundColor = UIColor(#colorLiteral(red: 0.5568159819, green: 0.5498092175, blue: 0.5621412396, alpha: 0.8470588235))
         
+        level4.setBackgroundImage(imageNormal2, for: UIControl.State.normal)
         level4.layer.cornerRadius = 20
         level4.layer.masksToBounds = true
         level4.addTarget(self, action: #selector(diaryButtonTapped), for: .touchUpInside)
-        level4.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+        
+        level4.titleLabel?.font = UIFont(name:"Copperplate", size: 30)
         return level4
     }()
     
@@ -149,11 +160,11 @@ class MoreVC2: UIViewController {
         view.addSubview(levelfour)
         NSLayoutConstraint.activate([
             
-            levelfour.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
+            levelfour.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5),
 //            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
 
-            levelfour.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
-            levelfour.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
+            levelfour.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
+            levelfour.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
             levelfour.heightAnchor.constraint(equalToConstant: 70),
         ])
         
@@ -176,9 +187,9 @@ class MoreVC2: UIViewController {
             levelTwo.topAnchor.constraint(equalTo: levelfour.bottomAnchor, constant: 20),
 //            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
 
-            levelTwo.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
-            levelTwo.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
-            levelTwo.heightAnchor.constraint(equalToConstant: 50),
+            levelTwo.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
+            levelTwo.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
+            levelTwo.heightAnchor.constraint(equalToConstant: 70),
         ])
         view.addSubview(levelthree)
         NSLayoutConstraint.activate([
@@ -186,9 +197,9 @@ class MoreVC2: UIViewController {
             levelthree.topAnchor.constraint(equalTo: levelTwo.bottomAnchor, constant: 20),
 //            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
 
-            levelthree.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
-            levelthree.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
-            levelthree.heightAnchor.constraint(equalToConstant: 50),
+            levelthree.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
+            levelthree.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
+            levelthree.heightAnchor.constraint(equalToConstant: 70),
         ])
        
         

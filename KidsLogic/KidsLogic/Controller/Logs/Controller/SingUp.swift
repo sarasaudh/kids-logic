@@ -66,17 +66,17 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         btn.addTarget(self, action: #selector(loginBtnPressed), for: .touchUpInside)
         return btn
     }()
-  
-    var registerBtn: UIButton = {
+    let imageNormal5:UIImage? = UIImage(named: "button")
+    lazy var registerBtn: UIButton = {
         let btn = UIButton()
         btn.setTitleColor(.black, for: .normal)
         btn.layer.cornerRadius = .maximumMagnitude(20, 20)
-
+        btn.setBackgroundImage(imageNormal5, for: UIControl.State.normal)
 //        btn.layer.cornerRadius = 50
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle((NSLocalizedString("Register", comment: "")), for: .normal)
-        btn.titleLabel?.font = UIFont(name:"Rockwell", size: 20)
-        btn.backgroundColor = UIColor(red: 89/255, green: 128/255, blue: 148/255, alpha: 1.5)
+        btn.titleLabel?.font = UIFont(name:"Copperplate", size: 20)
+//        btn.backgroundColor = UIColor(red: 89/255, green: 128/255, blue: 148/255, alpha: 1.5)
         btn.addTarget(self, action: #selector(registerBtnPressed), for: .touchUpInside)
         return btn
     }()

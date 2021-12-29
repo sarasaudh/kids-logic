@@ -40,15 +40,18 @@ class LoginVC: UIViewController,UITextFieldDelegate {
     return true
 }
     
-    var loginBtn: UIButton = {
+      let imageNormal5:UIImage? = UIImage(named: "button")
+    
+    lazy var loginBtn: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.layer.cornerRadius = .maximumMagnitude(20, 20)
         btn.setTitleColor(.black, for: .normal)
         btn.setTitle((NSLocalizedString("Login", comment: "")), for: .normal)
         btn.setTitleShadowColor(.blue, for: .normal)
-        btn.titleLabel?.font = UIFont(name:"Rockwell", size: 20)
-        btn.backgroundColor = UIColor(red: 89/255, green: 128/255, blue: 148/255, alpha: 1.5)
+        btn.titleLabel?.font = UIFont(name:"Copperplate", size: 20)
+        btn.setBackgroundImage(imageNormal5, for: UIControl.State.normal)
+//        btn.backgroundColor = UIColor(red: 89/255, green: 128/255, blue: 148/255, alpha: 1.5)
         btn.addTarget(self, action: #selector(loginBtnPressed), for: .touchUpInside)
         return btn
     }()

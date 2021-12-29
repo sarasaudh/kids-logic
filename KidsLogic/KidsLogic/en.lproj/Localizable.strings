@@ -14,7 +14,7 @@
 //Profile
 "name" = "Your Name 🧒🏻";
 "status" = "Your Status ✨";
-"save" = "Save...";
+"save" = "Save";
 "sign Out" = "Sign Out...";
 //TabVC
 "profile" = "Profile";
@@ -26,12 +26,12 @@
 "GAME 🎮" = "GAME 🎮" ;
 "Video 📀" = "Video 📀" ;
 "Carton 🧩" = "Carton 🧩" ;
-"Self evaluation🔖 " = "self evaluation 🔖 " ;
+"Self evaluation🔖 " = "self evaluation " ;
 
 //KidDailyEvaluation
 "NEW Task➕" = "NEW Task➕" ;
 "NEW Day 🕚" = "NEW Day 🕚" ;
-"Quiz 🧩" = "Quiz 🧩" ;
+"Quiz 🧩" = "Quiz " ;
 "Tasks" = "Tasks" ;
 "Days" = "Days" ;
 

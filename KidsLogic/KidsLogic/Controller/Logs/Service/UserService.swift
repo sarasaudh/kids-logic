@@ -26,14 +26,18 @@ class UsersService {
         guard
           let id = data["id"] as? String,
           let name = data["name"] as? String,
-          let email = data["email"] as? String else {
+          let status = data["status"] as? String,
+            let score = data["score"] as? Int,
+          let image = data["image"] as? String
+          else {
             continue
           }
         let user = User(
           id: id,
           name: name,
-          email: email,
-          score: 1
+          status: status,
+          score: score,
+          image: image
         )
         users.append(user)
       }
@@ -44,7 +48,7 @@ class UsersService {
     usersCollection.document(user.id).setData([
       "id": user.id,
       "name": user.name,
-      "email": user.email,
+      "status": user.status,
     ], merge: true)
   }
 }

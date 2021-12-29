@@ -16,6 +16,7 @@ class QuizviewController: UIViewController {
     var questionNumber: Int = 0
     var score: Int = 0
     var selectedAnswer: Int = 0
+    static let shared = QuizviewController()
     
     
     var scoreLabel: UILabel = {
@@ -134,8 +135,9 @@ class QuizviewController: UIViewController {
         super.viewDidLoad()
     
         // Do any additional setup after loading the view.
-        view.backgroundColor = .white
-
+//        view.backgroundColor = .white
+        
+             view.backgroundColor = UIColor (named: "DarkColor")
         
         updateQuestion()
         updateUI()
@@ -256,7 +258,7 @@ class QuizviewController: UIViewController {
     }
     func updateQuestion(){
         
-        if questionNumber <= allQuestions.list.count - 1{
+        if questionNumber <= allQuestions.list.count - 2{
             QImageView.image = UIImage(named:(allQuestions.list[questionNumber].questionImage))
             questionLabel.text = allQuestions.list[questionNumber].question
             optionA.setTitle(allQuestions.list[questionNumber].optionA, for: UIControl.State.normal)
@@ -281,7 +283,7 @@ class QuizviewController: UIViewController {
     func updateUI(){
        
         scoreLabel.text = "Score: \(score)"
-        questionCounter.text = "\(questionNumber + 1)/\(allQuestions.list.count)"
+        questionCounter.text = "Q:\(questionNumber + 1)/\(allQuestions.list.count)"
 //        progressView.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.list.count)) * CGFloat(questionNumber + 1)
         
     }

@@ -51,7 +51,8 @@
 		8499461B27628E1100135446 /* gold.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8499461A27628E1000135446 /* gold.wav */; };
 		8499461D276291BD00135446 /* evil.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8499461C276291BD00135446 /* evil.mp3 */; };
 		8499461F2762953700135446 /* GFish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8499461E2762953700135446 /* GFish.mp3 */; };
-		84B4EE4E276B62DE00982DDD /* prf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4EE4D276B62DE00982DDD /* prf.swift */; };
+		84B4D793277B2BA900F40C9E /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4D792277B2BA900F40C9E /* RegisterService.swift */; };
+		84B4D795277B448A00F40C9E /* prf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4D794277B448A00F40C9E /* prf.swift */; };
 		84E5312B2753880C00B45CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5312A2753880C00B45CCC /* AppDelegate.swift */; };
 		84E5312D2753880C00B45CCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5312C2753880C00B45CCC /* SceneDelegate.swift */; };
 		84E531342753880E00B45CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E531332753880E00B45CCC /* Assets.xcassets */; };
@@ -123,7 +124,8 @@
 		8499461A27628E1000135446 /* gold.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gold.wav; sourceTree = "<group>"; };
 		8499461C276291BD00135446 /* evil.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = evil.mp3; sourceTree = "<group>"; };
 		8499461E2762953700135446 /* GFish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GFish.mp3; sourceTree = "<group>"; };
-		84B4EE4D276B62DE00982DDD /* prf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prf.swift; sourceTree = "<group>"; };
+		84B4D792277B2BA900F40C9E /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
+		84B4D794277B448A00F40C9E /* prf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prf.swift; sourceTree = "<group>"; };
 		84E531272753880C00B45CCC /* KidsLogic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidsLogic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E5312A2753880C00B45CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84E5312C2753880C00B45CCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,22 +189,22 @@
 			isa = PBXGroup;
 			children = (
 				84E5314727538B8000B45CCC /* Logs */,
-				8479B8C92765F67B00AD8CA7 /* GameVC */,
-				8479B8CA2765F68800AD8CA7 /* LessonVC */,
+				8479B8C92765F67B00AD8CA7 /* PlayVC */,
+				8479B8CA2765F68800AD8CA7 /* StudyVC */,
 				842A16572754F87600F505E2 /* ScoreTable */,
 				849945DF2761DF9F00135446 /* Games */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		845B11BD2761357C00746173 /* KidDailyEvaluation */ = {
+		845B11BD2761357C00746173 /* DailyEvaluation */ = {
 			isa = PBXGroup;
 			children = (
 				845B11BF2761361B00746173 /* Models */,
 				845B11C02761362800746173 /* Controllers */,
 				845B11BE2761360A00746173 /* Service */,
 			);
-			path = KidDailyEvaluation;
+			path = DailyEvaluation;
 			sourceTree = "<group>";
 		};
 		845B11BE2761360A00746173 /* Service */ = {
@@ -285,25 +287,26 @@
 				84E531642753994400B45CCC /* LogIn.swift */,
 				842B2334275DE086009C888D /* SingUp.swift */,
 				8435ACE9275BFA4D0076F36A /* Profile.swift */,
-				84B4EE4D276B62DE00982DDD /* prf.swift */,
+				84B4D794277B448A00F40C9E /* prf.swift */,
+				84B4D792277B2BA900F40C9E /* RegisterService.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		8479B8C92765F67B00AD8CA7 /* GameVC */ = {
+		8479B8C92765F67B00AD8CA7 /* PlayVC */ = {
 			isa = PBXGroup;
 			children = (
 				8479B8CE2765F6FA00AD8CA7 /* Controller */,
 			);
-			path = GameVC;
+			path = PlayVC;
 			sourceTree = "<group>";
 		};
-		8479B8CA2765F68800AD8CA7 /* LessonVC */ = {
+		8479B8CA2765F68800AD8CA7 /* StudyVC */ = {
 			isa = PBXGroup;
 			children = (
 				8479B8CD2765F6D200AD8CA7 /* Controller */,
 			);
-			path = LessonVC;
+			path = StudyVC;
 			sourceTree = "<group>";
 		};
 		8479B8CB2765F6C400AD8CA7 /* Model */ = {
@@ -333,7 +336,7 @@
 				8479B8D2276660F400AD8CA7 /* MapVC.swift */,
 				84E531722754075800B45CCC /* Quiz Controller */,
 				8479B8D12765F80C00AD8CA7 /* LessonCareon */,
-				845B11BD2761357C00746173 /* KidDailyEvaluation */,
+				845B11BD2761357C00746173 /* DailyEvaluation */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -610,11 +613,11 @@
 				849945E32761E58A00135446 /* GoldenFish Game.swift in Sources */,
 				842A15FC2754E21400F505E2 /* User.swift in Sources */,
 				8479B8D3276660F400AD8CA7 /* MapVC.swift in Sources */,
+				84B4D795277B448A00F40C9E /* prf.swift in Sources */,
 				84E53178275407B700B45CCC /* QuestionBank.swift in Sources */,
 				8435ACEA275BFA4E0076F36A /* Profile.swift in Sources */,
 				845B11D62761379E00746173 /* DaysVC.swift in Sources */,
 				842A15F02754ACFD00F505E2 /* Light.swift in Sources */,
-				84B4EE4E276B62DE00982DDD /* prf.swift in Sources */,
 				8479B8D92768A51600AD8CA7 /* Lesson struct.swift in Sources */,
 				842A15E82754AAAF00F505E2 /* Theme.swift in Sources */,
 				84E5312B2753880C00B45CCC /* AppDelegate.swift in Sources */,
@@ -641,6 +644,7 @@
 				849945DB2761DCD200135446 /* TabChildVC2.swift in Sources */,
 				84E531652753994400B45CCC /* LogIn.swift in Sources */,
 				842A15F22754B26700F505E2 /* LessoneViedeo.swift in Sources */,
+				84B4D793277B2BA900F40C9E /* RegisterService.swift in Sources */,
 				845B11C42761369700746173 /* TaskService.swift in Sources */,
 				849945E12761DFD200135446 /* Games for child.swift in Sources */,
 				842A15F42754B29D00F505E2 /* LessonviedeoCell.swift in Sources */,

@@ -4,14 +4,17 @@
 //
 //  Created by sara saud on 29/04/1443 AH.
 //
-
 import Foundation
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import SwiftUI
+
+
 class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate ,UITextFieldDelegate{
   var users: Array<User> = []
   lazy var containerView: UIView = {
+      
     let view = UIView()
     view.translatesAutoresizingMaskIntoConstraints = false
 //    view.backgroundColor = .white
@@ -64,6 +67,9 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
     return label
   }()
   //save the name and image and statuse
+    
+        let imageNormal2:UIImage? = UIImage(named: "Selver")
+    
   lazy var saveButton: UIButton = {
     let button = UIButton(type: .system)
     button.setTitle((NSLocalizedString("save", comment: "")), for: .normal)
@@ -71,9 +77,11 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
     button.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline, compatibleWith: .init(legibilityWeight: .bold))
     button.heightAnchor.constraint(equalToConstant: 50).isActive = true
     button.widthAnchor.constraint(equalToConstant: 250).isActive = true
-    button.layer.cornerRadius = 25
-    button.addTarget(self, action: #selector(updateButtonTapped), for: .touchUpInside)
+    button.layer.cornerRadius = 10
+    button.addTarget(self, action: #selector(SaveButtonTapped), for: .touchUpInside)
     button.layer.masksToBounds = true
+      
+      button.setBackgroundImage(imageNormal2, for: UIControl.State.normal)
     button.backgroundColor = UIColor(#colorLiteral(red: 0.3814536035, green: 0.5256128311, blue: 0.7803931832, alpha: 1))
     return button
   }()
@@ -117,6 +125,8 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
 }
   override func viewDidLoad () {
     super.viewDidLoad()
+      
+      
       view.setGradiantView2()
       nameLabel.delegate = self
       userStatusLabel.delegate = self
@@ -164,9 +174,28 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
      
       ])
 //    guard let currentUserID = Auth.auth().currentUser?.uid else {return}
-//    RegisterService.shared.listenToUsers { ubdateUser in
-//      self.users = ubdateUser
-//    }
+      
+    RegisterService.shared.listenToUsers { ubdateUser in
+      self.users = ubdateUser
+    }
+      
+//      guard let currentUserID = Auth.auth().currentUser?.uid else {return}
+//      let uuid = UUID().uuidString
+//              Firestore.firestore()
+//                  .document("uuid")
+//                  .addSnapshotListener{ doucument, error in
+//                      if error != nil {
+//                          print (error)
+//                          return
+//                      }
+//
+//                      self.nameLabel.text = doucument?.data()?["name"] as? String
+//                      self.userStatusLabel.text = doucument?.data()?["status"] as? String
+////                      self.profileImage.image = doucument?.data()?["image"] as? Image
+//
+//
+//                  }
+      
   }
   //sing out from snap chat
   @objc private func singOutButtonTapped() {
@@ -181,11 +210,22 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
 //    present(LoginVC(), animated: true, completion: nil)
   }
   //update name , image , status in fire store
-  @objc private func updateButtonTapped() {
+  @objc private func SaveButtonTapped() {
+      
+//      guard let currentUserID = Auth.auth().currentUser?.uid else {return}
+      let id = UUID().uuidString
+      RegisterService.shared.addUser(user: User(
+        id: id,
+        name: nameLabel.text ?? "d",
+        status: userStatusLabel.text ?? "d",
+        score:  0,
+        image: "\(profileImage.image)" ))
+      
     guard let currentUserID = Auth.auth().currentUser?.uid else {return}
     Firestore.firestore().document("users/\(currentUserID)").updateData([
-      "name" : nameLabel.text,
-      "id" : currentUserID,
+        "id" : currentUserID,
+        "name" : nameLabel.text,
+        "score" :  nameLabel.text ?? "",
       "status" :userStatusLabel.text,
       "image":"\(profileImage.image)"
     ])
@@ -194,7 +234,7 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
     alert1.addAction(UIAlertAction(title: "OK",style: .default,handler: { action in
       print("OK")
     }
-                   )
+      )
     )
     present(alert1, animated: true, completion: nil)
   }

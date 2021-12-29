@@ -11,6 +11,8 @@ import UIKit
 struct User{
    var id: String
    var name: String
-   var email: String
+   var status: String
    var score: Int
+    let image : String
+    
 }
