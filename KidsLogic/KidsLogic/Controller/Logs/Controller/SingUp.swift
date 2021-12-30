@@ -9,10 +9,11 @@ import Foundation
 import UIKit
 import FirebaseAuth
 import SwiftUI
+import Firebase
 //import DropDown
 
 class SignUpVC: UIViewController,UITextFieldDelegate {
-    
+   var score: Int = 0
 //    let dropDown = DropDown()
     var userName: UITextField = {
         let tf = UITextField()
@@ -79,6 +80,8 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
 //        btn.backgroundColor = UIColor(red: 89/255, green: 128/255, blue: 148/255, alpha: 1.5)
         btn.addTarget(self, action: #selector(registerBtnPressed), for: .touchUpInside)
         return btn
+   
+    
     }()
 
     
@@ -168,6 +171,21 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
                 return
             }
             
+            guard let currentUserID = Auth.auth().currentUser?.uid else {return}
+                        Firestore.firestore().document("users/\(currentUserID)").setData([
+                            //                    "name" : self.name.text,
+                            "Id" : currentUserID,
+                            "Email" : self.emailTF.text,
+                            "First Name": self.userName.text,
+                            "score" : self.score
+                            
+                        ], merge : true)
+                        if error != nil {
+                            print(error as Any)
+                            return
+                        }
+            
+            
             self.present(GradeVC(), animated: true, completion: nil)
         }
         func alertUserLoginError2() {
@@ -186,5 +204,7 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
 
     
         }
+    
+    
         
 }

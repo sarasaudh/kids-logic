@@ -12,7 +12,9 @@ import SwiftUI
 
 
 class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate ,UITextFieldDelegate{
+    
   var users: Array<User> = []
+    var score:User?
   lazy var containerView: UIView = {
       
     let view = UIView()
@@ -46,6 +48,7 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
       label.textColor = .systemGray6
       label.borderStyle = .bezel
       label.textAlignment = .center
+      
     return label
   }()
   lazy var usernameStackView: UIStackView = {
@@ -57,13 +60,19 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
     return view
   }()
   // user status
-  lazy var userStatusLabel: UITextField = {
-    let label = UITextField()
+  lazy var userScoreLabel: UILabel = {
+    let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
-      label.placeholder = (NSLocalizedString("status", comment: ""))
-      label.textColor = .systemGray6
-      label.borderStyle = .bezel
+//      label.shadowColor = .blue
+      label.font.withSize(100)
+      label.backgroundColor = .quaternaryLabel
+      label.text = NSLocalizedString("Score", comment: "")
+//      label.text = "SCORE"//(NSLocalizedString("score", comment: ""))
+      label.textColor = .green
+//      label.borderStyle = .bezel
       label.textAlignment = .center
+      label.layer.cornerRadius = 15
+   
     return label
   }()
   //save the name and image and statuse
@@ -120,16 +129,53 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
   }()
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         nameLabel.resignFirstResponder()
-        userStatusLabel.resignFirstResponder()
+//        userScoreLabel.resignFirstResponder()
     return true
 }
   override func viewDidLoad () {
     super.viewDidLoad()
+  
       
+      //listener
+      guard let currentUserID = Auth.auth().currentUser?.uid else {return}
+              Firestore.firestore()
+                  .document("users/\(currentUserID)")
+                  .addSnapshotListener{ doucument, error in
+                      if error != nil {
+                          print (error)
+                          return
+                      }
+                      
+        self.nameLabel.text = doucument?.data()?["First Name"] as? String
+        self.userScoreLabel.text = "SCORE:  \(doucument?.data()?["score"] as! Int)"
+           }
       
+      //if image level
+//      if userScoreLabel == 0 {
+//          profileImage.image = UIImage(named: "kidPro")
+//
+//      }else if score?.score == 1 {
+//           profileImage.image = UIImage(named: "score")
+//      }else if score?.score == 2 {
+//           profileImage.image = UIImage(named: "forest")
+//      }
+//      if score?.score == 0 {
+//          profileImage.image = UIImage(named: "kidPro")
+//
+//      }else if score?.score == 1 {
+//           profileImage.image = UIImage(named: "score")
+//      }else if score?.score == 2 {
+//           profileImage.image = UIImage(named: "forest")
+//       }  }else if score?.score == 3 {
+//           profileImage.image = UIImage(named: "forest")
+//       }  }else if score?.score == 4 {
+//           profileImage.image = UIImage(named: "forest")
+//       }else if score?.score == 5 {
+//           profileImage.image = UIImage(named: "forest")
+//       }
       view.setGradiantView2()
       nameLabel.delegate = self
-      userStatusLabel.delegate = self
+//      userScoreLabel.delegate = self
 //            let image = UIImage(systemName: "person.crop.rectangle.fill")
 //            tabBarItem = .init(title: "profile", image: image, selectedImage: image)
     // Gesture to image
@@ -144,7 +190,7 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
     verticalStackView.addArrangedSubview(profileImage)
     verticalStackView.addArrangedSubview (nameLabel)
     verticalStackView.addArrangedSubview(usernameStackView)
-    usernameStackView.addArrangedSubview (userStatusLabel)
+//    usernameStackView.addArrangedSubview (userScoreLabel)
     verticalStackView.addArrangedSubview(saveButton)
     verticalStackView.addArrangedSubview(scoreButton)
     verticalStackView.addArrangedSubview(singOutButton)
@@ -173,6 +219,14 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
         
      
       ])
+      view.addSubview(userScoreLabel)
+      NSLayoutConstraint.activate([
+        userScoreLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10),
+        userScoreLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor) ,
+        userScoreLabel.heightAnchor.constraint(equalToConstant: 40),
+        userScoreLabel.widthAnchor.constraint(equalToConstant: 200),
+      ])
+      
 //    guard let currentUserID = Auth.auth().currentUser?.uid else {return}
       
     RegisterService.shared.listenToUsers { ubdateUser in
@@ -217,17 +271,17 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
       RegisterService.shared.addUser(user: User(
         id: id,
         name: nameLabel.text ?? "d",
-        status: userStatusLabel.text ?? "d",
+        status: userScoreLabel.text ?? "d",
         score:  0,
         image: "\(profileImage.image)" ))
       
     guard let currentUserID = Auth.auth().currentUser?.uid else {return}
     Firestore.firestore().document("users/\(currentUserID)").updateData([
-        "id" : currentUserID,
-        "name" : nameLabel.text,
-        "score" :  nameLabel.text ?? "",
-      "status" :userStatusLabel.text,
-      "image":"\(profileImage.image)"
+//        "id" : currentUserID,
+        "First Name" : nameLabel.text ?? "",
+//        "score" :  userScoreLabel.text ?? "",
+//      "status" :userScoreLabel.text,
+//      "image":"\(profileImage.image)"
     ])
     let alert1 = UIAlertController(
       title: ("Saved"),message: "Saved update data",preferredStyle: .alert)

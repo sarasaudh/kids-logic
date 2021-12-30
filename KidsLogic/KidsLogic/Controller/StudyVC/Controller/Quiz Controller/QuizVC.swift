@@ -9,7 +9,7 @@ import WebKit
 import Foundation
 import UIKit
 import FirebaseFirestore
-
+import FirebaseAuth
 class QuizviewController: UIViewController {
  
     let allQuestions = QuestionBank()
@@ -246,15 +246,23 @@ class QuizviewController: UIViewController {
         
    }
     func saveData() {
-        
-        Firestore
-            .firestore()
-            .document("users/score")
-            .setData([
-            
-                "score": score
-                
-            ])
+   
+        guard let currentUserID = Auth.auth().currentUser?.uid else {return}
+        Firestore.firestore().document("users/\(currentUserID)").updateData([
+//            "id" : currentUserID,
+//            "name" : nameLabel.text,
+            "score" : score
+//          "status" :userStatusLabel.text,
+//          "image":"\(profileImage.image)"
+        ])
+//        Firestore
+//            .firestore()
+//            .document("users/score")
+//            .setData([
+//
+//                "score": score
+//
+//            ])
     }
     func updateQuestion(){
         
@@ -266,7 +274,7 @@ class QuizviewController: UIViewController {
             optionC.setTitle(allQuestions.list[questionNumber].optionC, for: UIControl.State.normal)
             optionD.setTitle(allQuestions.list[questionNumber].optionD, for: UIControl.State.normal)
             selectedAnswer = allQuestions.list[questionNumber].correctAnswer
-//            updateUI()
+            updateUI()
             
         }else {
             let alert = UIAlertController(title: "Awesome! Your score : \(score)", message: "End of Quiz. Do you want to start over?", preferredStyle: .alert)

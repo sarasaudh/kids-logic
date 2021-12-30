@@ -12,7 +12,7 @@ struct User{
    var id: String
    var name: String
    var status: String
-   var score: Int
+   var score: Int?
     let image : String
     
 }
