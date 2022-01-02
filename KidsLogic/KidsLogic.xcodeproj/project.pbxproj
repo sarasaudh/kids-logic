@@ -53,6 +53,7 @@
 		8499461F2762953700135446 /* GFish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8499461E2762953700135446 /* GFish.mp3 */; };
 		84B4D793277B2BA900F40C9E /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4D792277B2BA900F40C9E /* RegisterService.swift */; };
 		84B4D795277B448A00F40C9E /* prf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4D794277B448A00F40C9E /* prf.swift */; };
+		84B4D797277D949D00F40C9E /* LessonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4D796277D949D00F40C9E /* LessonsVC.swift */; };
 		84E5312B2753880C00B45CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5312A2753880C00B45CCC /* AppDelegate.swift */; };
 		84E5312D2753880C00B45CCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5312C2753880C00B45CCC /* SceneDelegate.swift */; };
 		84E531342753880E00B45CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E531332753880E00B45CCC /* Assets.xcassets */; };
@@ -126,6 +127,7 @@
 		8499461E2762953700135446 /* GFish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GFish.mp3; sourceTree = "<group>"; };
 		84B4D792277B2BA900F40C9E /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		84B4D794277B448A00F40C9E /* prf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prf.swift; sourceTree = "<group>"; };
+		84B4D796277D949D00F40C9E /* LessonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsVC.swift; sourceTree = "<group>"; };
 		84E531272753880C00B45CCC /* KidsLogic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidsLogic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E5312A2753880C00B45CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84E5312C2753880C00B45CCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				84E531662753A16B00B45CCC /* grade.swift */,
+				84B4D796277D949D00F40C9E /* LessonsVC.swift */,
 				84E531642753994400B45CCC /* LogIn.swift */,
 				842B2334275DE086009C888D /* SingUp.swift */,
 				8435ACE9275BFA4D0076F36A /* Profile.swift */,
@@ -633,6 +636,7 @@
 				84E53174275407AC00B45CCC /* QuizVC.swift in Sources */,
 				84E5312D2753880C00B45CCC /* SceneDelegate.swift in Sources */,
 				845B11D22761377600746173 /* NewDayVC.swift in Sources */,
+				84B4D797277D949D00F40C9E /* LessonsVC.swift in Sources */,
 				845B11D02761373D00746173 /* NewTaskVC.swift in Sources */,
 				845B11C6276136AC00746173 /* DayService.swift in Sources */,
 				84E531692753A9C000B45CCC /* Video.swift in Sources */,

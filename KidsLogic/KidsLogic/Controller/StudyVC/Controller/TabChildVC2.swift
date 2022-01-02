@@ -31,9 +31,9 @@ class TabVC2: UITabBarController {
       
      viewControllers = [
 
-        createNavController(for:Lessons(), title: NSLocalizedString("Lesson", comment: ""), image: UIImage(systemName: "list.bullet.rectangle.fill")!),
+        createNavController(for:HoomeLessonsVC(), title: NSLocalizedString("Lesson", comment: ""), image: UIImage(systemName: "list.bullet.rectangle.fill")!),
       
-        createNavController(for:MoreVC2(), title: NSLocalizedString("More", comment: ""), image: UIImage(systemName: "star")!),
+        createNavController(for:MoreVC2(), title: NSLocalizedString("Evaluation", comment: ""), image: UIImage(systemName: "star")!),
         
        createNavController(for:MyProfileVC(), title: NSLocalizedString("profile", comment: ""), image: UIImage(systemName: "person")!),
      ]

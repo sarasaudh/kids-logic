@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GradeVC: UIViewController {
+class SectionVC: UIViewController {
 
     
     
@@ -87,7 +87,25 @@ lazy var levelOne: UIButton = {
         
         return level2
     }()
-    
+    let imageNormalL:UIImage? = UIImage(named: "en")
+    @objc lazy var changeLanguge: UIButton = {
+        let btn = UIButton()
+        
+        
+        btn.translatesAutoresizingMaskIntoConstraints = false
+//        btn.setTitle(NSLocalizedString("STUDY", comment: ""), for: .normal)
+//        btn.setTitleColor(.white, for: .normal)
+        
+        btn.setBackgroundImage(imageNormalL, for: UIControl.State.normal)
+//        level2.backgroundColor = UIColor(#colorLiteral(red: 0.8785117269, green: 0.7318091393, blue: 0.647349894, alpha: 1))
+        btn.addTarget(self, action: #selector(ChangeLanguge), for: .touchUpInside)
+//        level2.layer.cornerRadius = 20
+        btn.layer.masksToBounds = true
+//        btn.titleLabel?.font = UIFont(name:"Copperplate", size: 40)
+        btn.titleLabel?.textAlignment = .center
+        
+        return btn
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.setGradiantView3()
@@ -153,6 +171,19 @@ lazy var levelOne: UIButton = {
 //            level1Image.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
             level2Image.heightAnchor.constraint(equalToConstant: 80),
         ])
+//        changeLanguge
+        view.addSubview(changeLanguge)
+        NSLayoutConstraint.activate([
+            
+            changeLanguge.topAnchor.constraint(equalTo: level2Image.bottomAnchor, constant: 100),
+
+//            changeLanguge.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -90),
+//            changeLanguge.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
+            changeLanguge.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            changeLanguge.heightAnchor.constraint(equalToConstant: 80),
+            changeLanguge.widthAnchor.constraint(equalToConstant: 80),
+        ])
+       
             }
     
     @objc private func level1ButtonTapped() {
@@ -166,6 +197,15 @@ lazy var levelOne: UIButton = {
         self.present(vc, animated: true, completion: nil)
 
     }
-
+    @objc func ChangeLanguge() {
+        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+          return
+        }
+        if UIApplication.shared.canOpenURL(settingsUrl) {
+          UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+            print("Settings opened: \(success)")
+          })
+        }
+      }
 }
 

@@ -15,14 +15,20 @@ class Lessons: UIViewController {
 
         override func viewDidLoad() {
             super.viewDidLoad()
-         
+            navigationItem.rightBarButtonItem = UIBarButtonItem(
+                title: "Back",
+                style: .plain,
+                target: self,
+                action: #selector(dismissSelf))
             
             // Do any additional setup after loading the view.
                     configureCollectionView()
             self.title = (NSLocalizedString("Logic KID", comment: ""))
             self.navigationItem.largeTitleDisplayMode = .automatic
         }
-    
+    @objc private func dismissSelf(){
+        dismiss(animated: true, completion: nil)
+    }
         private func configureCollectionView(){
             
             collectionView                      = UICollectionView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height), collectionViewLayout: Layout())

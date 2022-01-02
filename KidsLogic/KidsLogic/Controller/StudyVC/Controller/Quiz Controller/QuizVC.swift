@@ -266,7 +266,7 @@ class QuizviewController: UIViewController {
     }
     func updateQuestion(){
         
-        if questionNumber <= allQuestions.list.count - 2{
+        if questionNumber <= allQuestions.list.count - 1{
             QImageView.image = UIImage(named:(allQuestions.list[questionNumber].questionImage))
             questionLabel.text = allQuestions.list[questionNumber].question
             optionA.setTitle(allQuestions.list[questionNumber].optionA, for: UIControl.State.normal)
@@ -291,7 +291,7 @@ class QuizviewController: UIViewController {
     func updateUI(){
        
         scoreLabel.text = "Score: \(score)"
-        questionCounter.text = "Q:\(questionNumber + 1)/\(allQuestions.list.count)"
+        questionCounter.text = "Q:\(questionNumber + 1)/\(allQuestions.list.count )"
 //        progressView.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.list.count)) * CGFloat(questionNumber + 1)
         
     }

@@ -35,28 +35,28 @@ class MoreVC2: UIViewController {
 //    return level1
 //}()
     
-      let imageNormal3:UIImage? = UIImage(named: "yallwo")
-    let imageNormal:UIImage? = UIImage(named: "blue")
+      let imageNormal3:UIImage? = UIImage(named: "blue")
+//    let imageNormal:UIImage? = UIImage(named: "blue")
     let imageNormal2:UIImage? = UIImage(named: "red")
     
     
-    lazy var levelTwo: UIButton = {
-        let level2 = UIButton()
-        
-        
-        level2.translatesAutoresizingMaskIntoConstraints = false
-        level2.setTitle(NSLocalizedString("Video 📀", comment: ""), for: .normal)
-        level2.setTitleColor(.systemGray2, for: .normal)
-//        level2.backgroundColor = UIColor(#colorLiteral(red: 0.3279541135, green: 0.6508837342, blue: 0.8242474198, alpha: 0.8470588235) )
-        
-        level2.setBackgroundImage(imageNormal, for: UIControl.State.normal)
-        level2.layer.cornerRadius = 20
-        level2.layer.masksToBounds = true
-        level2.addTarget(self, action: #selector(VedioButtonTapped), for: .touchUpInside)
-        
-        level2.titleLabel?.font = UIFont(name:"Copperplate", size: 30)
-        return level2
-    }()
+//    lazy var levelTwo: UIButton = {
+//        let level2 = UIButton()
+//
+//
+//        level2.translatesAutoresizingMaskIntoConstraints = false
+//        level2.setTitle(NSLocalizedString("Video 📀", comment: ""), for: .normal)
+//        level2.setTitleColor(.systemGray2, for: .normal)
+////        level2.backgroundColor = UIColor(#colorLiteral(red: 0.3279541135, green: 0.6508837342, blue: 0.8242474198, alpha: 0.8470588235) )
+//
+//        level2.setBackgroundImage(imageNormal, for: UIControl.State.normal)
+//        level2.layer.cornerRadius = 20
+//        level2.layer.masksToBounds = true
+//        level2.addTarget(self, action: #selector(VedioButtonTapped), for: .touchUpInside)
+//
+//        level2.titleLabel?.font = UIFont(name:"Copperplate", size: 30)
+//        return level2
+//    }()
     lazy var levelthree: UIButton = {
         let level3 = UIButton()
         
@@ -152,7 +152,7 @@ class MoreVC2: UIViewController {
         NSLayoutConstraint.activate([
             imageView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             imageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
-            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant:10),
+            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant:70),
             imageView.widthAnchor.constraint(equalToConstant: 300),
             imageView.heightAnchor.constraint(equalToConstant:300),
         ])
@@ -160,12 +160,12 @@ class MoreVC2: UIViewController {
         view.addSubview(levelfour)
         NSLayoutConstraint.activate([
             
-            levelfour.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5),
+            levelfour.topAnchor.constraint(equalTo: imageView.bottomAnchor),
 //            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
 
             levelfour.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
             levelfour.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
-            levelfour.heightAnchor.constraint(equalToConstant: 70),
+            levelfour.heightAnchor.constraint(equalToConstant: 100),
         ])
         
         //Constraint loginButton
@@ -181,25 +181,25 @@ class MoreVC2: UIViewController {
 //        ])
         
         //Constraint registerButton
-        view.addSubview(levelTwo)
-        NSLayoutConstraint.activate([
-            
-            levelTwo.topAnchor.constraint(equalTo: levelfour.bottomAnchor, constant: 20),
-//            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
-
-            levelTwo.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
-            levelTwo.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
-            levelTwo.heightAnchor.constraint(equalToConstant: 70),
-        ])
+//        view.addSubview(levelTwo)
+//        NSLayoutConstraint.activate([
+//
+//            levelTwo.topAnchor.constraint(equalTo: levelfour.bottomAnchor, constant: 20),
+////            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
+//
+//            levelTwo.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
+//            levelTwo.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
+//            levelTwo.heightAnchor.constraint(equalToConstant: 70),
+//        ])
         view.addSubview(levelthree)
         NSLayoutConstraint.activate([
             
-            levelthree.topAnchor.constraint(equalTo: levelTwo.bottomAnchor, constant: 20),
+            levelthree.topAnchor.constraint(equalTo: levelfour.bottomAnchor, constant: 40),
 //            loginButton.bottomAnchor.constraint(equalTo: registerButton.topAnchor),
 
             levelthree.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
             levelthree.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
-            levelthree.heightAnchor.constraint(equalToConstant: 70),
+            levelthree.heightAnchor.constraint(equalToConstant: 100),
         ])
        
         
@@ -210,7 +210,7 @@ class MoreVC2: UIViewController {
         NSLayoutConstraint.activate([
             
 
-            Swipelabel.topAnchor.constraint(equalTo: levelthree.bottomAnchor, constant: 50),
+            Swipelabel.topAnchor.constraint(equalTo: levelthree.bottomAnchor, constant: 20),
             Swipelabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             Swipelabel.heightAnchor.constraint(equalToConstant: 20),
         ])
@@ -225,7 +225,7 @@ class MoreVC2: UIViewController {
         NSLayoutConstraint.activate([
      
 
-        MapButton.topAnchor.constraint(equalTo: Swipelabel.bottomAnchor, constant: 30),
+        MapButton.topAnchor.constraint(equalTo: Swipelabel.bottomAnchor, constant: 20),
         MapButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         MapButton.widthAnchor.constraint(equalToConstant: 50),
         MapButton.heightAnchor.constraint(equalToConstant: 50),

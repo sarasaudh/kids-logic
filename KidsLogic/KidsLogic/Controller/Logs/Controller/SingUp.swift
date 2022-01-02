@@ -18,7 +18,7 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
     var userName: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.backgroundColor = .white
+        tf.backgroundColor = .systemGray6
         tf.text = ""
         tf.placeholder = (NSLocalizedString("Your Name", comment: ""))
 //        (NSLocalizedString("email",comment:""))
@@ -29,7 +29,7 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
     var emailTF: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.backgroundColor = .white
+        tf.backgroundColor = .systemGray6
         tf.text = ""
         tf.placeholder = (NSLocalizedString("email", comment: ""))
         
@@ -43,7 +43,7 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.isSecureTextEntry = true
-        tf.backgroundColor = .white
+        tf.backgroundColor = .systemGray6
         tf.layer.cornerRadius = .minimumMagnitude(20, 20)
         tf.text = ""
         tf.placeholder = (NSLocalizedString("password", comment: ""))
@@ -186,7 +186,7 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
                         }
             
             
-            self.present(GradeVC(), animated: true, completion: nil)
+            self.present(SectionVC(), animated: true, completion: nil)
         }
         func alertUserLoginError2() {
             let alert = UIAlertController(title: "oh...", message: "Please enter All Your Informations To Create New Account ☑︎", preferredStyle: .alert)

@@ -13,7 +13,7 @@ class LoginVC: UIViewController,UITextFieldDelegate {
     var emailTF: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.backgroundColor = .white
+        tf.backgroundColor = .systemGray6
         tf.text = ""
         tf.placeholder = (NSLocalizedString("email", comment: ""))
         tf.textAlignment = .left
@@ -26,7 +26,7 @@ class LoginVC: UIViewController,UITextFieldDelegate {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.isSecureTextEntry = true
-        tf.backgroundColor = .white
+        tf.backgroundColor = .systemGray6
         tf.layer.cornerRadius = .minimumMagnitude(20, 20)
         tf.text = ""
         tf.textAlignment = .left
@@ -154,7 +154,7 @@ class LoginVC: UIViewController,UITextFieldDelegate {
                 print(error as Any)
                 return
             }
-            let vc2 = GradeVC()
+            let vc2 = SectionVC()
             vc2.modalPresentationStyle = .fullScreen
             self.present(vc2, animated: true, completion: nil)
         }
