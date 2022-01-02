@@ -148,6 +148,6 @@ class VideoCollectionViewCell
 ### Slides :
 
 My presentation:
-  - https://drive.google.com/drive/folders/11ih5z_wBWkD9j6H1MaJezFHb_ANXQcub?usp=sharing
+  - 
 
 
