@@ -11,7 +11,7 @@ import CoreLocation
 import WebKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
-
+    
     var locationManger: CLLocationManager!
     
     lazy var infoImageView: UIImageView = {
@@ -21,7 +21,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = 30
-
+        
         return imageView
     }()
     
@@ -31,30 +31,30 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         return MV
     }()
     let LinkImage:UIImage? = UIImage(named: "Link")
-  lazy var websitelabel: UIButton = {
+    lazy var websitelabel: UIButton = {
         let button = UIButton (type: .system)
-
+        
         button.setBackgroundImage(LinkImage, for: UIControl.State.normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-//      button.setTitle(NSLocalizedString("Link", comment: ""), for: .normal)
-            button.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+        //      button.setTitle(NSLocalizedString("Link", comment: ""), for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
         button.layer.cornerRadius = 10
         button.addTarget(self, action: #selector(LinkPressed), for: .touchUpInside)
         button.layer.masksToBounds = true
         return button
     }()
-
-   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let me = MKPointAnnotation()
-                me.title = "KidsLogic 🐼"
-                me.coordinate =  CLLocationCoordinate2D(latitude: 21.543333, longitude: 39.172779)
+        me.title = "KidsLogic 🐼"
+        me.coordinate =  CLLocationCoordinate2D(latitude: 21.543333, longitude: 39.172779)
         mapView.addAnnotation(me)
-            
+        
         websitelabel.addTarget(self, action: "LinkPressed", for: .touchUpInside)
-       
-    
+        
+        
         view.backgroundColor = .white
         mapView.delegate = self
         
@@ -74,18 +74,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             
             infoImageView.topAnchor.constraint(equalTo: view.topAnchor),
             infoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor) ,
-
+            
             infoImageView.widthAnchor.constraint(equalToConstant: 400),
             infoImageView.heightAnchor.constraint(equalToConstant:300),
             
             websitelabel.topAnchor.constraint(equalTo: view.topAnchor,constant: 215),
             websitelabel.centerXAnchor.constraint(equalTo: view.centerXAnchor,constant: 70) ,
-
+            
             websitelabel.widthAnchor.constraint(equalToConstant: 170),
             websitelabel.heightAnchor.constraint(equalToConstant:50),
-
             
-//
+            
+            //
             mapView.topAnchor.constraint(equalTo: infoImageView.bottomAnchor),
             mapView.leftAnchor.constraint(equalTo: view.leftAnchor),
             mapView.rightAnchor.constraint(equalTo: view.rightAnchor),
@@ -94,8 +94,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
     
-
+    
     @objc private func LinkPressed() {
         UIApplication.shared.openURL(NSURL(string: "https://sites.google.com/view/kidslogic/home")! as URL)
-       }
+    }
 }

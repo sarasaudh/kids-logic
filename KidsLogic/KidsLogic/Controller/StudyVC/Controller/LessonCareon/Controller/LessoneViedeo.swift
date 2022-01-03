@@ -9,18 +9,18 @@ import UIKit
 
 
 class VideoLessons: UIViewController {
-//    let isfavorit : Bool
+    //    let isfavorit : Bool
     private var collectionView: UICollectionView?
-
-        private var data = [VideoModel]()
+    
+    private var data = [VideoModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-   
-
-
+        
+        
+        
         // Do any additional setup after loading the view.
         
         for _ in 0..<1{
@@ -31,8 +31,8 @@ class VideoLessons: UIViewController {
                                    videoFileFormat: "mp4")
             data.append (model)
         }
-      
-    let layout = UICollectionViewFlowLayout()
+        
+        let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.itemSize = CGSize(width: view.frame.size.width,
                                  height: view.frame.size.height)
@@ -58,22 +58,22 @@ extension VideoLessons: UICollectionViewDataSource{
         return data.count
     }
     
-
-       
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) ->
-            UICollectionViewCell {
-            let model = data[indexPath.row]
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VideoCollectionViewCell.identifier,
-                                                               for: indexPath) as! VideoCollectionViewCell
-            cell.configure(with: model)
-                cell.delegate = self
-            return cell
-}
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) ->
+    UICollectionViewCell {
+        let model = data[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VideoCollectionViewCell.identifier,
+                                                      for: indexPath) as! VideoCollectionViewCell
+        cell.configure(with: model)
+        cell.delegate = self
+        return cell
+    }
 }
 
 extension VideoLessons: VideoCollectionViewCellDelegate{
     func didTapLikeButton(with model: VideoModel) {
-   
+        
         print("like button tapped")
         let button = UIButton(type: .custom)
         let image = UIImage(named: "fav")?.withRenderingMode(.alwaysTemplate)
@@ -85,11 +85,8 @@ extension VideoLessons: VideoCollectionViewCellDelegate{
     func didTapProfileButton(with model: VideoModel) {
         print("profile button tapped")
         self.dismiss(animated: true)
-//        let vc = TabVC()
-//        vc.modalPresentationStyle = .fullScreen
-//        self.present(vc, animated: true, completion: nil)
+        
     }
-    
-                                              }
+}
 
 

@@ -8,8 +8,8 @@
 import Foundation
 
 class QuestionBank{
+    
     var list = [Question]()
-//    (NSLocalizedString("Link", comment: "")
     init() {
         list.append(Question(image: "1test",
                              questionText: (NSLocalizedString("ALGORITHM", comment: "")),
@@ -21,15 +21,15 @@ class QuestionBank{
         
         list.append(Question(image: "2test",
                              questionText:(NSLocalizedString( "BOOLEAN",comment: "")),
-    choiceA: (NSLocalizedString("A. مربع",comment: "")),
-    choiceB: (NSLocalizedString("B. كود",comment: "")),
-    choiceC: (NSLocalizedString("C. القيمة تكون صحيحة او خاطئة",comment: "")),
-    choiceD: (NSLocalizedString("صيغة ",comment: "")),
-    answer: 3))
+                             choiceA: (NSLocalizedString("A. مربع",comment: "")),
+                             choiceB: (NSLocalizedString("B. كود",comment: "")),
+                             choiceC: (NSLocalizedString("C. القيمة تكون صحيحة او خاطئة",comment: "")),
+                             choiceD: (NSLocalizedString("صيغة ",comment: "")),
+                             answer: 3))
         
         list.append(Question(image: "3test",
                              questionText:"BorderRadius",
-//                             questionText:(NSLocalizedString( "BorderRadius",comment: "")),
+                             //                             questionText:(NSLocalizedString( "BorderRadius",comment: "")),
                              choiceA:(NSLocalizedString( "A. الوان",comment: "")),
                              choiceB:(NSLocalizedString( "B. الحدود",comment: "")),
                              choiceC:(NSLocalizedString( "C.دائرة ",comment: "")),
@@ -37,7 +37,7 @@ class QuestionBank{
                              answer: 2))
         
         list.append(Question(image: "4test",
-//                             questionText:(NSLocalizedString( " BUG",comment: "")),
+                             //                             questionText:(NSLocalizedString( " BUG",comment: "")),
                              questionText: " BUG",
                              choiceA:(NSLocalizedString( "A.خطأ برمجي",comment: "")),
                              choiceB: (NSLocalizedString("B. نملة",comment: "")),
@@ -46,7 +46,7 @@ class QuestionBank{
                              answer: 1))
         
         list.append(Question(image: "5test" ,
-//                             questionText:(NSLocalizedString( "CSS",comment: "")),
+                             //                             questionText:(NSLocalizedString( "CSS",comment: "")),
                              questionText:"CSS",
                              choiceA: (NSLocalizedString("A.دالة" ,comment: "")),
                              choiceB: (NSLocalizedString("B. برمجية" ,comment: "")),
@@ -55,7 +55,7 @@ class QuestionBank{
                              answer: 4))
         
         list.append(Question(image: "6test" ,
-//                             questionText:(NSLocalizedString( "DEBUG",comment: "")),
+                             //                             questionText:(NSLocalizedString( "DEBUG",comment: "")),
                              questionText:"DEBUG",
                              choiceA: (NSLocalizedString("A. تصحيح برمجي" ,comment: "")),
                              choiceB: (NSLocalizedString("B. زوايا" ,comment: "")),
@@ -64,12 +64,12 @@ class QuestionBank{
                              answer: 1))
         
         list.append(Question(image: "2test",
-         questionText:(NSLocalizedString( "القيمة المنطقية BOOLEAN ",comment: "")),
-        choiceA: (NSLocalizedString("A. مربع",comment: "")),
-        choiceB: (NSLocalizedString("B. كود",comment: "")),
-        choiceC: (NSLocalizedString("C. القيمة تكون صحيحة او خاطئة",comment: "")),
-        choiceD: (NSLocalizedString("صيغة ",comment: "")),
-        answer: 3))
+                             questionText:(NSLocalizedString( "القيمة المنطقية BOOLEAN ",comment: "")),
+                             choiceA: (NSLocalizedString("A. مربع",comment: "")),
+                             choiceB: (NSLocalizedString("B. كود",comment: "")),
+                             choiceC: (NSLocalizedString("C. القيمة تكون صحيحة او خاطئة",comment: "")),
+                             choiceD: (NSLocalizedString("صيغة ",comment: "")),
+                             answer: 3))
     }
 }
 

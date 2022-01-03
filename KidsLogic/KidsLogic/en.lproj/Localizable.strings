@@ -1,16 +1,20 @@
 /* 
-  File.strings
-  KidsLogic
-
-  Created by sara saud on 25/04/1443 AH.
-
-//*/
+ File.strings
+ KidsLogic
+ 
+ Created by sara saud on 25/04/1443 AH.
+ 
+ //*/
 //LogIn
 "Login" = "Log in  ";
 "Register" = "Register Now !";
 "email" = "Email...";
 "password" = "Password...";
 "Your Name" = "Your Name" ;
+
+"Welcome " = "Welcome " ;
+"PLAY" =  "PLAY" ;
+"STUDY" = "STUDY" ;
 //Profile
 "name" = "Your Name 🧒🏻";
 "status" = "Your Status ✨";
@@ -22,6 +26,8 @@
 "Lesson" = "Lesson";
 "Logic KID" = "Lesson";
 "More" = "More";
+"Evaluation" = "Evaluation" ;
+"Swipe To Back 📽 " = "Swipe To Back 📽 " ;
 //MORE
 "GAME 🎮" = "GAME 🎮" ;
 "Video 📀" = "Video 📀" ;
@@ -58,10 +64,10 @@
 "2: Booleans are “truth values” — they’re a data type that can represent one of two outcomes: true or false. (In some languages, true and false can be represented as 1 or 0, but the takeaway message is the same.)" = "2: Booleans are “truth values” — they’re a data type that can represent one of two outcomes: true or false. (In some languages, true and false can be represented as 1 or 0, but the takeaway message is the same.)";
 "BORDER RADIUS" = "BORDER RADIUS";
 "3: A box's backgrounds, but not its border-image, are clipped to the appropriate curve (as determined by ‘background-clip’). Other effects that clip to the border or padding edge (such as ‘overflow’ other than ‘visible’) also must clip to the curve. The content of replaced elements is always trimmed to the content edge curve. Also, the area outside the curve of the border edge does not accept mouse events on behalf of the element." = "3: A box's backgrounds, but not its border-image, are clipped to the appropriate curve (as determined by ‘background-clip’). Other effects that clip to the border or padding edge (such as ‘overflow’ other than ‘visible’) also must clip to the curve. The content of replaced elements is always trimmed to the content edge curve. Also, the area outside the curve of the border edge does not accept mouse events on behalf of the element.";
-    
+
 "BUG" = "BUG";
 "4: In IT, a bug refers to an error, fault or flaw in any computer program or a hardware system. A bug produces unexpected results or causes a system to behave unexpectedly. In short it is any behavior or result that." = "4: In IT, a bug refers to an error, fault or flaw in any computer program or a hardware system. A bug produces unexpected results or causes a system to behave unexpectedly. In short it is any behavior or result that." ;
-    
+
 "CSS" = "CSS";
 "5: CSS, which stands for Cascading Style Sheets, is a language used alongside HTML to separate a webpage's content (the HTML part) from the design and formatting (the CSS part). It defines fonts, colors, margins, lines, height, width, backgrounds, images, positions and other visual aspects of a webpage, something which HTML was not originally designed to do. Simply put, CSS decides how your HTML is displayed." = "5: CSS, which stands for Cascading Style Sheets, is a language used alongside HTML to separate a webpage's content (the HTML part) from the design and formatting (the CSS part). It defines fonts, colors, margins, lines, height, width, backgrounds, images, positions and other visual aspects of a webpage, something which HTML was not originally designed to do. Simply put, CSS decides how your HTML is displayed.";
 

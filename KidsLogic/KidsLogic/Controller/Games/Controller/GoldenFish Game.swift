@@ -18,7 +18,7 @@ class GoldenFishGame: UIViewController {
     
     var xxContraint: NSLayoutConstraint?
     var yyContraint : NSLayoutConstraint?
-
+    
     var yyyContraint : NSLayoutConstraint?
     var xxxContraint : NSLayoutConstraint?
     
@@ -33,7 +33,7 @@ class GoldenFishGame: UIViewController {
         lbl.font = .systemFont(ofSize: 40)
         lbl.textAlignment = .center
         return lbl
-    
+        
     }()
     lazy var Faster: UILabel = {
         let lbl = UILabel ()
@@ -53,7 +53,7 @@ class GoldenFishGame: UIViewController {
         btn.tintColor = .red
         return btn
     }()
-   var Gold: UIButton = {
+    var Gold: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setImage(UIImage(named: "gold"), for: UIControl.State.normal)
@@ -86,13 +86,13 @@ class GoldenFishGame: UIViewController {
         btn.setImage(UIImage(named:"RedFish"), for: UIControl.State.normal)
         btn.addTarget(self, action: #selector(RedFishPressed), for: .touchDown)
         btn.sizeToFit()
-//        btn.addTarget(self, action: #selector(move3), for: .touchDown)
+        //        btn.addTarget(self, action: #selector(move3), for: .touchDown)
         return btn
     }()
     
     // Buttons
-     let BackButton: UIButton = {
-         let button = UIButton()
+    let BackButton: UIButton = {
+        let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setBackgroundImage(UIImage(systemName: "arrowshape.turn.up.right.fill"), for:.normal)
         button.addTarget(self, action: #selector(didTapProfileButton2), for: .touchDown)
@@ -103,25 +103,25 @@ class GoldenFishGame: UIViewController {
     
     @objc func didTapProfileButton2() {
         
-           print("profile button tapped")
-           self.dismiss(animated: true)
+        print("profile button tapped")
+        self.dismiss(animated: true)
         audioPlayer.stop()
-   //        let vc = TabVC()
-   //        vc.modalPresentationStyle = .fullScreen
-   //        self.present(vc, animated: true, completion: nil)
-       }
+        //        let vc = TabVC()
+        //        vc.modalPresentationStyle = .fullScreen
+        //        self.present(vc, animated: true, completion: nil)
+    }
     
- 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //back
         //Button Views
-       
-
-
-       
-
+        
+        
+        
+        
+        
         
         self.move2()
         self.move()
@@ -155,7 +155,7 @@ class GoldenFishGame: UIViewController {
             
             
             
-           
+            
             blueFish.widthAnchor.constraint(equalToConstant: 100) ,
             blueFish.heightAnchor.constraint(equalToConstant: 100),
             
@@ -175,17 +175,17 @@ class GoldenFishGame: UIViewController {
             BackButton.widthAnchor.constraint(equalToConstant: 60) ,
             BackButton.heightAnchor.constraint(equalToConstant: 60),
             
-       
+            
         ])
         
-      
+        
         
         xxContraint = Goldfish.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         yyContraint = Goldfish.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 170)
         
         self.yyContraint?.isActive = true
         self.xxContraint?.isActive = true
-      
+        
         
         xContraint = blueFish.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         yContraint = blueFish.centerYAnchor.constraint(equalTo: view.centerYAnchor)
@@ -198,7 +198,7 @@ class GoldenFishGame: UIViewController {
         self.xxxContraint?.isActive = true
         
     }
-     
+    
     //anemation
     @objc func move3() {
         
@@ -225,7 +225,7 @@ class GoldenFishGame: UIViewController {
         let randomTime = TimeInterval.random(in: minTime...maxTime)
         
         UIView.animate(withDuration: 3, delay: 0.1, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.2, options: [.curveLinear, .allowUserInteraction]) {
-           
+            
             self.xxxContraint?.constant = randomY
             self.yyyContraint?.constant = randomX
             
@@ -294,7 +294,7 @@ class GoldenFishGame: UIViewController {
         let randomTime = TimeInterval.random(in: minTime...maxTime)
         
         UIView.animate(withDuration: 3, delay: 0.1, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.2, options: [.curveLinear, .allowUserInteraction]) {
-           
+            
             self.xxContraint?.constant = randomY
             self.yyContraint?.constant = randomX
             
@@ -306,7 +306,7 @@ class GoldenFishGame: UIViewController {
         
     }
     
- 
+    
     @objc func blueFishPressed() {
         
         label1.text = "0"
@@ -397,9 +397,9 @@ class GoldenFishGame: UIViewController {
         audioPlayer.prepareToPlay()
         audioPlayer.play()
         
-     
-}
-
+        
+    }
+    
     @objc func RedFishPressed() {
         
         label1.text = "\((Int(self.label1.text ?? "0") ?? 0) + 1)"
@@ -429,7 +429,7 @@ class GoldenFishGame: UIViewController {
         
         
     }
-
+    
     @objc func GFishPressed(){
         
         label1.text = "\((Int(self.label1.text ?? "0") ?? 0) + 1)"
@@ -456,7 +456,7 @@ class GoldenFishGame: UIViewController {
         audioPlayer.prepareToPlay()
         audioPlayer.play()
         
-
+        
     }
 }
 

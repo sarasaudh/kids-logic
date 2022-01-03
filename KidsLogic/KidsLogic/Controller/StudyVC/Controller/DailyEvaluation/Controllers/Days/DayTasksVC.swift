@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class DayTasksVC: UIViewController {
-
+    
     var dayId: String
     let cellId = "DayTasksCell"
     var day: Day?
@@ -26,6 +26,7 @@ class DayTasksVC: UIViewController {
         super.init(coder: coder)
     }
     
+    // MARK: - properties
     lazy var tasksTV: UITableView = {
         let tv = UITableView()
         tv.translatesAutoresizingMaskIntoConstraints = false
@@ -117,7 +118,7 @@ extension DayTasksVC: UITableViewDataSource, UITableViewDelegate {
         } else {
             cell.accessoryType = .none
         }
-    
+        
         
         return cell
     }

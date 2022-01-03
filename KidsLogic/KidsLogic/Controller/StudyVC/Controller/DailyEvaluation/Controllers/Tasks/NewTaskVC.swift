@@ -9,6 +9,8 @@ import UIKit
 
 class NewTaskVC: UIViewController, UITextFieldDelegate {
     
+    
+    // MARK: - properties
     lazy var taskNameTF: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
@@ -35,7 +37,7 @@ class NewTaskVC: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let name = taskNameTF.text ?? ""
         let uuid = UUID().uuidString
-
+        
         TasksService.shared.addTask(
             task: Tasks(name: name, id: uuid)
         )

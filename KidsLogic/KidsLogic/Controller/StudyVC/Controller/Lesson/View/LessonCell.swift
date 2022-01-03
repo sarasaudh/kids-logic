@@ -11,6 +11,8 @@ import UIKit
 
 class LogicCell: UICollectionViewCell {
     static let ID = "LogicCellId"
+    
+    // MARK: - properties
     private let blogImage: UIImageView = {
         let image           = UIImageView()
         
@@ -24,7 +26,7 @@ class LogicCell: UICollectionViewCell {
         caption.textColor   = .secondaryLabel
         caption.font        = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 18, weight: .medium))
         caption.textAlignment = .center
-
+        
         return caption
     }()
     
@@ -42,7 +44,7 @@ class LogicCell: UICollectionViewCell {
         description.font            = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 16, weight: .regular))
         description.numberOfLines   = 4
         description.textAlignment   = .left
-//        description.backgroundColor = 
+        //        description.backgroundColor = 
         return description
     }()
     
@@ -51,7 +53,7 @@ class LogicCell: UICollectionViewCell {
         image.layer.cornerRadius = 25
         image.clipsToBounds = true
         image.contentMode   = .scaleAspectFit
-    
+        
         return image
     }()
     
@@ -64,7 +66,7 @@ class LogicCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-            backgroundColor = UIColor(named: "DarkColor")
+        backgroundColor = UIColor(named: "DarkColor")
         setupCell()
     }
     
@@ -86,14 +88,14 @@ class LogicCell: UICollectionViewCell {
     private func setupSizeForCellContent() {
         blogImage.frame = CGRect(x: 2, y: 2, width: self.frame.size.width, height: self.frame.size.height / 1)
         
-
+        
         blogTitle.frame = CGRect(x: 14, y: self.frame.size.height / 1 ,width: self.frame.size.width - 24, height: 90)
         
         blogDescription.frame = CGRect(x: 14, y: self.frame.size.height / 1.74, width: self.frame.size.width - 24, height: 90)
         
         authorImage.frame = CGRect(x: 14, y: self.frame.size.height / 1.23, width: 50, height: 50)
         lessonNumb.frame = CGRect(x: authorImage.frame.maxX + 13, y: self.frame.size.height / 1.23, width: self.frame.size.width - 50, height: 50)
-       
+        
     }
     private func setupCell() {
         self.backgroundColor =  UIColor(named: "DarkColor")
@@ -104,23 +106,23 @@ class LogicCell: UICollectionViewCell {
         self.addSubview(lessonNumb)
         self.layer.cornerRadius = 60
         self.layer.masksToBounds = true
-    
+        
     }
 }
 extension LogicCell {
-
+    
     func addShadow(offset: CGSize, color: UIColor, radius: CGFloat, opacity: Float) {
         layer.masksToBounds = false
         layer.shadowOffset = offset
         layer.shadowColor = color.cgColor
         layer.shadowRadius = radius
         layer.shadowOpacity = opacity
-
+        
         let backgroundCGColor = backgroundColor?.cgColor
         backgroundColor = nil
         layer.backgroundColor =  backgroundCGColor
-//        layer.backgroundColor = UIColor(named:"DarkColor")
-
+        //        layer.backgroundColor = UIColor(named:"DarkColor")
+        
     }
 }
 

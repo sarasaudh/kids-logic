@@ -13,5 +13,5 @@ struct Logic {
     var desc    : String
     var author  : String
     var lessonNum : String
-
+    
 }

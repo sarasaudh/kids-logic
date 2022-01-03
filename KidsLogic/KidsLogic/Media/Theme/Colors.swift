@@ -19,7 +19,7 @@ enum colors {
 }
 enum colors1{
     static let backgroundDarckcolor  = UIColor(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1))
-   static let backgroundLightcolor  = UIColor(#colorLiteral(red: 0.4832331538, green: 0.7777528763, blue: 1, alpha: 1))
+    static let backgroundLightcolor  = UIColor(#colorLiteral(red: 0.4832331538, green: 0.7777528763, blue: 1, alpha: 1))
 }
 enum colors2 {
     static let backgroundLightcolor = UIColor(#colorLiteral(red: 0.4004689157, green: 0.913308382, blue: 1, alpha: 1))
@@ -30,13 +30,13 @@ enum colors2 {
 enum colors3 {
     static let backgroundLightcolor = UIColor( #colorLiteral(red: 0.9145148396, green: 0.9097008109, blue: 0.8880508542, alpha: 1) )
     static let backgroundleftColor = UIColor(#colorLiteral(red: 0.3282613158, green: 0.4580078721, blue: 0.5644039512, alpha: 1))
-
-//MARK: -
-
+    
+    //MARK: -
+    
 }
 enum colors4{
     static let backgroundDarckcolor  = UIColor(#colorLiteral(red: 0.4832331538, green: 0.7777528763, blue: 1, alpha: 1) )
-   static let backgroundLightcolor  = UIColor(#colorLiteral(red: 0.1612170339, green: 0.2494742572, blue: 0.6634539962, alpha: 1))
+    static let backgroundLightcolor  = UIColor(#colorLiteral(red: 0.1612170339, green: 0.2494742572, blue: 0.6634539962, alpha: 1))
     static let backgroundLightcolor2  = UIColor(#colorLiteral(red: 0.1612170339, green: 0.2494742572, blue: 0.6634539962, alpha: 1))
 }
 // Gradiant background
@@ -77,7 +77,7 @@ extension UIView {
         gradientLayer.colors = [colors4.backgroundLightcolor2.cgColor,colors4.backgroundLightcolor.cgColor, colors4.backgroundDarckcolor.cgColor]
         layer.insertSublayer(gradientLayer, at: 0)
     }
-   
+    
 }
 
 

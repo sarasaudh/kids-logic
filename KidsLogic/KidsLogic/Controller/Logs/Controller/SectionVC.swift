@@ -8,7 +8,9 @@
 import UIKit
 
 class SectionVC: UIViewController {
-
+    
+    
+    // MARK: - properties
     
     
     lazy var imageView: UIImageView = {
@@ -20,6 +22,8 @@ class SectionVC: UIViewController {
         
         return imageView
     }()
+    
+    
     lazy var level1Image: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "baby")
@@ -28,6 +32,8 @@ class SectionVC: UIViewController {
         
         return imageView
     }()
+    
+    
     lazy var level2Image: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "kid")
@@ -38,80 +44,77 @@ class SectionVC: UIViewController {
         return imageView
     }()
     
+    
     lazy var levelsLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
-
-         lbl.textAlignment = .center
-          lbl.textColor = .black
-         lbl.shadowColor = .blue
-          lbl.font.withSize(100)
-         lbl.translatesAutoresizingMaskIntoConstraints = false
-         lbl.text = NSLocalizedString("Welcome ", comment: "")
-          return lbl
-            
+        
+        lbl.textAlignment = .center
+        lbl.textColor = .black
+        lbl.shadowColor = .blue
+        lbl.font.withSize(100)
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.text = NSLocalizedString("Welcome ", comment: "")
+        
+        return lbl
     }()
     
-      let imageNormal:UIImage? = UIImage(named: "button")
-lazy var levelOne: UIButton = {
-    let level1 = UIButton()
-    level1.translatesAutoresizingMaskIntoConstraints = false
-    level1.setTitle(NSLocalizedString("PLAY", comment: ""), for: .normal)
-    level1.setTitleColor(.white, for: .normal)
-    level1.titleLabel?.font = UIFont(name:"Copperplate", size: 40 )
-   
-    level1.setBackgroundImage(imageNormal, for: UIControl.State.normal)
-//    level1.backgroundColor = UIColor(#colorLiteral(red: 0.8162642121, green: 0.6648833156, blue: 0.7066509128, alpha: 1))
-//    level1.layer.cornerRadius = 20
-    level1.layer.masksToBounds = true
-    level1.addTarget(self, action: #selector(level1ButtonTapped), for: .touchUpInside)
-//    level1.titleLabel?.font = .systemFont(ofSize: 40, weight: .medium)
-    return level1
-}()
-
+    
+    let imageNormal:UIImage? = UIImage(named: "button")
+    
+    lazy var levelOne: UIButton = {
+        let level1 = UIButton()
+        level1.translatesAutoresizingMaskIntoConstraints = false
+        level1.setTitle(NSLocalizedString("PLAY", comment: ""), for: .normal)
+        level1.setTitleColor(.white, for: .normal)
+        level1.titleLabel?.font = UIFont(name:"Copperplate", size: 40 )
+        level1.setBackgroundImage(imageNormal, for: UIControl.State.normal)
+        level1.layer.masksToBounds = true
+        level1.addTarget(self, action: #selector(level1ButtonTapped), for: .touchUpInside)
+        
+        return level1
+    }()
+    
     lazy var levelTwo: UIButton = {
         let level2 = UIButton()
-        
         
         level2.translatesAutoresizingMaskIntoConstraints = false
         level2.setTitle(NSLocalizedString("STUDY", comment: ""), for: .normal)
         level2.setTitleColor(.white, for: .normal)
         
         level2.setBackgroundImage(imageNormal, for: UIControl.State.normal)
-//        level2.backgroundColor = UIColor(#colorLiteral(red: 0.8785117269, green: 0.7318091393, blue: 0.647349894, alpha: 1))
         level2.addTarget(self, action: #selector(level2ButtonTapped), for: .touchUpInside)
-//        level2.layer.cornerRadius = 20
         level2.layer.masksToBounds = true
         level2.titleLabel?.font = UIFont(name:"Copperplate", size: 40)
         level2.titleLabel?.textAlignment = .center
         
         return level2
     }()
+    
+    
     let imageNormalL:UIImage? = UIImage(named: "en")
+    
     @objc lazy var changeLanguge: UIButton = {
         let btn = UIButton()
         
         
         btn.translatesAutoresizingMaskIntoConstraints = false
-//        btn.setTitle(NSLocalizedString("STUDY", comment: ""), for: .normal)
-//        btn.setTitleColor(.white, for: .normal)
-        
         btn.setBackgroundImage(imageNormalL, for: UIControl.State.normal)
-//        level2.backgroundColor = UIColor(#colorLiteral(red: 0.8785117269, green: 0.7318091393, blue: 0.647349894, alpha: 1))
         btn.addTarget(self, action: #selector(ChangeLanguge), for: .touchUpInside)
-//        level2.layer.cornerRadius = 20
         btn.layer.masksToBounds = true
-//        btn.titleLabel?.font = UIFont(name:"Copperplate", size: 40)
         btn.titleLabel?.textAlignment = .center
         
         return btn
     }()
+    
+    
+    // MARK: - LoadView
     override func viewDidLoad() {
         super.viewDidLoad()
         view.setGradiantView3()
         
         
-        //Constraint imageView
+        // MARK: - Constraints
         
         view.addSubview(imageView)
         
@@ -126,13 +129,13 @@ lazy var levelOne: UIButton = {
         
         // constrant label
         view.addSubview(levelsLabel)
-                NSLayoutConstraint.activate([
-                    levelsLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -80),
-        
-                    levelsLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
-                    levelsLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
-                    levelsLabel.heightAnchor.constraint(equalToConstant: 200),
-                ])
+        NSLayoutConstraint.activate([
+            levelsLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -80),
+            
+            levelsLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50),
+            levelsLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
+            levelsLabel.heightAnchor.constraint(equalToConstant: 200),
+        ])
         
         
         
@@ -140,7 +143,7 @@ lazy var levelOne: UIButton = {
         view.addSubview(levelOne)
         NSLayoutConstraint.activate([
             levelOne.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 90),
-
+            
             levelOne.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -90),
             levelOne.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
             levelOne.heightAnchor.constraint(equalToConstant: 100),
@@ -148,9 +151,8 @@ lazy var levelOne: UIButton = {
         view.addSubview(level1Image)
         NSLayoutConstraint.activate([
             level1Image.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 90),
-
+            
             level1Image.rightAnchor.constraint(equalTo: levelOne.rightAnchor, constant:60),
-//            level1Image.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
             level1Image.heightAnchor.constraint(equalToConstant: 90),
         ])
         //Constraint registerButton
@@ -158,7 +160,7 @@ lazy var levelOne: UIButton = {
         NSLayoutConstraint.activate([
             
             levelTwo.topAnchor.constraint(equalTo: levelOne.bottomAnchor, constant: 50),
-
+            
             levelTwo.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -90),
             levelTwo.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
             levelTwo.heightAnchor.constraint(equalToConstant: 100),
@@ -166,46 +168,49 @@ lazy var levelOne: UIButton = {
         view.addSubview(level2Image)
         NSLayoutConstraint.activate([
             level2Image.topAnchor.constraint(equalTo: levelOne.bottomAnchor, constant: 50),
-
+            
             level2Image.rightAnchor.constraint(equalTo: levelTwo.rightAnchor, constant:-70),
-//            level1Image.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
             level2Image.heightAnchor.constraint(equalToConstant: 80),
         ])
-//        changeLanguge
+        
+        //        changeLanguge
         view.addSubview(changeLanguge)
         NSLayoutConstraint.activate([
             
             changeLanguge.topAnchor.constraint(equalTo: level2Image.bottomAnchor, constant: 100),
-
-//            changeLanguge.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -90),
-//            changeLanguge.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 50),
             changeLanguge.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             changeLanguge.heightAnchor.constraint(equalToConstant: 80),
             changeLanguge.widthAnchor.constraint(equalToConstant: 80),
         ])
-       
-            }
+        
+    }
+    // MARK: - func
+    
     
     @objc private func level1ButtonTapped() {
         let vc = HomeVC()
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
+    
+    
     @objc private func level2ButtonTapped() {
         let vc = TabVC2()
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
-
+        
     }
+    
+    
     @objc func ChangeLanguge() {
         guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
-          return
+            return
         }
         if UIApplication.shared.canOpenURL(settingsUrl) {
-          UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
-            print("Settings opened: \(success)")
-          })
+            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                print("Settings opened: \(success)")
+            })
         }
-      }
+    }
 }
 

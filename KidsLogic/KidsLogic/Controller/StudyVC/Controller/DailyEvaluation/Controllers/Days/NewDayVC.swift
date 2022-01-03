@@ -10,7 +10,8 @@ import FirebaseFirestore
 
 
 class NewDayVC: UIViewController {
-
+    
+    // MARK: - properties
     lazy var datePicker: UIDatePicker = {
         let dp = UIDatePicker()
         dp.translatesAutoresizingMaskIntoConstraints = false

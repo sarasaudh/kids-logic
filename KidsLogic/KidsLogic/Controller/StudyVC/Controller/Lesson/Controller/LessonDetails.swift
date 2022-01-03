@@ -18,7 +18,7 @@ class LessonDetailVC: UIViewController {
     var LessonNumber: String?
     
     
-    
+    // MARK: - properties
     let bImage: UIImageView =  {
         let image           = UIImageView()
         image.contentMode   = .scaleToFill
@@ -52,7 +52,7 @@ class LessonDetailVC: UIViewController {
     }()
     private let Lvoice: UIButton = {
         let btn = UIButton()
-//        btn.translatesAutoresirzingMaskIntoConstraints = false
+        //        btn.translatesAutoresirzingMaskIntoConstraints = false
         btn.setImage(UIImage(named: "nicepanda"), for: UIControl.State.normal)
         btn.addTarget(self, action: #selector(pandaVPressed), for: .touchDown)
         return btn
@@ -63,7 +63,7 @@ class LessonDetailVC: UIViewController {
         view.backgroundColor = UIColor(named: "DarkColor")
         self.title = "Logic Lessons "
         self.navigationItem.largeTitleDisplayMode = .never
-         
+        
         setupView()
     }
     
@@ -73,7 +73,7 @@ class LessonDetailVC: UIViewController {
         guard let lesTitle = lessonTitle else {return}
         guard let lesDes = lessonDescription else {return}
         guard let lesnum = LessonNumber else {return}
-
+        
         
         //image
         bImage.translatesAutoresizingMaskIntoConstraints                                        = false
@@ -82,7 +82,7 @@ class LessonDetailVC: UIViewController {
         bImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive       = true
         bImage.widthAnchor.constraint(equalTo: view.widthAnchor).isActive                       = true
         bImage.heightAnchor.constraint(equalToConstant: view.frame.size.height / 3).isActive    = true
-                
+        
         
         //title
         bTitle.translatesAutoresizingMaskIntoConstraints = false
@@ -119,43 +119,43 @@ class LessonDetailVC: UIViewController {
         bDescription.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 19).isActive       = true
         bDescription.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -19).isActive    = true
         bDescription.heightAnchor.constraint(equalToConstant: 400).isActive                             = true
-      
-    
+        
+        
         
         bImage.image        = UIImage(named: lesImage)
         bTitle.text         = lesTitle
         bDescription.text   = lesDes
         LNum.text           = lesnum
     }
-
+    
     @objc func pandaVPressed() {
-
-    print("Hello Panda 🐼!")
-               // Set the sound file name & extension
-               let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "nice", ofType: "mp3")!)
-               
-               do {
-                   // Preperation
-                   try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
-               } catch _ {
-               }
-               do {
-                   try AVAudioSession.sharedInstance().setActive(true)
-               } catch _ {
-               }
-               
-               // Play the sound
-               do {
-                   audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
-               } catch _{
-               }
-//        stop voice
-//        [self.webView loadRequest:NSURLRequestFromString(@"about:blank")]
-
-               audioPlayer.prepareToPlay()
-               audioPlayer.play()
-          
-           
+        
+        print("Hello Panda 🐼!")
+        // Set the sound file name & extension
+        let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: "nice", ofType: "mp3")!)
+        
+        do {
+            // Preperation
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+        } catch _ {
         }
-  
+        do {
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch _ {
+        }
+        
+        // Play the sound
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
+        } catch _{
+        }
+        //        stop voice
+        //        [self.webView loadRequest:NSURLRequestFromString(@"about:blank")]
+        
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+        
+        
+    }
+    
 }

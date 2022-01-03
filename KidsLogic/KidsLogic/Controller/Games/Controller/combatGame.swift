@@ -19,7 +19,7 @@ class codecombat: UIViewController, WKUIDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-   
+        
         let myURL = URL(string:"https://codecombat.com/play")
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)

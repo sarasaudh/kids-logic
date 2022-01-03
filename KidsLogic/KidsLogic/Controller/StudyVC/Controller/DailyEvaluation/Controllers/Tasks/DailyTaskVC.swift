@@ -9,7 +9,8 @@ import UIKit
 import FirebaseFirestore
 class DTasksVC: UIViewController {
     var tasks: Array<Tasks> = []
-
+    
+    // MARK: - properties
     lazy var tasksTV: UITableView = {
         let t = UITableView()
         t.translatesAutoresizingMaskIntoConstraints = false
@@ -29,7 +30,7 @@ class DTasksVC: UIViewController {
         b.layer.cornerRadius = 20
         return b
     }()
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.setGradiantView3()
@@ -38,7 +39,7 @@ class DTasksVC: UIViewController {
             self.tasksTV.reloadData()
         }
         
-//        tabBarItem = UITabBarItem(title: "My Task", image: UIImage(systemName: "target"), selectedImage: nil)
+        //        tabBarItem = UITabBarItem(title: "My Task", image: UIImage(systemName: "target"), selectedImage: nil)
         view.backgroundColor = .white
         
         view.addSubview(tasksTV)
@@ -64,39 +65,39 @@ class DTasksVC: UIViewController {
     }
     //delete
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-         let cell = tasks[indexPath.row]
-         let alertcontroller = UIAlertController(title: "Delete Task"
-                             , message: "Are you sure you want to delete this Task?"
-                             , preferredStyle: UIAlertController.Style.alert
-         )
-            alertcontroller.addAction(
-                UIAlertAction(title: "cancel",
-                       style: UIAlertAction.Style.default,
-                       handler: { Action in print("...")
-           })
-         )
-         alertcontroller.addAction(
-           UIAlertAction(title: "Delete",
-                  style: UIAlertAction.Style.destructive,
-                  handler: { Action in
-             if editingStyle == .delete {
-                 Firestore.firestore().collection("tasks").document(cell.id).delete()
-             }
-             self.tasksTV.reloadData()
-           })
-         )
-         self.present(alertcontroller, animated: true, completion: nil)
-       }
-     }
+        let cell = tasks[indexPath.row]
+        let alertcontroller = UIAlertController(title: "Delete Task"
+                                                , message: "Are you sure you want to delete this Task?"
+                                                , preferredStyle: UIAlertController.Style.alert
+        )
+        alertcontroller.addAction(
+            UIAlertAction(title: "cancel",
+                          style: UIAlertAction.Style.default,
+                          handler: { Action in print("...")
+                          })
+        )
+        alertcontroller.addAction(
+            UIAlertAction(title: "Delete",
+                          style: UIAlertAction.Style.destructive,
+                          handler: { Action in
+                              if editingStyle == .delete {
+                                  Firestore.firestore().collection("tasks").document(cell.id).delete()
+                              }
+                              self.tasksTV.reloadData()
+                          })
+        )
+        self.present(alertcontroller, animated: true, completion: nil)
+    }
+}
 
 extension DTasksVC: UITableViewDataSource, UITableViewDelegate {
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath)
         
         let task = tasks[indexPath.row]

@@ -88,7 +88,7 @@ class DaysService {
         ])
     }
     
-//    delet day
+    //    delet day
     func deleteDay(dayId: String) {
         daysCollection.document(dayId).delete()
     }

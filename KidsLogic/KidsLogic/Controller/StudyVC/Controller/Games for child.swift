@@ -10,62 +10,64 @@ import Foundation
 import UIKit
 class Games2:UIViewController {
     
+    
+    // MARK: - properties
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "gaming")
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
-//        imageView.backgroundColor = .quaternaryLabel
+        //        imageView.backgroundColor = .quaternaryLabel
         imageView.layer.cornerRadius = 30
         
         return imageView
     }()
     
-   var honyGameName: UILabel = {
-      let lbl = UILabel()
-       lbl.textAlignment = .center
+    var honyGameName: UILabel = {
+        let lbl = UILabel()
+        lbl.textAlignment = .center
         lbl.textColor = .white
-       lbl.shadowColor = .black
-       lbl.backgroundColor = UIColor(#colorLiteral(red: 0.715143621, green: 0.4925160408, blue: 0.5837199092, alpha: 1))
+        lbl.shadowColor = .black
+        lbl.backgroundColor = UIColor(#colorLiteral(red: 0.715143621, green: 0.4925160408, blue: 0.5837199092, alpha: 1))
         lbl.font.withSize(15)
-       lbl.translatesAutoresizingMaskIntoConstraints = false
-       lbl.text = NSLocalizedString("honey bee Game", comment: "")
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.text = NSLocalizedString("honey bee Game", comment: "")
         return lbl
         
-   }()
-  
-lazy var honyboo: UIButton = {
-    let btn = UIButton()
-    btn.translatesAutoresizingMaskIntoConstraints = false
-//    btn.setTitle(NSLocalizedString("honey bee 🐝", comment: ""), for: .normal)
-    btn.setImage(UIImage(named: "h"), for: UIControl.State.normal)
-    btn.setTitleColor(.white, for: .normal)
-    btn.backgroundColor = UIColor(#colorLiteral(red: 0.7047290802, green: 0.4141619802, blue: 0.5999490619, alpha: 0.8470588235))
-    btn.layer.cornerRadius = 20
-    btn.layer.masksToBounds = true
-    btn.addTarget(self, action: #selector(honyBeeTapped), for: .touchUpInside)
-    btn.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
-    return btn
-}()
-  
+    }()
+    
+    lazy var honyboo: UIButton = {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        //    btn.setTitle(NSLocalizedString("honey bee 🐝", comment: ""), for: .normal)
+        btn.setImage(UIImage(named: "h"), for: UIControl.State.normal)
+        btn.setTitleColor(.white, for: .normal)
+        btn.backgroundColor = UIColor(#colorLiteral(red: 0.7047290802, green: 0.4141619802, blue: 0.5999490619, alpha: 0.8470588235))
+        btn.layer.cornerRadius = 20
+        btn.layer.masksToBounds = true
+        btn.addTarget(self, action: #selector(honyBeeTapped), for: .touchUpInside)
+        btn.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+        return btn
+    }()
+    
     
     var FishGameName: UILabel = {
-       let lbl = UILabel()
+        let lbl = UILabel()
         lbl.textAlignment = .center
-         lbl.textColor = .white
+        lbl.textColor = .white
         lbl.shadowColor = .black
         lbl.backgroundColor = UIColor(#colorLiteral(red: 0.3951109648, green: 0.6936698556, blue: 0.7874156833, alpha: 1))
-         lbl.font.withSize(15)
+        lbl.font.withSize(15)
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.text = NSLocalizedString("Golden Fish", comment: "")
-         return lbl
-         
+        return lbl
+        
     }()
     
     lazy var Fishgame: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-//        btn.setTitle(NSLocalizedString("Golden Fish", comment: ""), for: .normal)
+        //        btn.setTitle(NSLocalizedString("Golden Fish", comment: ""), for: .normal)
         btn.setImage(UIImage(named: "startFish"), for: UIControl.State.normal)
         btn.setTitleColor(.white, for: .normal)
         btn.backgroundColor = UIColor(#colorLiteral(red: 0.3279541135, green: 0.6508837342, blue: 0.8242474198, alpha: 0.8470588235) )
@@ -78,22 +80,22 @@ lazy var honyboo: UIButton = {
     }()
     
     var CodeCombatName: UILabel = {
-       let lbl = UILabel()
+        let lbl = UILabel()
         lbl.textAlignment = .center
-         lbl.textColor = .white
+        lbl.textColor = .white
         lbl.shadowColor = .black
         lbl.backgroundColor = UIColor(#colorLiteral(red: 0.4051097035, green: 0.6975014806, blue: 0.8082057238, alpha: 1) )
-         lbl.font.withSize(15)
+        lbl.font.withSize(15)
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.text = NSLocalizedString("Code Combat", comment: "")
-         return lbl
-         
+        return lbl
+        
     }()
     
     lazy var game3: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-//        btn.setTitle(NSLocalizedString("Code Combat", comment: ""), for: .normal)
+        //        btn.setTitle(NSLocalizedString("Code Combat", comment: ""), for: .normal)
         btn.setImage(UIImage(named: "codecombat"), for: UIControl.State.normal)
         btn.setTitleColor(.white, for: .normal)
         btn.backgroundColor = UIColor(#colorLiteral(red: 0.3279541135, green: 0.6508837342, blue: 0.8242474198, alpha: 0.8470588235) )
@@ -118,7 +120,7 @@ lazy var honyboo: UIButton = {
         view.addSubview(FishGameName)
         view.addSubview(CodeCombatName)
         view.addSubview(game3)
-       
+        
         NSLayoutConstraint.activate([
             
             imageView.topAnchor.constraint(equalTo: view.topAnchor,constant: -2),
@@ -130,7 +132,7 @@ lazy var honyboo: UIButton = {
             game3.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             game3.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
             game3.heightAnchor.constraint(equalToConstant: 100),
-      
+            
             CodeCombatName.topAnchor.constraint(equalTo: game3.bottomAnchor, constant:10),
             CodeCombatName.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             CodeCombatName.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
@@ -140,31 +142,31 @@ lazy var honyboo: UIButton = {
             honyboo.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             honyboo.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
             honyboo.heightAnchor.constraint(equalToConstant: 100),
-           
-        
+            
+            
             honyGameName.topAnchor.constraint(equalTo: honyboo.bottomAnchor, constant:10),
             honyGameName.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             honyGameName.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
             
-           
+            
             
             
             Fishgame.topAnchor.constraint(equalTo: honyGameName.bottomAnchor, constant: 20),
             Fishgame.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             Fishgame.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
             Fishgame.heightAnchor.constraint(equalToConstant: 100),
-      
+            
             FishGameName.topAnchor.constraint(equalTo: Fishgame.bottomAnchor, constant:10),
             FishGameName.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             FishGameName.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
-      
-          
-      
+            
+            
+            
         ])
-     
-}
+        
+    }
     @objc private func honyBeeTapped() {
-let vc = honyBeeGame()
+        let vc = honyBeeGame()
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }

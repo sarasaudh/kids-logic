@@ -15,6 +15,9 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
     
     var users: Array<User> = []
     var score:User?
+    
+    // MARK: - properties
+    
     lazy var containerView: UIView = {
         
         let view = UIView()
@@ -32,14 +35,14 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
         image.isUserInteractionEnabled = true
         return image
     }()
-//    lazy var imagePicker : UIImagePickerController = {
-//        let imagePicker = UIImagePickerController()
-//        imagePicker.delegate = self
-//        imagePicker.sourceType = .photoLibrary
-//        imagePicker.allowsEditing = true
-//        imagePicker.sheetPresentationController?.preferredCornerRadius = 50
-//        return imagePicker
-//    }()
+    //    lazy var imagePicker : UIImagePickerController = {
+    //        let imagePicker = UIImagePickerController()
+    //        imagePicker.delegate = self
+    //        imagePicker.sourceType = .photoLibrary
+    //        imagePicker.allowsEditing = true
+    //        imagePicker.sheetPresentationController?.preferredCornerRadius = 50
+    //        return imagePicker
+    //    }()
     //user name
     lazy var nameLabel: UITextField = {
         let label = UITextField()
@@ -169,7 +172,7 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
                     self.profileImage.image = UIImage(named: "score6")
                 case 7 :
                     self.profileImage.image = UIImage(named: "score7")
-                
+                    
                 default :
                     self.profileImage.image = UIImage(named: "score1")
                     
@@ -208,8 +211,8 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
         // Gesture to image
         
         
-//        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
-//        profileImage.addGestureRecognizer(tapRecognizer)
+        //        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        //        profileImage.addGestureRecognizer(tapRecognizer)
         view.backgroundColor = .white
         
         view.addSubview(containerView)
@@ -321,16 +324,16 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
         )
         present(alert1, animated: true, completion: nil)
     }
-//    //image picker
-//    @objc func imageTapped() {
-//        print("Image tapped")
-//        present(imagePicker, animated: true)
-//    }
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        let image = info[.editedImage] ?? info [.originalImage] as? UIImage
-//        profileImage.image = image as? UIImage
-//        dismiss(animated: true)
-//    }
+    //    //image picker
+    //    @objc func imageTapped() {
+    //        print("Image tapped")
+    //        present(imagePicker, animated: true)
+    //    }
+    //    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    //        let image = info[.editedImage] ?? info [.originalImage] as? UIImage
+    //        profileImage.image = image as? UIImage
+    //        dismiss(animated: true)
+    //    }
     //share
     @objc func scorePressed (_ sender: Any) {
         

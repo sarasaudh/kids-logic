@@ -8,41 +8,41 @@
 import UIKit
 
 class TabVC: UITabBarController {
-   
     
-  fileprivate func createNavController(for rootViewController: UIViewController,
-                           title: String,
-                           image: UIImage) -> UIViewController {
-      
-      let navController = UINavigationController(rootViewController: rootViewController)
-      
-      navController.tabBarItem.title = title
-      navController.tabBarItem.image = image
-      navController.navigationBar.prefersLargeTitles = true
-      rootViewController.navigationItem.title = title
-      navController.navigationBar.backgroundColor = .quaternarySystemFill
-      
-      return navController
+    
+    fileprivate func createNavController(for rootViewController: UIViewController,
+                                         title: String,
+                                         image: UIImage) -> UIViewController {
+        
+        let navController = UINavigationController(rootViewController: rootViewController)
+        
+        navController.tabBarItem.title = title
+        navController.tabBarItem.image = image
+        navController.navigationBar.prefersLargeTitles = true
+        rootViewController.navigationItem.title = title
+        navController.navigationBar.backgroundColor = .quaternarySystemFill
+        
+        return navController
     }
     
-  func setupVCs() {
-      
-     viewControllers = [
-
-      
-        createNavController(for:HomeVC(), title: NSLocalizedString("Home", comment: ""), image: UIImage(systemName: "star")!)
+    func setupVCs() {
         
-//       createNavController(for:MyProfileVC(), title: NSLocalizedString("profile", comment: ""), image: UIImage(systemName: "person")!),
-     ]
-   }
+        viewControllers = [
+            
+            
+            createNavController(for:HomeVC(), title: NSLocalizedString("Home", comment: ""), image: UIImage(systemName: "star")!)
+            
+            //       createNavController(for:MyProfileVC(), title: NSLocalizedString("profile", comment: ""), image: UIImage(systemName: "person")!),
+        ]
+    }
     
-  override func viewDidLoad() {
-      
-    super.viewDidLoad()
-      setupVCs()
- 
-      view.backgroundColor = UIColor (named: "DarkColor")
-       
-  }
-   
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        setupVCs()
+        
+        view.backgroundColor = UIColor (named: "DarkColor")
+        
+    }
+    
 }

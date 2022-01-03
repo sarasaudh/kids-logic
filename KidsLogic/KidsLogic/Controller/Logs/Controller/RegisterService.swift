@@ -42,7 +42,7 @@ class RegisterService {
                     status: (data["status"] as? String) ?? "No status",
                     score: (data["score"] as? Int) ?? 0,
                     image: (data["image"] as? String) ?? "No image"
-                   
+                    
                 )
                 users.append(user)
             }
@@ -58,5 +58,5 @@ class RegisterService {
             "status": user.status,
         ], merge: true)
     }
-
+    
 }

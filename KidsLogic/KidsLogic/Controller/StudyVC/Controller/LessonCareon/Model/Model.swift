@@ -11,6 +11,6 @@ struct VideoModel {
     let username: String
     let audioTrackName: String
     let videoFileName: String
-   let videoFileFormat: String
-  
+    let videoFileFormat: String
+    
 }

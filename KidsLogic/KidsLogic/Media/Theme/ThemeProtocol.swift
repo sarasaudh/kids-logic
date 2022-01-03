@@ -7,7 +7,7 @@
 import UIKit
 import Foundation
 protocol ThemeProtocol {
-   var mainFontName: String { get }
+    var mainFontName: String { get }
     var accent: UIColor { get }
     var background: UIColor { get }
     var tint: UIColor { get }

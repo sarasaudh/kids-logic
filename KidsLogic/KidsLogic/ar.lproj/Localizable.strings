@@ -1,16 +1,20 @@
 /* 
-  File.strings
-  KidsLogic
-
-  Created by sara saud on 25/04/1443 AH.
-
-*/
+ File.strings
+ KidsLogic
+ 
+ Created by sara saud on 25/04/1443 AH.
+ 
+ */
 //LOG IN
 "Login" = "تسجيل الدخول";
 "Register" = "انشاء حساب جديد";
 "email" = "البريد الالكتروني";
 "password" = "الرقم السري";
 "Your Name" = " اسمك" ;
+
+"Welcome " = "مرحباً " ;
+"PLAY" = "العب";
+"STUDY" = "ادرس"
 //Profile
 "name" = "🧒🏻الأسم";
 "status" = "✨الحاله";
@@ -33,13 +37,14 @@
 "Quiz 🧩" = " 🧩 اختبار ";
 //Self evaluation
 "Self evaluation🔖 " = "التقييم الذاتي🔖 " ;
+"Evaluation" = "التقييم" ;
 "NEW Task➕" = "➕مهمة يومية" ;
 "NEW Day 🕚" = "يوم جديد 🕚 " ;
 //Lesson
 "ALGORITHM" = "الخوارزمية";
 "Tasks" = "مهامي";
 "Days" = "الايام";
-
+"Swipe To Back 📽 " = "اسحب للخلف  📽 " ;
 
 //Quiz
 "ALGORITHM" = "الخوارزمية" ;
@@ -67,7 +72,7 @@
 ";
 "BORDER RADIUS" = "الحدود";
 "3: A box's backgrounds, but not its border-image, are clipped to the appropriate curve (as determined by ‘background-clip’). Other effects that clip to the border or padding edge (such as ‘overflow’ other than ‘visible’) also must clip to the curve. The content of replaced elements is always trimmed to the content edge curve. Also, the area outside the curve of the border edge does not accept mouse events on behalf of the element." = "يتم قص خلفيات الصندوق ، ولكن ليس صورة الحدود الخاصة به ، بالمنحنى المناسب (كما هو محدد بواسطة مقطع الخلفية). التأثيرات الأخرى التي تقطع الحد أو حافة المساحة المتروكة (مثل تجاوز بخلاف المرئي) يجب أيضًا قصها مع المنحنى. يتم دائمًا اقتطاع محتوى العناصر المستبدلة إلى منحنى حافة المحتوى. أيضًا ، لا تقبل المنطقة الواقعة خارج منحنى حافة الحد أحداث الماوس نيابة عن العنصر." ;
-    
+
 
 "BUG" = "خطأ برمجي";
 "4: In IT, a bug refers to an error, fault or flaw in any computer program or a hardware system. A bug produces unexpected results or causes a system to behave unexpectedly. In short it is any behavior or result that." = "في تكنولوجيا المعلومات ، يشير الخطأ إلى خطأ أو خطأ أو عيب في أي برنامج كمبيوتر أو نظام أجهزة. ينتج عن الخطأ نتائج غير متوقعة أو يتسبب في تصرف النظام بشكل غير متوقع. باختصار هو أي سلوك أو نتيجة ذلك." ;
@@ -93,7 +98,7 @@
 " ;
 
 "HTML" = "ترميز النص التشعيبي";
-"9: The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document." = "yperText Markup Language)‏ (اختصار إتش تي إم إل HTML)، هي لغة ترميز تستخدم في إنشاء وتصميم صفحات ومواقع الويب، وتعتبر هذه اللّغة من أقدم اللّغات وأوسعها استخداما في تصميم صفحات الويب. HTML هيكل صفحة الويب وتعطي متصفّح الإنترنت وصفا لكيفيّة عرضه لمحتوياتها، يمكن أن تساعده تقنيات مثل أوراق الأنماط المتتالية (CSS) ولغات البرمجة النصية مثل جافا سكريبت تستقبل متصفحات الويب مستندات HTML من خادم الويب أو من نظام الملفات وتعرضها، ووظيفة لغة HTML هي وصف بنية صفحات الويب هيكليًا.
+"9: The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document." = "hyperText Markup Language)‏ (اختصار إتش تي إم إل HTML)، هي لغة ترميز تستخدم في إنشاء وتصميم صفحات ومواقع الويب، وتعتبر هذه اللّغة من أقدم اللّغات وأوسعها استخداما في تصميم صفحات الويب. HTML هيكل صفحة الويب وتعطي متصفّح الإنترنت وصفا لكيفيّة عرضه لمحتوياتها، يمكن أن تساعده تقنيات مثل أوراق الأنماط المتتالية (CSS) ولغات البرمجة النصية مثل جافا سكريبت تستقبل متصفحات الويب مستندات HTML من خادم الويب أو من نظام الملفات وتعرضها، ووظيفة لغة HTML هي وصف بنية صفحات الويب هيكليًا.
 العناصر في HTML هي اللبنة الأساسية لبناء مستندات HTML،
 " ;
 

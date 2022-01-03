@@ -17,7 +17,7 @@ class LightTheme: ThemeProtocol{
     
     var tint: UIColor = UIColor(named: "Tint")!
     
-
+    
     
     
 }

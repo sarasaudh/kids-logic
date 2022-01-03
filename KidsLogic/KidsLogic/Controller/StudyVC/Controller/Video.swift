@@ -18,7 +18,7 @@ class Vedio: UIViewController, WKUIDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-   
+        
         let myURL = URL(string:"https://www.youtube.com/watch?v=YtYEGsi2HB4")
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)

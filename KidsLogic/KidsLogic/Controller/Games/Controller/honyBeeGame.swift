@@ -17,7 +17,7 @@ class honyBeeGame: UIViewController {
     
     var xxContraint: NSLayoutConstraint?
     var yyContraint : NSLayoutConstraint?
-  
+    
     var count = 0
     
     
@@ -59,8 +59,8 @@ class honyBeeGame: UIViewController {
     }()
     
     // Buttons
-     let BackButton: UIButton = {
-         let button = UIButton()
+    let BackButton: UIButton = {
+        let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setBackgroundImage(UIImage(systemName: "arrowshape.turn.up.right.fill"), for:.normal)
         button.addTarget(self, action: #selector(didTapProfileButton2), for: .touchDown)
@@ -71,13 +71,13 @@ class honyBeeGame: UIViewController {
     
     @objc func didTapProfileButton2() {
         
-           print("profile button tapped")
-           self.dismiss(animated: true)
+        print("profile button tapped")
+        self.dismiss(animated: true)
         audioPlayer.stop()
-   //        let vc = TabVC()
-   //        vc.modalPresentationStyle = .fullScreen
-   //        self.present(vc, animated: true, completion: nil)
-       }
+        //        let vc = TabVC()
+        //        vc.modalPresentationStyle = .fullScreen
+        //        self.present(vc, animated: true, completion: nil)
+    }
     
     
     override func viewDidLoad() {
@@ -86,20 +86,20 @@ class honyBeeGame: UIViewController {
         self.move()
         view.isUserInteractionEnabled = true
         
-    
-               let backgroundImage2 = UIImageView(frame: UIScreen.main.bounds)
+        
+        let backgroundImage2 = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage2.image = UIImage(named: "hony")
         backgroundImage2.contentMode = UIView.ContentMode.scaleAspectFill
-               self.view.insertSubview(backgroundImage2, at: 0)
-     
-              
+        self.view.insertSubview(backgroundImage2, at: 0)
+        
+        
         
         
         view.isUserInteractionEnabled = true
-    
-    
+        
+        
         // Do any additional setup after loading the view.
-      
+        
         
         view.addSubview(label1)
         view.addSubview(button)
@@ -119,7 +119,7 @@ class honyBeeGame: UIViewController {
             label1.rightAnchor.constraint(equalTo: view.rightAnchor),
             label1.topAnchor.constraint(equalTo: button.bottomAnchor , constant: 10),
             
-           
+            
             redhonyboo.widthAnchor.constraint(equalToConstant: 100) ,
             redhonyboo.heightAnchor.constraint(equalToConstant: 100),
             
@@ -131,10 +131,10 @@ class honyBeeGame: UIViewController {
             BackButton.widthAnchor.constraint(equalToConstant: 60) ,
             BackButton.heightAnchor.constraint(equalToConstant: 60),
             
-       
+            
         ])
         
-      
+        
         
         xxContraint = Hony.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         yyContraint = Hony.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 170)
@@ -144,18 +144,18 @@ class honyBeeGame: UIViewController {
         
         
         xContraint = redhonyboo.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-//        ,Hony.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        //        ,Hony.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         yContraint = redhonyboo.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         self.yContraint?.isActive = true
         self.xContraint?.isActive = true
         
         
+        
+        
+    }
     
-  
-}
- 
- 
-   
+    
+    
     
     @objc func move() {
         
@@ -228,7 +228,7 @@ class honyBeeGame: UIViewController {
     
     @objc func pandaPressed() {
         self.move()
-//        self.move2()
+        //        self.move2()
         
         print("Hello Panda 🐼!")
         // Set the sound file name & extension

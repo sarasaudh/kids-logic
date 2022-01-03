@@ -13,6 +13,7 @@ class DaysVC: UIViewController {
     var days: Array<Day> = []
     var taskCount = 0
     
+    // MARK: - properties
     lazy var daysTV: UITableView = {
         let tv = UITableView()
         tv.translatesAutoresizingMaskIntoConstraints = false
@@ -45,8 +46,8 @@ class DaysVC: UIViewController {
             self.daysTV.reloadData()
         }
         
-//        tabBarItem = UITabBarItem(title: "Days", image: UIImage(systemName: "calendar"), selectedImage:  UIImage(systemName: "calendar"))
-//       
+        //        tabBarItem = UITabBarItem(title: "Days", image: UIImage(systemName: "calendar"), selectedImage:  UIImage(systemName: "calendar"))
+        //       
         view.backgroundColor = .gray
         
         view.addSubview(daysTV)
@@ -93,32 +94,32 @@ extension DaysVC: UITableViewDelegate, UITableViewDataSource {
     }
     //delete
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-         let cell = days[indexPath.row]
-         let alertcontroller = UIAlertController(title: "Delete Favorite Book"
-                             , message: "Are you sure you want to delete this Book?"
-                             , preferredStyle: UIAlertController.Style.alert
-         )
-            alertcontroller.addAction(
-                UIAlertAction(title: "cancel",
-                       style: UIAlertAction.Style.default,
-                       handler: { Action in print("...")
-           })
-         )
-         alertcontroller.addAction(
-           UIAlertAction(title: "Delete",
-                  style: UIAlertAction.Style.destructive,
-                  handler: { Action in
-             if editingStyle == .delete {
-                 Firestore.firestore().collection("days").document(cell.id).delete()
-             }
-             self.daysTV.reloadData()
-           })
-         )
-         self.present(alertcontroller, animated: true, completion: nil)
-       }
-     
-
-
+        let cell = days[indexPath.row]
+        let alertcontroller = UIAlertController(title: "Delete Favorite Book"
+                                                , message: "Are you sure you want to delete this Book?"
+                                                , preferredStyle: UIAlertController.Style.alert
+        )
+        alertcontroller.addAction(
+            UIAlertAction(title: "cancel",
+                          style: UIAlertAction.Style.default,
+                          handler: { Action in print("...")
+                          })
+        )
+        alertcontroller.addAction(
+            UIAlertAction(title: "Delete",
+                          style: UIAlertAction.Style.destructive,
+                          handler: { Action in
+                              if editingStyle == .delete {
+                                  Firestore.firestore().collection("days").document(cell.id).delete()
+                              }
+                              self.daysTV.reloadData()
+                          })
+        )
+        self.present(alertcontroller, animated: true, completion: nil)
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let day = days[indexPath.row]
         

@@ -23,7 +23,7 @@ class TasksService {
             "name": task.name,
             "id": task.id
         ])
-   
+        
     }
     
     //delete student
@@ -31,11 +31,11 @@ class TasksService {
     func deletetask(tasktId : String) {
         //firbase
         tasksCollection.document(tasktId).delete()
-
+        
     }
-//    switch student status
+    //    switch student status
     
-//    lessson to students
+    //    lessson to students
     
     func listenToTasks(completion: @escaping (([Tasks]) -> Void)) {
         
@@ -62,7 +62,7 @@ class TasksService {
         }
     }
     
-//    get students cunt
+    //    get students cunt
     func listenToTasktCount(completion: @escaping ((Int) -> Void)) {
         listenToTasks { tasks in
             completion(tasks.count)

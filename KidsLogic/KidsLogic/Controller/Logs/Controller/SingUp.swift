@@ -13,15 +13,18 @@ import Firebase
 //import DropDown
 
 class SignUpVC: UIViewController,UITextFieldDelegate {
-   var score: Int = 0
-//    let dropDown = DropDown()
+    var score: Int = 0
+    //    let dropDown = DropDown()
+    
+    // MARK: - properties
+    
     var userName: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.backgroundColor = .systemGray6
         tf.text = ""
         tf.placeholder = (NSLocalizedString("Your Name", comment: ""))
-//        (NSLocalizedString("email",comment:""))
+        //        (NSLocalizedString("email",comment:""))
         tf.layer.cornerRadius = .minimumMagnitude(20, 20)
         tf.textAlignment = .left
         return tf
@@ -33,7 +36,7 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         tf.text = ""
         tf.placeholder = (NSLocalizedString("email", comment: ""))
         
-//        (NSLocalizedString("email",comment:""))
+        //        (NSLocalizedString("email",comment:""))
         tf.layer.cornerRadius = .minimumMagnitude(20, 20)
         tf.textAlignment = .left
         return tf
@@ -50,20 +53,20 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         tf.textAlignment = .left
         return tf
     }()
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    emailTF.resignFirstResponder()
+        emailTF.resignFirstResponder()
         passwordTF.resignFirstResponder()
-    return true
-}
+        return true
+    }
     
     var loginBtn: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-//        btn.layer.cornerRadius = .maximumMagnitude(20, 20)
+        //        btn.layer.cornerRadius = .maximumMagnitude(20, 20)
         btn.setTitleColor(.gray, for: .normal)
         btn.setTitle((NSLocalizedString("Login", comment: "")), for: .normal)
-//        btn.backgroundColor = UIColor(red: 89/255, green: 128/255, blue: 148/255, alpha: 1.5)
+        //        btn.backgroundColor = UIColor(red: 89/255, green: 128/255, blue: 148/255, alpha: 1.5)
         btn.addTarget(self, action: #selector(loginBtnPressed), for: .touchUpInside)
         return btn
     }()
@@ -73,17 +76,17 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         btn.setTitleColor(.black, for: .normal)
         btn.layer.cornerRadius = .maximumMagnitude(20, 20)
         btn.setBackgroundImage(imageNormal5, for: UIControl.State.normal)
-//        btn.layer.cornerRadius = 50
+        //        btn.layer.cornerRadius = 50
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle((NSLocalizedString("Register", comment: "")), for: .normal)
         btn.titleLabel?.font = UIFont(name:"Copperplate", size: 20)
-//        btn.backgroundColor = UIColor(red: 89/255, green: 128/255, blue: 148/255, alpha: 1.5)
+        //        btn.backgroundColor = UIColor(red: 89/255, green: 128/255, blue: 148/255, alpha: 1.5)
         btn.addTarget(self, action: #selector(registerBtnPressed), for: .touchUpInside)
         return btn
-   
-    
+        
+        
     }()
-
+    
     
     var imgUser: UIImageView = {
         let imageView = UIImageView()
@@ -93,15 +96,15 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         return imageView
     }()
     
-  
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTF.delegate = self
         passwordTF.delegate = self
         
         view.backgroundColor = .white
-
+        
         
         view.setGradiantView()
         view.addSubview(imgUser)
@@ -110,8 +113,8 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
             imgUser.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             imgUser.heightAnchor.constraint(equalToConstant: 400),
             imgUser.widthAnchor.constraint(equalTo: imgUser.heightAnchor,multiplier: 100/100)])
-
-      
+        
+        
         view.addSubview(userName)
         view.addSubview(emailTF)
         view.addSubview(passwordTF)
@@ -151,7 +154,7 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
             
             
             
-                  ])
+        ])
     }
     
     
@@ -172,25 +175,25 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
             }
             
             guard let currentUserID = Auth.auth().currentUser?.uid else {return}
-                        Firestore.firestore().document("users/\(currentUserID)").setData([
-                            //                    "name" : self.name.text,
-                            "Id" : currentUserID,
-                            "Email" : self.emailTF.text,
-                            "First Name": self.userName.text,
-                            "score" : self.score
-                            
-                        ], merge : true)
-                        if error != nil {
-                            print(error as Any)
-                            return
-                        }
+            Firestore.firestore().document("users/\(currentUserID)").setData([
+                //                    "name" : self.name.text,
+                "Id" : currentUserID,
+                "Email" : self.emailTF.text,
+                "First Name": self.userName.text,
+                "score" : self.score
+                
+            ], merge : true)
+            if error != nil {
+                print(error as Any)
+                return
+            }
             
             
             self.present(SectionVC(), animated: true, completion: nil)
         }
         func alertUserLoginError2() {
             let alert = UIAlertController(title: "oh...", message: "Please enter All Your Informations To Create New Account ☑︎", preferredStyle: .alert)
-          
+            
             alert.addAction(UIAlertAction(title: "Dismis", style: .cancel , handler: nil))
             present(alert, animated: true)
         }
@@ -201,10 +204,10 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         let vc = LoginVC()
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
-
-    
-        }
-    
-    
         
+        
+    }
+    
+    
+    
 }
