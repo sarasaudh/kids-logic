@@ -32,6 +32,7 @@ class VideoLessons: UIViewController {
             data.append (model)
         }
         
+        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.itemSize = CGSize(width: view.frame.size.width,
@@ -46,10 +47,18 @@ class VideoLessons: UIViewController {
         collectionView?.dataSource = self
         view.addSubview(collectionView!)
     }
+    
+    
+    
+    
+    
     override func viewDidLayoutSubviews () {
         super.viewDidLayoutSubviews ()
         collectionView? .frame = view.frame
     }
+    
+    
+    
     
 }
 

@@ -19,12 +19,15 @@ class LessonDetailVC: UIViewController {
     
     
     // MARK: - properties
+    
+    
     let bImage: UIImageView =  {
         let image           = UIImageView()
         image.contentMode   = .scaleToFill
         image.clipsToBounds = true
         return image
     }()
+    
     
     private let bTitle: UILabel = {
         let title = UILabel()
@@ -34,15 +37,18 @@ class LessonDetailVC: UIViewController {
         return title
     }()
     
+    
     private let bDescription: UITextView = {
         let description             = UITextView()
         description.textColor       =  UIColor.systemGray6
         description.font            = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 30, weight: .regular))
-        description.textAlignment   = .justified
+        description.textAlignment   = .natural
         description.backgroundColor = UIColor(named: "DarkColor")
         description.isEditable = false
         return description
     }()
+    
+    
     private let LNum: UILabel = {
         let title = UILabel()
         title.textColor     =  .systemMint
@@ -50,13 +56,19 @@ class LessonDetailVC: UIViewController {
         title.textAlignment = .right
         return title
     }()
+    
+    
     private let Lvoice: UIButton = {
         let btn = UIButton()
-        //        btn.translatesAutoresirzingMaskIntoConstraints = false
         btn.setImage(UIImage(named: "nicepanda"), for: UIControl.State.normal)
         btn.addTarget(self, action: #selector(pandaVPressed), for: .touchDown)
         return btn
     }()
+    
+    
+    
+//MARK: - viewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -127,6 +139,13 @@ class LessonDetailVC: UIViewController {
         bDescription.text   = lesDes
         LNum.text           = lesnum
     }
+    
+    
+    
+    
+    //MARK: - func
+    
+    
     
     @objc func pandaVPressed() {
         

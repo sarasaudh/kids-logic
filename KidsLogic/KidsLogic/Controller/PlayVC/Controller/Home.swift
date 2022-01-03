@@ -22,7 +22,6 @@ class HomeVC: UIViewController {
         imageView.image = UIImage(named: "kids")
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        //        imageView.backgroundColor = .quaternaryLabel
         imageView.layer.cornerRadius = 30
         
         return imageView
@@ -33,12 +32,11 @@ class HomeVC: UIViewController {
         level1.setTitle(NSLocalizedString("GAME 🎮", comment: ""), for: .normal)
         level1.setBackgroundImage(imageNormal, for: UIControl.State.normal)
         level1.titleLabel?.font = UIFont(name:"Copperplate", size: 50)
-        level1.setTitleColor(.systemGray4, for: .normal)
-        //    level1.backgroundColor = UIColor(#colorLiteral(red: 0.7047290802, green: 0.4141619802, blue: 0.5999490619, alpha: 0.8470588235))
+        level1.setTitleColor(.systemBlue, for: .normal)
         level1.layer.cornerRadius = 20
         level1.layer.masksToBounds = true
         level1.addTarget(self, action: #selector(GameButtonTapped), for: .touchUpInside)
-        //    level1.titleLabel?.font = .systemFont(ofSize: 40, weight: .medium)
+       
         return level1
     }()
     
@@ -50,8 +48,7 @@ class HomeVC: UIViewController {
         level3.setTitle(NSLocalizedString("Carton 🧩", comment: ""), for: .normal)
         level3.setBackgroundImage(imageNormal2
                                   , for: UIControl.State.normal)
-        level3.setTitleColor(.systemGray4, for: .normal)
-        //        level3.backgroundColor = UIColor(  #colorLiteral(red: 0.7520335913, green: 0.6473677754, blue: 0.5675167441, alpha: 1) )
+        level3.setTitleColor(.systemBlue, for: .normal)
         
         level3.layer.cornerRadius = 20
         level3.layer.masksToBounds = true
@@ -63,19 +60,17 @@ class HomeVC: UIViewController {
     lazy var baackButton: UIButton = {
         let btn = UIButton()
         
-        
         btn.translatesAutoresizingMaskIntoConstraints = false
-        //        btn.setTitle(NSLocalizedString("Back", comment: ""), for: .normal)
         btn.setImage(UIImage(named: "back"), for: UIControl.State.normal)
         btn.setTitleColor(.red , for: .normal)
-        //        level3.backgroundColor = UIColor(  #colorLiteral(red: 0.7520335913, green: 0.6473677754, blue: 0.5675167441, alpha: 1) )
-        
-        //        level3.layer.cornerRadius = 20
-        //        level3.layer.masksToBounds = true
         btn.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         btn.titleLabel?.font = .systemFont(ofSize: 40, weight: .medium)
         return btn
     }()
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -129,7 +124,6 @@ class HomeVC: UIViewController {
     
     @objc private func GameButtonTapped() {
         let vc = Games2()
-        //        let vc = GameVC()
         vc.modalPresentationStyle = .automatic
         self.present(vc, animated: true, completion: nil)
     }

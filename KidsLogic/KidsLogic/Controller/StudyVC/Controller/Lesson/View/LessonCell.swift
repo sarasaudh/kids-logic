@@ -13,6 +13,7 @@ class LogicCell: UICollectionViewCell {
     static let ID = "LogicCellId"
     
     // MARK: - properties
+    
     private let blogImage: UIImageView = {
         let image           = UIImageView()
         
@@ -20,6 +21,7 @@ class LogicCell: UICollectionViewCell {
         image.clipsToBounds = true
         return image
     }()
+    
     
     private let blogCaption: UILabel = {
         let caption = UILabel()
@@ -30,6 +32,7 @@ class LogicCell: UICollectionViewCell {
         return caption
     }()
     
+    
     private let blogTitle: UILabel = {
         let title = UILabel()
         title.textColor     =  UIColor.secondaryLabel
@@ -37,6 +40,7 @@ class LogicCell: UICollectionViewCell {
         title.textAlignment = .center
         return title
     }()
+    
     
     private let blogDescription: UILabel = {
         let description             = UILabel()
@@ -48,6 +52,7 @@ class LogicCell: UICollectionViewCell {
         return description
     }()
     
+    
     private let authorImage: UIImageView = {
         let image           = UIImageView()
         image.layer.cornerRadius = 25
@@ -57,12 +62,14 @@ class LogicCell: UICollectionViewCell {
         return image
     }()
     
+    
     private let lessonNumb: UILabel = {
         let authorName             = UILabel()
         authorName.textColor       =  UIColor.secondaryLabel
         authorName.font            = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 16, weight: .medium))
         return authorName
     }()
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -76,6 +83,11 @@ class LogicCell: UICollectionViewCell {
         backgroundColor = UIColor(named: "DarkColor")
         setupSizeForCellContent()
     }
+    
+    
+    
+    
+    
     func setCell(card: Logic){
         blogImage.image         = UIImage(named: card.image)
         blogCaption.text        = card.caption.capitalized
@@ -97,6 +109,9 @@ class LogicCell: UICollectionViewCell {
         lessonNumb.frame = CGRect(x: authorImage.frame.maxX + 13, y: self.frame.size.height / 1.23, width: self.frame.size.width - 50, height: 50)
         
     }
+    
+    
+    
     private func setupCell() {
         self.backgroundColor =  UIColor(named: "DarkColor")
         self.addSubview(blogImage)
@@ -109,6 +124,8 @@ class LogicCell: UICollectionViewCell {
         
     }
 }
+
+
 extension LogicCell {
     
     func addShadow(offset: CGSize, color: UIColor, radius: CGFloat, opacity: Float) {

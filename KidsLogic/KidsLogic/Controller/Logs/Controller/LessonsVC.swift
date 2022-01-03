@@ -34,7 +34,7 @@ class HoomeLessonsVC: UIViewController {
         level1.setTitle(NSLocalizedString("READ 📖", comment: ""), for: .normal)
         level1.setBackgroundImage(imageNormal, for: UIControl.State.normal)
         level1.titleLabel?.font = UIFont(name:"Copperplate", size: 50)
-        level1.setTitleColor(.systemGray4, for: .normal)
+        level1.setTitleColor(.systemBlue, for: .normal)
         level1.layer.cornerRadius = 20
         level1.layer.masksToBounds = true
         level1.addTarget(self, action: #selector(readButtonTapped), for: .touchUpInside)
@@ -49,7 +49,7 @@ class HoomeLessonsVC: UIViewController {
         level3.setTitle(NSLocalizedString("WACH 🎞 ", comment: ""), for: .normal)
         level3.setBackgroundImage(imageNormal2
                                   , for: UIControl.State.normal)
-        level3.setTitleColor(.systemGray4, for: .normal)
+        level3.setTitleColor(.systemBlue, for: .normal)
         level3.layer.cornerRadius = 20
         level3.layer.masksToBounds = true
         level3.addTarget(self, action: #selector(VedioButtonTapped), for: .touchUpInside)
@@ -168,12 +168,12 @@ class HoomeLessonsVC: UIViewController {
         return navController
     }
     
-    func setupVCs() {
+//    func setupVCs() {
+//
+//        createNavController(for:Lessons(), title: NSLocalizedString("Lesson", comment: ""), image: UIImage(systemName: "list.bullet.rectangle.fill")!)
         
-        createNavController(for:Lessons(), title: NSLocalizedString("Lesson", comment: ""), image: UIImage(systemName: "list.bullet.rectangle.fill")!)
         
-        
-    }
+//    }
     
     
     

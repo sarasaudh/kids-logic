@@ -106,9 +106,6 @@ class GoldenFishGame: UIViewController {
         print("profile button tapped")
         self.dismiss(animated: true)
         audioPlayer.stop()
-        //        let vc = TabVC()
-        //        vc.modalPresentationStyle = .fullScreen
-        //        self.present(vc, animated: true, completion: nil)
     }
     
     
@@ -117,11 +114,6 @@ class GoldenFishGame: UIViewController {
         
         //back
         //Button Views
-        
-        
-        
-        
-        
         
         self.move2()
         self.move()

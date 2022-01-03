@@ -18,7 +18,6 @@ class ScoreViewController: UITableViewController {
         createProductArray()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
         
-        // Do any additional setup after loading the view, typically from a nib.
         
     }
     override func didReceiveMemoryWarning() {
@@ -33,7 +32,7 @@ class ScoreViewController: UITableViewController {
         cell.imageView?.image = currentLastItem.KidImage
         cell.backgroundColor = UIColor(named: "Darkcolorr")
         
-        // cell.contactImage? = UIImageView(named: "\(currentLastItem.contactImage)")
+
         return cell
     }
     

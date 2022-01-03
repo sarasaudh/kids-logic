@@ -17,6 +17,8 @@ class VideoCollectionViewCell: UICollectionViewCell, UINavigationControllerDeleg
     //    backgroundColor = UIColor(named: "DarkColor")
     static let identifier = "VideoCollectionViewCell"
     private var collectionView: UICollectionView?
+  
+    
     // MARK: - properties
     //Labels
     private let usernameLabel: UILabel = {
@@ -25,18 +27,24 @@ class VideoCollectionViewCell: UICollectionViewCell, UINavigationControllerDeleg
         label.textColor = .white
         return label
     }()
+    
+    
     private let captionLabel: UILabel = {
         let label = UILabel ()
         label.textAlignment = .left
         label.textColor = .white
         return label
     }()
+    
+    
     private let audioLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
         label.textColor = .white
         return label
     }()
+    
+    
     // Buttons
     private let profileButton: UIButton = {
         let button = UIButton()
@@ -44,6 +52,7 @@ class VideoCollectionViewCell: UICollectionViewCell, UINavigationControllerDeleg
         button.tintColor = .white
         return button
     }()
+    
     
     private let videoContainer = UIView()
     
@@ -140,11 +149,15 @@ class VideoCollectionViewCell: UICollectionViewCell, UINavigationControllerDeleg
         guard let model = model else {
             return
         }
+        
+        
         guard let path = Bundle.main.path(forResource: model.videoFileName,
                                           ofType: model.videoFileFormat) else {
             print("Failed to find video")
             return
         }
+        
+        
         player = AVPlayer(url: URL(fileURLWithPath: path))
         
         let playerView = AVPlayerLayer()
@@ -155,8 +168,12 @@ class VideoCollectionViewCell: UICollectionViewCell, UINavigationControllerDeleg
         player?.volume = 70
         player?.play()
     }
+    
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
 }
 

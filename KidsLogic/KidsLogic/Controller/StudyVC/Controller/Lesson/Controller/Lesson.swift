@@ -26,9 +26,15 @@ class Lessons: UIViewController {
         self.title = (NSLocalizedString("Logic KID", comment: ""))
         self.navigationItem.largeTitleDisplayMode = .automatic
     }
+    
+    
+    
     @objc private func dismissSelf(){
         dismiss(animated: true, completion: nil)
     }
+    
+    
+    
     private func configureCollectionView(){
         
         collectionView                      = UICollectionView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height), collectionViewLayout: Layout())
@@ -40,6 +46,7 @@ class Lessons: UIViewController {
         collectionView.register(LogicCell.self, forCellWithReuseIdentifier: LogicCell.ID)
         view.addSubview(collectionView)
     }
+    
     
     private func Layout() -> UICollectionViewCompositionalLayout{
         
@@ -60,6 +67,15 @@ class Lessons: UIViewController {
         
     }
 }
+
+
+
+
+
+
+
+//        MARK: - extension
+
 
 extension Lessons: UICollectionViewDelegate , UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -92,8 +108,6 @@ extension Lessons: UICollectionViewDelegate , UICollectionViewDataSource{
         vc.LessonNumber = LogicPosts.posts[indexPath.row].lessonNum
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
     
 }
 

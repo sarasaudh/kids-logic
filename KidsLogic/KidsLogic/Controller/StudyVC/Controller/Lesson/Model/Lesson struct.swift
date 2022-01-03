@@ -8,7 +8,7 @@
 import Foundation
 struct Logic {
     var image   : String
-    var caption = "KID Logic"
+    var caption = "Kid Logic"
     var title   : String
     var desc    : String
     var author  : String

@@ -10,12 +10,16 @@ class Vedio: UIViewController, WKUIDelegate {
     
     var webView: WKWebView!
     
+    
     override func loadView() {
         let webConfiguration = WKWebViewConfiguration()
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.uiDelegate = self
         view = webView
     }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +27,9 @@ class Vedio: UIViewController, WKUIDelegate {
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
     }
+    
+    
+    
 }
 
 

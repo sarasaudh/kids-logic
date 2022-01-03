@@ -250,21 +250,11 @@ class QuizviewController: UIViewController {
         
         guard let currentUserID = Auth.auth().currentUser?.uid else {return}
         Firestore.firestore().document("users/\(currentUserID)").updateData([
-            //            "id" : currentUserID,
-            //            "name" : nameLabel.text,
             "score" : score
-            //          "status" :userStatusLabel.text,
-            //          "image":"\(profileImage.image)"
+      
         ])
-        //        Firestore
-        //            .firestore()
-        //            .document("users/score")
-        //            .setData([
-        //
-        //                "score": score
-        //
-        //            ])
     }
+    
     func updateQuestion(){
         
         if questionNumber <= allQuestions.list.count - 1{
@@ -280,11 +270,15 @@ class QuizviewController: UIViewController {
         }else {
             let alert = UIAlertController(title: "Awesome! Your score : \(score)", message: "End of Quiz. Do you want to start over?", preferredStyle: .alert)
             let restartAction = UIAlertAction(title: "Restart", style: .default, handler: {action in self.restartQuiz()})
+            let endAction = UIAlertAction(title: "Exit", style: .default, handler: {action in self.QuitQuiz()})
+          
             
             
-            
-            alert.addAction(restartAction)
+           [ alert.addAction(restartAction) , alert.addAction(endAction) ]
             present(alert, animated: true, completion: nil)
+            
+            
+//            present(alert, animated: true, completion: nil)
         }
         
         
@@ -293,7 +287,6 @@ class QuizviewController: UIViewController {
         
         scoreLabel.text = "Score: \(score)"
         questionCounter.text = "Q:\(questionNumber + 1)/\(allQuestions.list.count )"
-        //        progressView.frame.size.width = (view.frame.size.width / CGFloat(allQuestions.list.count)) * CGFloat(questionNumber + 1)
         
     }
     

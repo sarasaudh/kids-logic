@@ -26,6 +26,17 @@ class TabVC2: UITabBarController {
         
         return navController
     }
+     
+    
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        setupVCs()
+        
+        view.backgroundColor = UIColor (named: "DarkColor")
+        
+    }
+    
     
     func setupVCs() {
         
@@ -38,15 +49,7 @@ class TabVC2: UITabBarController {
             createNavController(for:MyProfileVC(), title: NSLocalizedString("profile", comment: ""), image: UIImage(systemName: "person")!),
         ]
     }
-    
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        setupVCs()
-        
-        view.backgroundColor = UIColor (named: "DarkColor")
-        
-    }
+   
     
 }
 

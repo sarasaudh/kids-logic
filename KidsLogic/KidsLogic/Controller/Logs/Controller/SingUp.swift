@@ -178,13 +178,14 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
             Firestore.firestore().document("users/\(currentUserID)").setData([
                 //                    "name" : self.name.text,
                 "Id" : currentUserID,
-                "Email" : self.emailTF.text,
-                "First Name": self.userName.text,
+                "Email" : self.emailTF.text ?? "",
+                "First Name": self.userName.text ?? "",
                 "score" : self.score
                 
             ], merge : true)
             if error != nil {
                 print(error as Any)
+    
                 return
             }
             

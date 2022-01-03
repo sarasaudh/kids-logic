@@ -97,7 +97,7 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
         button.backgroundColor = UIColor(#colorLiteral(red: 0.3814536035, green: 0.5256128311, blue: 0.7803931832, alpha: 1))
         return button
     }()
-    let imageNormal:UIImage? = UIImage(named: "score1")
+    let imageNormal:UIImage? = UIImage(named: "score999")
     lazy var scoreButton: UIButton = {
         let button = UIButton (type: .system)
         

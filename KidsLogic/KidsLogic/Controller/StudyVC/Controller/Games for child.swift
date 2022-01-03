@@ -95,11 +95,9 @@ class Games2:UIViewController {
     lazy var game3: UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-        //        btn.setTitle(NSLocalizedString("Code Combat", comment: ""), for: .normal)
         btn.setImage(UIImage(named: "codecombat"), for: UIControl.State.normal)
         btn.setTitleColor(.white, for: .normal)
         btn.backgroundColor = UIColor(#colorLiteral(red: 0.3279541135, green: 0.6508837342, blue: 0.8242474198, alpha: 0.8470588235) )
-        
         btn.layer.cornerRadius = 20
         btn.layer.masksToBounds = true
         btn.addTarget(self, action: #selector(CodeCombatTapped), for: .touchUpInside)
@@ -163,6 +161,7 @@ class Games2:UIViewController {
             
             
         ])
+        
         
     }
     @objc private func honyBeeTapped() {

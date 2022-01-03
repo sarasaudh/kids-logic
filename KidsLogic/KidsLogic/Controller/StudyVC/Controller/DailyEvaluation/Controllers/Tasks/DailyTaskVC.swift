@@ -39,7 +39,6 @@ class DTasksVC: UIViewController {
             self.tasksTV.reloadData()
         }
         
-        //        tabBarItem = UITabBarItem(title: "My Task", image: UIImage(systemName: "target"), selectedImage: nil)
         view.backgroundColor = .white
         
         view.addSubview(tasksTV)
