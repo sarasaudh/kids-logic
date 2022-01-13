@@ -7,8 +7,6 @@
 
 import Foundation
 import WebKit
-import Foundation
-
 import UIKit
 
 class HoomeLessonsVC: UIViewController {
@@ -17,7 +15,7 @@ class HoomeLessonsVC: UIViewController {
     let imageNormal:UIImage? = UIImage(named: "burble")
     
     // MARK: - properties
-    
+   
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "read")
@@ -112,7 +110,7 @@ class HoomeLessonsVC: UIViewController {
         view.addSubview(baackButton)
         NSLayoutConstraint.activate([
             
-            baackButton.topAnchor.constraint(equalTo: VideoButton.bottomAnchor, constant: 100),
+            baackButton.topAnchor.constraint(equalTo: VideoButton.bottomAnchor, constant: 50),
             baackButton.centerXAnchor.constraint(equalTo: view.centerXAnchor) ,
             baackButton.heightAnchor.constraint(equalToConstant: 50),
             baackButton.widthAnchor.constraint(equalToConstant: 50),

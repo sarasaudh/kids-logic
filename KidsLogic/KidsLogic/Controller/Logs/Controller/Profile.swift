@@ -158,6 +158,8 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
                 let score = doucument?.data()?["score"] as? Int // else {return}
                 
                 switch score {
+                case 0 :
+                    self.profileImage.image = UIImage(named: "score1")
                 case 1 :
                     self.profileImage.image = UIImage(named: "score1")
                 case 2 :
@@ -174,7 +176,7 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
                     self.profileImage.image = UIImage(named: "score7")
                     
                 default :
-                    self.profileImage.image = UIImage(named: "score1")
+                    self.profileImage.image = UIImage(named: "panda2")
                     
                     //
                 }
@@ -284,16 +286,20 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
         
     }
     //sing out from snap chat
-    @objc private func singOutButtonTapped() {
+    @objc func singOutButtonTapped() {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
-            dismiss(animated: true, completion: nil)
+//            dismiss(animated: true, completion: nil)
+            let vc = LoginVC()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+            
         } catch let signOutError as NSError {
             print ("Error signing out: \(signOutError.localizedDescription)")
         }
-        self.dismiss(animated: true, completion: nil)
-        //    present(LoginVC(), animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+//            present(LoginVC(), animated: true, completion: nil)
     }
     //update name , image , status in fire store
     @objc private func SaveButtonTapped() {

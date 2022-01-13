@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84121CE42790029F0014E770 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84121CE32790029F0014E770 /* InfoViewController.swift */; };
 		842A15E82754AAAF00F505E2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A15E72754AAAF00F505E2 /* Theme.swift */; };
 		842A15EA2754AB1E00F505E2 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A15E92754AB1E00F505E2 /* ThemeProtocol.swift */; };
 		842A15EE2754ACF600F505E2 /* Dark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A15ED2754ACF600F505E2 /* Dark.swift */; };
@@ -39,6 +40,10 @@
 		845B11D22761377600746173 /* NewDayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B11D12761377600746173 /* NewDayVC.swift */; };
 		845B11D42761379000746173 /* DayTasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B11D32761379000746173 /* DayTasksVC.swift */; };
 		845B11D62761379E00746173 /* DaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B11D52761379E00746173 /* DaysVC.swift */; };
+		84730F1E278D6B6A004C5500 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84730F1D278D6B6A004C5500 /* Setting.swift */; };
+		84730F48278EBD2C004C5500 /* MenuSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84730F47278EBD2C004C5500 /* MenuSetting.swift */; };
+		84730F4A278EBE2E004C5500 /* HomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84730F49278EBE2E004C5500 /* HomeSection.swift */; };
+		84730F4C278EBE3D004C5500 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84730F4B278EBE3D004C5500 /* Container.swift */; };
 		8479B8D3276660F400AD8CA7 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479B8D2276660F400AD8CA7 /* MapVC.swift */; };
 		8479B8D92768A51600AD8CA7 /* Lesson struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479B8D82768A51600AD8CA7 /* Lesson struct.swift */; };
 		8479B8DC2768A5FB00AD8CA7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479B8DB2768A5FB00AD8CA7 /* Model.swift */; };
@@ -76,6 +81,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84121CE32790029F0014E770 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		842A15E72754AAAF00F505E2 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		842A15E92754AB1E00F505E2 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
 		842A15ED2754ACF600F505E2 /* Dark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dark.swift; sourceTree = "<group>"; };
@@ -110,6 +116,10 @@
 		845B11D12761377600746173 /* NewDayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDayVC.swift; sourceTree = "<group>"; };
 		845B11D32761379000746173 /* DayTasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTasksVC.swift; sourceTree = "<group>"; };
 		845B11D52761379E00746173 /* DaysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysVC.swift; sourceTree = "<group>"; };
+		84730F1D278D6B6A004C5500 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		84730F47278EBD2C004C5500 /* MenuSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSetting.swift; sourceTree = "<group>"; };
+		84730F49278EBE2E004C5500 /* HomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSection.swift; sourceTree = "<group>"; };
+		84730F4B278EBE3D004C5500 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		8479B8D2276660F400AD8CA7 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		8479B8D82768A51600AD8CA7 /* Lesson struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lesson struct.swift"; sourceTree = "<group>"; };
 		8479B8DB2768A5FB00AD8CA7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -184,6 +194,7 @@
 		842A1675275743C700F505E2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				84730F1C278D6B55004C5500 /* Setting */,
 				84E5314727538B8000B45CCC /* Logs */,
 				8479B8C92765F67B00AD8CA7 /* PlayVC */,
 				8479B8CA2765F68800AD8CA7 /* StudyVC */,
@@ -249,6 +260,25 @@
 			path = Tasks;
 			sourceTree = "<group>";
 		};
+		84730F1C278D6B55004C5500 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				84730F1D278D6B6A004C5500 /* Setting.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		84730F46278EBD12004C5500 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84730F47278EBD2C004C5500 /* MenuSetting.swift */,
+				84730F49278EBE2E004C5500 /* HomeSection.swift */,
+				84730F4B278EBE3D004C5500 /* Container.swift */,
+				84121CE32790029F0014E770 /* InfoViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		8479B8C32765F55300AD8CA7 /* Lesson */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,8 +308,9 @@
 		8479B8C82765F5CF00AD8CA7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				84E531662753A16B00B45CCC /* SectionVC.swift */,
+				84730F46278EBD12004C5500 /* ViewController */,
 				84B4D796277D949D00F40C9E /* LessonsVC.swift */,
+				84E531662753A16B00B45CCC /* SectionVC.swift */,
 				84E531642753994400B45CCC /* LogIn.swift */,
 				842B2334275DE086009C888D /* SingUp.swift */,
 				8435ACE9275BFA4D0076F36A /* Profile.swift */,
@@ -619,16 +650,21 @@
 				849945DE2761DEC300135446 /* Home.swift in Sources */,
 				84E531672753A16B00B45CCC /* SectionVC.swift in Sources */,
 				84E531612753957D00B45CCC /* LessonModel.swift in Sources */,
+				84730F4A278EBE2E004C5500 /* HomeSection.swift in Sources */,
+				84730F4C278EBE3D004C5500 /* Container.swift in Sources */,
 				84E5315F2753953E00B45CCC /* LessonCell.swift in Sources */,
 				842A165D2754F89600F505E2 /* ScoreViewController.swift in Sources */,
 				845B11C8276136C900746173 /* Day.swift in Sources */,
 				84E53174275407AC00B45CCC /* QuizVC.swift in Sources */,
+				84730F48278EBD2C004C5500 /* MenuSetting.swift in Sources */,
+				84730F1E278D6B6A004C5500 /* Setting.swift in Sources */,
 				84E5312D2753880C00B45CCC /* SceneDelegate.swift in Sources */,
 				845B11D22761377600746173 /* NewDayVC.swift in Sources */,
 				84B4D797277D949D00F40C9E /* LessonsVC.swift in Sources */,
 				845B11D02761373D00746173 /* NewTaskVC.swift in Sources */,
 				845B11C6276136AC00746173 /* DayService.swift in Sources */,
 				84E531692753A9C000B45CCC /* Video.swift in Sources */,
+				84121CE42790029F0014E770 /* InfoViewController.swift in Sources */,
 				842A165F2754F89600F505E2 /* contactCell.swift in Sources */,
 				8479B8DC2768A5FB00AD8CA7 /* Model.swift in Sources */,
 				842A15EE2754ACF600F505E2 /* Dark.swift in Sources */,
@@ -792,9 +828,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2VKRHK5LM7;
+				DEVELOPMENT_TEAM = 5L7E8X3MQ5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KidsLogic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -808,6 +845,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sara.KidsLogic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -819,9 +857,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2VKRHK5LM7;
+				DEVELOPMENT_TEAM = 5L7E8X3MQ5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KidsLogic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -835,6 +874,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sara.KidsLogic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

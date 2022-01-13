@@ -75,19 +75,19 @@ class MoreVC2: UIViewController {
     }()
   
     
-    let MapImage:UIImage? = UIImage(named: "map")
-    lazy var MapButton: UIButton = {
-        let button = UIButton (type: .system)
-        
-        button.setBackgroundImage(MapImage, for: UIControl.State.normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.cornerRadius = 25
-        button.addTarget(self, action: #selector(MapPressed), for: .touchUpInside)
-        button.layer.masksToBounds = true
-        return button
-    }()
- 
-    
+//    let MapImage:UIImage? = UIImage(named: "map")
+//    lazy var MapButton: UIButton = {
+//        let button = UIButton (type: .system)
+//
+//        button.setBackgroundImage(MapImage, for: UIControl.State.normal)
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.layer.cornerRadius = 25
+//        button.addTarget(self, action: #selector(MapPressed), for: .touchUpInside)
+//        button.layer.masksToBounds = true
+//        return button
+//    }()
+//
+//
     
     
     override func viewDidLoad() {
@@ -143,16 +143,16 @@ class MoreVC2: UIViewController {
             Swipelabel.heightAnchor.constraint(equalToConstant: 20),
         ])
         
-        view.addSubview(MapButton)
-        NSLayoutConstraint.activate([
-            
-            
-            MapButton.topAnchor.constraint(equalTo: Swipelabel.bottomAnchor, constant: 20),
-            MapButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            MapButton.widthAnchor.constraint(equalToConstant: 50),
-            MapButton.heightAnchor.constraint(equalToConstant: 50),
-        ])
-        
+//        view.addSubview(MapButton)
+//        NSLayoutConstraint.activate([
+//
+//
+//            MapButton.topAnchor.constraint(equalTo: Swipelabel.bottomAnchor, constant: 20),
+//            MapButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            MapButton.widthAnchor.constraint(equalToConstant: 50),
+//            MapButton.heightAnchor.constraint(equalToConstant: 50),
+//        ])
+//
         
         
         let swipelift = UISwipeGestureRecognizer(
@@ -191,12 +191,12 @@ class MoreVC2: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
-    @objc private func MapPressed() {
-        
-        let vc = MapViewController()
-        vc.modalPresentationStyle = .pageSheet
-        self.present(vc, animated: true, completion: nil)
-    }
+//    @objc private func MapPressed() {
+//
+//        let vc = MapViewController()
+//        vc.modalPresentationStyle = .pageSheet
+//        self.present(vc, animated: true, completion: nil)
+//    }
     
 }
 

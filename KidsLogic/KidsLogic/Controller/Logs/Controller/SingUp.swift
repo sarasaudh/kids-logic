@@ -189,8 +189,11 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
                 return
             }
             
+            let vc = SectionVC()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
             
-            self.present(SectionVC(), animated: true, completion: nil)
+//            self.present(SectionVC(), animated: true, completion: nil)
         }
         func alertUserLoginError2() {
             let alert = UIAlertController(title: "oh...", message: "Please enter All Your Informations To Create New Account ☑︎", preferredStyle: .alert)
