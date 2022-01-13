@@ -93,51 +93,62 @@
 ### Views(Controllers):
 
 
-class LoginVC
-class SignUpVC
-class SectionVC
+- class LoginVC
+- class SignUpVC
+- class SectionVC
 
-class TabVC
+- class TabVC
 
-class Lessons
-class LessonDetailVC
-class LogicCell
-class LogicPosts
-class Vedio
+- class Lessons
+- class LessonDetailVC
+- class LogicCell
+- class LogicPosts
+- class Vedio
 
 
-class TaskTabVC
-class DTasksVC
-class NewTaskVC
-class NewDayVC
-class DayTasksVC
-class DaysVC
+- class TaskTabVC
+- class DTasksVC
+- class NewTaskVC
+- class NewDayVC
+- class DayTasksVC
+- class DaysVC
 
-class Question
-class QuestionBank
-class QuizviewController
+- class Question
+- class QuestionBank
+- class QuizviewController
 
-class MapViewController
+- class MapViewController
 
-class MyProfileVC
-class ScoreViewController
+- class MyProfileVC
+- class ScoreViewController
 
-class TabVC2
+- class TabVC2
 
-class Games
-class Games2
-class GoldenFishGame
-class honyBeeGame
-class codecombat
+- class Games
+- class Games2
+- class GoldenFishGame
+- class honyBeeGame
+- class codecombat
 
-class VideoLessons
-class VideoCollectionViewCell
+- class VideoLessons
+- class VideoCollectionViewCell
 
 
 ### Services:
 - class UsersService
 - class TasksService 
 - class DaysService 
+
+### feature
+- Read Lessons
+- evaluation  hem self
+- watching videos
+- trying to answer the Quiz
+- Play games
+- increase score
+ 
+## LogIn
+![Simulator Screen Shot - iPhone 13 Pro - 2022-01-02 at 09 47 49](https://user-images.githubusercontent.com/91429812/148018788-1b6d5587-74a6-4e10-b92a-bf326b53437d.png)
 
 
 # Links 
@@ -148,6 +159,7 @@ class VideoCollectionViewCell
 ### Slides :
 
 My presentation:
+https://docs.google.com/presentation/d/1XZZs9C2o_9z_82oMtjuDNlS440NmJMUTESgB4rBGYMU/edit?usp=sharing
   - 
 
 
