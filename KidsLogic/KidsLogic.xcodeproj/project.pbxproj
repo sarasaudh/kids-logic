@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84121CE42790029F0014E770 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84121CE32790029F0014E770 /* InfoViewController.swift */; };
 		842A15E82754AAAF00F505E2 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A15E72754AAAF00F505E2 /* Theme.swift */; };
 		842A15EA2754AB1E00F505E2 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A15E92754AB1E00F505E2 /* ThemeProtocol.swift */; };
 		842A15EE2754ACF600F505E2 /* Dark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A15ED2754ACF600F505E2 /* Dark.swift */; };
@@ -81,7 +80,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		84121CE32790029F0014E770 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		842A15E72754AAAF00F505E2 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		842A15E92754AB1E00F505E2 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
 		842A15ED2754ACF600F505E2 /* Dark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dark.swift; sourceTree = "<group>"; };
@@ -264,19 +262,19 @@
 			isa = PBXGroup;
 			children = (
 				84730F1D278D6B6A004C5500 /* Setting.swift */,
+				84730F46278EBD12004C5500 /* SideMenu */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
 		};
-		84730F46278EBD12004C5500 /* ViewController */ = {
+		84730F46278EBD12004C5500 /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
 				84730F47278EBD2C004C5500 /* MenuSetting.swift */,
 				84730F49278EBE2E004C5500 /* HomeSection.swift */,
 				84730F4B278EBE3D004C5500 /* Container.swift */,
-				84121CE32790029F0014E770 /* InfoViewController.swift */,
 			);
-			path = ViewController;
+			path = SideMenu;
 			sourceTree = "<group>";
 		};
 		8479B8C32765F55300AD8CA7 /* Lesson */ = {
@@ -308,7 +306,6 @@
 		8479B8C82765F5CF00AD8CA7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				84730F46278EBD12004C5500 /* ViewController */,
 				84B4D796277D949D00F40C9E /* LessonsVC.swift */,
 				84E531662753A16B00B45CCC /* SectionVC.swift */,
 				84E531642753994400B45CCC /* LogIn.swift */,
@@ -664,7 +661,6 @@
 				845B11D02761373D00746173 /* NewTaskVC.swift in Sources */,
 				845B11C6276136AC00746173 /* DayService.swift in Sources */,
 				84E531692753A9C000B45CCC /* Video.swift in Sources */,
-				84121CE42790029F0014E770 /* InfoViewController.swift in Sources */,
 				842A165F2754F89600F505E2 /* contactCell.swift in Sources */,
 				8479B8DC2768A5FB00AD8CA7 /* Model.swift in Sources */,
 				842A15EE2754ACF600F505E2 /* Dark.swift in Sources */,

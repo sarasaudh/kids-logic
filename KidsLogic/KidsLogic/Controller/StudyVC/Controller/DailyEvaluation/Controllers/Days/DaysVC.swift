@@ -46,8 +46,7 @@ class DaysVC: UIViewController {
             self.daysTV.reloadData()
         }
         
-        //        tabBarItem = UITabBarItem(title: "Days", image: UIImage(systemName: "calendar"), selectedImage:  UIImage(systemName: "calendar"))
-        //       
+         
         view.backgroundColor = .gray
         
         view.addSubview(daysTV)

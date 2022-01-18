@@ -18,7 +18,7 @@ class LoginVC: UIViewController,UITextFieldDelegate {
         tf.text = ""
         tf.placeholder = (NSLocalizedString("email", comment: ""))
         tf.textAlignment = .left
-        //        (NSLocalizedString("email",comment:""))
+       
         tf.layer.cornerRadius = .minimumMagnitude(20, 20)
         return tf
     }()

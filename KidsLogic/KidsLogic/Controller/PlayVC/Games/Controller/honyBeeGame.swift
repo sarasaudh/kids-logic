@@ -74,9 +74,7 @@ class honyBeeGame: UIViewController {
         print("profile button tapped")
         self.dismiss(animated: true)
         audioPlayer.stop()
-        //        let vc = TabVC()
-        //        vc.modalPresentationStyle = .fullScreen
-        //        self.present(vc, animated: true, completion: nil)
+
     }
     
     

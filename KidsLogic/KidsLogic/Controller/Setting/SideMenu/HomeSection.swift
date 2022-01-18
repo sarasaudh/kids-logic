@@ -36,8 +36,6 @@ class SettingHomeVC: UIViewController {
             imageView.leftAnchor.constraint(equalTo: view.leftAnchor),
             imageView.topAnchor.constraint(equalTo: view.topAnchor),
             imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-//            imageView.widthAnchor.constraint(equalToConstant: 600),
-//            imageView.heightAnchor.constraint(equalToConstant: 300),
         ])
         
         view.backgroundColor = .systemBackground

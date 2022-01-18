@@ -56,6 +56,16 @@
 "DEBUG" = "DEBUG" ;
 
 
+
+//MenuList
+"info" = "info";
+"Back" = "Back" ;
+ "Languge" = "Languge" ;
+"Map" = "Map" ;
+ "Website" = "Website" ;
+ "Sign Out" = "Sign Out" ;
+
+
 //Lessons
 "ALGORITHM" = "ALGORITHM";
 "1: Think of it this way: many introductory lessons introduce algorithms as mathematical “recipes”; and like a recipe, algorithms contain clear steps working towards an established result. " = "1: Think of it this way: many introductory lessons introduce algorithms as mathematical “recipes”; and like a recipe, algorithms contain clear steps working towards an established result. " ;

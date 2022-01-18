@@ -14,7 +14,6 @@ import Firebase
 
 class SignUpVC: UIViewController,UITextFieldDelegate {
     var score: Int = 0
-    //    let dropDown = DropDown()
     
     // MARK: - properties
     
@@ -24,7 +23,7 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         tf.backgroundColor = .systemGray6
         tf.text = ""
         tf.placeholder = (NSLocalizedString("Your Name", comment: ""))
-        //        (NSLocalizedString("email",comment:""))
+       
         tf.layer.cornerRadius = .minimumMagnitude(20, 20)
         tf.textAlignment = .left
         return tf
@@ -36,7 +35,7 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         tf.text = ""
         tf.placeholder = (NSLocalizedString("email", comment: ""))
         
-        //        (NSLocalizedString("email",comment:""))
+      
         tf.layer.cornerRadius = .minimumMagnitude(20, 20)
         tf.textAlignment = .left
         return tf
@@ -66,7 +65,7 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         //        btn.layer.cornerRadius = .maximumMagnitude(20, 20)
         btn.setTitleColor(.gray, for: .normal)
         btn.setTitle((NSLocalizedString("Login", comment: "")), for: .normal)
-        //        btn.backgroundColor = UIColor(red: 89/255, green: 128/255, blue: 148/255, alpha: 1.5)
+     
         btn.addTarget(self, action: #selector(loginBtnPressed), for: .touchUpInside)
         return btn
     }()
@@ -76,11 +75,11 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         btn.setTitleColor(.black, for: .normal)
         btn.layer.cornerRadius = .maximumMagnitude(20, 20)
         btn.setBackgroundImage(imageNormal5, for: UIControl.State.normal)
-        //        btn.layer.cornerRadius = 50
+        
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle((NSLocalizedString("Register", comment: "")), for: .normal)
         btn.titleLabel?.font = UIFont(name:"Copperplate", size: 20)
-        //        btn.backgroundColor = UIColor(red: 89/255, green: 128/255, blue: 148/255, alpha: 1.5)
+      
         btn.addTarget(self, action: #selector(registerBtnPressed), for: .touchUpInside)
         return btn
         

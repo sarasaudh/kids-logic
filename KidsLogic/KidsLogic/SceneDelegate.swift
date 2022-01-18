@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         let navigationController = UINavigationController(rootViewController: SectionVC())
         
-        let home = SectionVC()
+        let home = LoginVC()
         
         //  let home = LoginOrRegisterVC()
         self.window?.rootViewController = home

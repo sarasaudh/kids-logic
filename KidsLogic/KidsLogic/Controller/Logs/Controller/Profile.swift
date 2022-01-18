@@ -35,14 +35,7 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
         image.isUserInteractionEnabled = true
         return image
     }()
-    //    lazy var imagePicker : UIImagePickerController = {
-    //        let imagePicker = UIImagePickerController()
-    //        imagePicker.delegate = self
-    //        imagePicker.sourceType = .photoLibrary
-    //        imagePicker.allowsEditing = true
-    //        imagePicker.sheetPresentationController?.preferredCornerRadius = 50
-    //        return imagePicker
-    //    }()
+   
     //user name
     lazy var nameLabel: UITextField = {
         let label = UITextField()
@@ -66,19 +59,18 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
     lazy var userScoreLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        //      label.shadowColor = .blue
+       
         label.font.withSize(100)
         label.backgroundColor = .quaternaryLabel
-        //      label.text = NSLocalizedString("Score", comment: "")
-        //      label.text = "SCORE"//(NSLocalizedString("score", comment: ""))
+      
         label.textColor = .green
-        //      label.borderStyle = .bezel
+       
         label.textAlignment = .center
         label.layer.cornerRadius = 15
-        //      userScoreLabel.text = "1"
+      
         return label
     }()
-    //save the name and image and statuse
+    
     
     let imageNormal2:UIImage? = UIImage(named: "Selver")
     
@@ -103,7 +95,7 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
         
         button.setBackgroundImage(imageNormal, for: UIControl.State.normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        //            button.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+        
         button.addTarget(self, action: #selector(scorePressed), for: .touchUpInside)
         button.layer.masksToBounds = true
         return button
@@ -151,9 +143,7 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
                 
                 self.nameLabel.text = doucument?.data()?["First Name"] as? String
                 self.userScoreLabel.text = "SCORE:\(doucument?.data()?["score"] as? Int ?? 0)"
-                //                      "SCORE:  \(doucument?.data()?["score"] as! Int)"
-                //                      let score = doucument?.data()?["score"] as? Int ?? 0
-                //        self.userScoreLabel.text = "\(score)"
+            
                 
                 let score = doucument?.data()?["score"] as? Int // else {return}
                 
@@ -182,39 +172,10 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
                 }
             }
         
-        //if image level
-        //      if userScoreLabel == 0 {
-        //          profileImage.image = UIImage(named: "kidPro")
-        ////
-        //      }else if score?.score == 1 {
-        //           profileImage.image = UIImage(named: "score")
-        //      }else if score?.score == 2 {
-        //           profileImage.image = UIImage(named: "forest")
-        //      }
-        //      if score?.score == 0 {
-        //          profileImage.image = UIImage(named: "kidPro")
-        //
-        //      }else if score?.score == 1 {
-        //           profileImage.image = UIImage(named: "score")
-        //      }else if score?.score == 2 {
-        //           profileImage.image = UIImage(named: "forest")
-        //       }  }else if score?.score == 3 {
-        //           profileImage.image = UIImage(named: "forest")
-        //       }  }else if score?.score == 4 {
-        //           profileImage.image = UIImage(named: "forest")
-        //       }else if score?.score == 5 {
-        //           profileImage.image = UIImage(named: "forest")
-        //       }
+      
         view.setGradiantView2()
         nameLabel.delegate = self
-        //      userScoreLabel.delegate = self
-        //            let image = UIImage(systemName: "person.crop.rectangle.fill")
-        //            tabBarItem = .init(title: "profile", image: image, selectedImage: image)
-        // Gesture to image
-        
-        
-        //        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
-        //        profileImage.addGestureRecognizer(tapRecognizer)
+
         view.backgroundColor = .white
         
         view.addSubview(containerView)
@@ -244,8 +205,7 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
         view.addSubview(scoreButton)
         
         NSLayoutConstraint.activate([
-            //        scoreButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
-            //        scoreButton.leftAnchor.constraint(equalTo: MapButton.rightAnchor, constant: 50),
+         
             scoreButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             scoreButton.topAnchor.constraint(equalTo: singOutButton.bottomAnchor, constant: 10),
             scoreButton.widthAnchor.constraint(equalToConstant: 50),
@@ -261,28 +221,11 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
             userScoreLabel.widthAnchor.constraint(equalToConstant: 100),
         ])
         
-        //    guard let currentUserID = Auth.auth().currentUser?.uid else {return}
-        
+       
         RegisterService.shared.listenToUsers { ubdateUser in
             self.users = ubdateUser
         }
         
-        //      guard let currentUserID = Auth.auth().currentUser?.uid else {return}
-        //      let uuid = UUID().uuidString
-        //              Firestore.firestore()
-        //                  .document("uuid")
-        //                  .addSnapshotListener{ doucument, error in
-        //                      if error != nil {
-        //                          print (error)
-        //                          return
-        //                      }
-        //
-        //                      self.nameLabel.text = doucument?.data()?["name"] as? String
-        //                      self.userStatusLabel.text = doucument?.data()?["status"] as? String
-        ////                      self.profileImage.image = doucument?.data()?["image"] as? Image
-        //
-        //
-        //                  }
         
     }
     //sing out from snap chat
@@ -298,13 +241,12 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
         } catch let signOutError as NSError {
             print ("Error signing out: \(signOutError.localizedDescription)")
         }
-//        self.dismiss(animated: true, completion: nil)
-//            present(LoginVC(), animated: true, completion: nil)
+
     }
-    //update name , image , status in fire store
+ 
     @objc private func SaveButtonTapped() {
         
-        //      guard let currentUserID = Auth.auth().currentUser?.uid else {return}
+        
         let id = UUID().uuidString
         RegisterService.shared.addUser(user: User(
             id: id,
@@ -315,11 +257,9 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
         
         guard let currentUserID = Auth.auth().currentUser?.uid else {return}
         Firestore.firestore().document("users/\(currentUserID)").updateData([
-            //        "id" : currentUserID,
+           
             "First Name" : nameLabel.text ?? "",
-            //        "score" :  userScoreLabel.text ?? "",
-            //      "status" :userScoreLabel.text,
-            //      "image":"\(profileImage.image)"
+         
         ])
         let alert1 = UIAlertController(
             title: ("Saved"),message: "Saved update data",preferredStyle: .alert)
@@ -330,17 +270,7 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
         )
         present(alert1, animated: true, completion: nil)
     }
-    //    //image picker
-    //    @objc func imageTapped() {
-    //        print("Image tapped")
-    //        present(imagePicker, animated: true)
-    //    }
-    //    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-    //        let image = info[.editedImage] ?? info [.originalImage] as? UIImage
-    //        profileImage.image = image as? UIImage
-    //        dismiss(animated: true)
-    //    }
-    //share
+   
     @objc func scorePressed (_ sender: Any) {
         
         let vc = ScoreViewController()

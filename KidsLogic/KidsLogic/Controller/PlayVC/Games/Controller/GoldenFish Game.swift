@@ -353,8 +353,6 @@ class GoldenFishGame: UIViewController {
             audioPlayer = try AVAudioPlayer(contentsOf: alertSound)
         } catch _{
         }
-        //        stop voice
-        //        [self.webView loadRequest:NSURLRequestFromString(@"about:blank")]
         
         audioPlayer.prepareToPlay()
         audioPlayer.play()

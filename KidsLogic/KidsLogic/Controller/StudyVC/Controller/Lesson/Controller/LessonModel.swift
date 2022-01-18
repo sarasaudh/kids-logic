@@ -39,36 +39,36 @@ class LogicPosts {
         Logic(image: "12", caption: "🦨", title: (NSLocalizedString("HEIGHT",comment: "")), desc:(NSLocalizedString("12: how tall an element or opject is",comment: "")), author: "🐼", lessonNum: "12"),
         
         Logic(image: "13", caption: "🐼", title: (NSLocalizedString("FUNCTION",comment: "")), desc: (NSLocalizedString("13:Functions are self contained modules of code that accomplish a specific task. Functions usually take in data, process it, and return a result. Once a function is written, it can be used over and over and over again. Functions can be called from the inside of other functions.",comment: "")), author: "🐼", lessonNum: "13"),
+        
+                Logic(image: "14", caption: "🐼", title: (NSLocalizedString("OPACITY",comment: "")), desc: (NSLocalizedString("14: Making an element more or less see through",comment: "")),author: "🐼", lessonNum: "14"),
+        
+                Logic(image: "15", caption: "🐼", title: (NSLocalizedString("NULL",comment: "")), desc: (NSLocalizedString("15: empty, no value exists",comment: "")),author: "🐼", lessonNum: "15"),
+        
+                Logic(image: "16", caption: "👽", title: (NSLocalizedString("LOOP",comment: "")), desc: (NSLocalizedString("16: Doing the same action again and again",comment: "")),author: "🐼", lessonNum: "16"),
+        
+                Logic(image: "17", caption: "👽", title: (NSLocalizedString("JAVA SCRIPT",comment: "")), desc: (NSLocalizedString("17: A Programming languge used in most websites",comment: "")),author: "🐼", lessonNum: "17"),
+        
+                Logic(image: "18", caption: "🦝", title: (NSLocalizedString("IF STATEMENT",comment: "")), desc: (NSLocalizedString("18: IF true , do this action",comment: "")),author: "🐼", lessonNum: "18"),
+        
+                Logic(image: "19", caption: "🦊", title: (NSLocalizedString("SCALE",comment: "")), desc: (NSLocalizedString("19: Sets the zoom or size of item",comment: "")),author: "🐼", lessonNum: "19"),
+        
         //
-        //        Logic(image: "14", caption: "🐼", title: (NSLocalizedString("OPACITY",comment: "")), desc: (NSLocalizedString("14: CSS, which stands for Cascading Style Sheets, is a language used alongside HTML to separate a webpage's content (the HTML part) from the design and formatting (the CSS part). It defines fonts, colors, margins, lines, height, width, backgrounds, images, positions and other visual aspects of a webpage, something which HTML was not originally designed to do. Simply put, CSS decides how your HTML is displayed.",comment: "")),author: "🐼", lessonNum: "14"),
+                Logic(image: "20", caption: "🤖",title: (NSLocalizedString("RUNTIME",comment: "")), desc: (NSLocalizedString("20: The period of time when a program is running ",comment: "")),author: "🐼", lessonNum: "20"),
         //
-        //        Logic(image: "15", caption: "🐼", title: (NSLocalizedString("NULL",comment: "")), desc: (NSLocalizedString("15: Think of it this way: many introductory lessons introduce algorithms as mathematical “recipes”; and like a recipe, algorithms contain clear steps working towards an established result. ",comment: "")),author: "🐼", lessonNum: "15"),
+                Logic(image: "30", caption: "🦉", title: (NSLocalizedString("RGB COLOR",comment: "")), desc: (NSLocalizedString("21: Combines red,green and blue i.e. rgb(0,255,90)",comment: "")),author: "🐼", lessonNum: "21"),
         //
-        //        Logic(image: "16", caption: "👽", title: (NSLocalizedString("LOOP",comment: "")), desc: (NSLocalizedString("16: Booleans are “truth values” — they’re a data type that can represent one of two outcomes: true or false. (In some languages, true and false can be represented as 1 or 0, but the takeaway message is the same.)",comment: "")),author: "🐼", lessonNum: "16"),
+                Logic(image: "40", caption: "🐸", title: (NSLocalizedString("REFRESH",comment: "")), desc: (NSLocalizedString("22: Relode the content of webpage or window ",comment: "")),author: "🐼", lessonNum: "22"),
         //
-        //        Logic(image: "17", caption: "👽", title: (NSLocalizedString("JAVA SCRIPT",comment: "")), desc: (NSLocalizedString("17: A box's backgrounds, but not its border-image, are clipped to the appropriate curve (as determined by ‘background-clip’). Other effects that clip to the border or padding edge (such as ‘overflow’ other than ‘visible’) also must clip to the curve. The content of replaced elements is always trimmed to the content edge curve. Also, the area outside the curve of the border edge does not accept mouse events on behalf of the element.",comment: "")),author: "🐼", lessonNum: "17"),
+                Logic(image: "50", caption: "🐸", title: (NSLocalizedString("PIXELS",comment: "")), desc: (NSLocalizedString("23: Units of distance on digital canvas",comment: "")),author: "🐼", lessonNum: "23"),
         //
-        //        Logic(image: "18", caption: "🦝", title: (NSLocalizedString("IF STATEMENT",comment: "")), desc: (NSLocalizedString("18: In IT, a bug refers to an error, fault or flaw in any computer program or a hardware system. A bug produces unexpected results or causes a system to behave unexpectedly. In short it is any behavior or result that.",comment: "")),author: "🐼", lessonNum: "18"),
-        //
-        //        Logic(image: "19", caption: "🦊", title: (NSLocalizedString("SCALE",comment: "")), desc: (NSLocalizedString("19: CSS, which stands for Cascading Style Sheets, is a language used alongside HTML to separate a webpage's content (the HTML part) from the design and formatting (the CSS part). It defines fonts, colors, margins, lines, height, width, backgrounds, images, positions and other visual aspects of a webpage, something which HTML was not originally designed to do. Simply put, CSS decides how your HTML is displayed.",comment: "")),author: "🐼", lessonNum: "19"),
+                Logic(image: "60", caption: "🦉", title: (NSLocalizedString("PATH",comment: "")), desc: (NSLocalizedString("24: Location of file or folder on your computer or system",comment: "")),author: "🐼", lessonNum: "24"),
         //
         //
-        //        Logic(image: "20", caption: "🤖",title: (NSLocalizedString("RUNTIME",comment: "")), desc: (NSLocalizedString("20: Think of it this way: many introductory lessons introduce algorithms as mathematical “recipes”; and like a recipe, algorithms contain clear steps working towards an established result. ",comment: "")),author: "🐼", lessonNum: "20"),
+                Logic(image: "70", caption: "🦝", title: (NSLocalizedString("WIDTH",comment: "")), desc: (NSLocalizedString("25: how wide an elment or object is ",comment: "")),author: "🐼", lessonNum: "25"),
         //
-        //        Logic(image: "30", caption: "🦉", title: (NSLocalizedString("RGB COLOR",comment: "")), desc: (NSLocalizedString("21: Booleans are “truth values” — they’re a data type that can represent one of two outcomes: true or false. (In some languages, true and false can be represented as 1 or 0, but the takeaway message is the same.)",comment: "")),author: "🐼", lessonNum: "21"),
+                Logic(image: "80", caption: "🦉", title: (NSLocalizedString("SYNTAX",comment: "")), desc: (NSLocalizedString("26:Rules for how to write a programming language",comment: "")),author: "🐼", lessonNum: "26"),
         //
-        //        Logic(image: "40", caption: "🐸", title: (NSLocalizedString("REFRESH",comment: "")), desc: (NSLocalizedString("22: A box's backgrounds, but not its border-image, are clipped to the appropriate curve (as determined by ‘background-clip’). Other effects that clip to the border or padding edge (such as ‘overflow’ other than ‘visible’) also must clip to the curve. The content of replaced elements is always trimmed to the content edge curve. Also, the area outside the curve of the border edge does not accept mouse events on behalf of the element.",comment: "")),author: "🐼", lessonNum: "22"),
-        //
-        //        Logic(image: "50", caption: "🐸", title: (NSLocalizedString("PIXELS",comment: "")), desc: (NSLocalizedString("23: In IT, a bug refers to an error, fault or flaw in any computer program or a hardware system. A bug produces unexpected results or causes a system to behave unexpectedly. In short it is any behavior or result that.",comment: "")),author: "🐼", lessonNum: "23"),
-        //
-        //        Logic(image: "60", caption: "🦉", title: (NSLocalizedString("PATH",comment: "")), desc: (NSLocalizedString("24: CSS, which stands for Cascading Style Sheets, is a language used alongside HTML to separate a webpage's content (the HTML part) from the design and formatting (the CSS part). It defines fonts, colors, margins, lines, height, width, backgrounds, images, positions and other visual aspects of a webpage, something which HTML was not originally designed to do. Simply put, CSS decides how your HTML is displayed.",comment: "")),author: "🐼", lessonNum: "24"),
-        //
-        //
-        //        Logic(image: "70", caption: "🦝", title: (NSLocalizedString("WIDTH",comment: "")), desc: (NSLocalizedString("25: Booleans are “truth values” — they’re a data type that can represent one of two outcomes: true or false. (In some languages, true and false can be represented as 1 or 0, but the takeaway message is the same.)",comment: "")),author: "🐼", lessonNum: "25"),
-        //
-        //        Logic(image: "80", caption: "🦉", title: (NSLocalizedString("SYNTAX",comment: "")), desc: (NSLocalizedString("26: A box's backgrounds, but not its border-image, are clipped to the appropriate curve (as determined by ‘background-clip’). Other effects that clip to the border or padding edge (such as ‘overflow’ other than ‘visible’) also must clip to the curve. The content of replaced elements is always trimmed to the content edge curve. Also, the area outside the curve of the border edge does not accept mouse events on behalf of the element.",comment: "")),author: "🐼", lessonNum: "26"),
-        //
-        //        Logic(image: "90", caption: "🤖", title: (NSLocalizedString("STRING",comment: "")), desc: (NSLocalizedString("27: In IT, a bug refers to an error, fault or flaw in any computer program or a hardware system. A bug produces unexpected results or causes a system to behave unexpectedly. In short it is any behavior or result that.",comment: "")),author: "🐼", lessonNum: "27"),
+                Logic(image: "90", caption: "🤖", title: (NSLocalizedString("STRING",comment: "")), desc: (NSLocalizedString("27: Text, used inside of quotes i.e. 'text')",comment: "")),author: "🐼", lessonNum: "27"),
         
         Logic(image: "exl", caption: "⏳", title: "Good job", desc: "SOON",author: "🐼", lessonNum: " ✅")
         

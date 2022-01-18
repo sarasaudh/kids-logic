@@ -166,13 +166,4 @@ class HoomeLessonsVC: UIViewController {
         return navController
     }
     
-//    func setupVCs() {
-//
-//        createNavController(for:Lessons(), title: NSLocalizedString("Lesson", comment: ""), image: UIImage(systemName: "list.bullet.rectangle.fill")!)
-        
-        
-//    }
-    
-    
-    
 }

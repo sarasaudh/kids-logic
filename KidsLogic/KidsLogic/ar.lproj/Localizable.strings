@@ -61,6 +61,15 @@
 "DEBUG" = "DEBUG";
 
 
+//MenuList
+
+"info"       = "           عن التطبيق" ;
+"Back"       = "           عودة" ;
+ "Languge"   = "           اللغة" ;
+"Map"        = "           قم بزيارتنا" ;
+ "Website"   = "           الموقع الالكتروني" ;
+ "Sign Out"  = "           تسجيل خروج" ;
+
 //Lesson
 
 "1: Think of it this way: many introductory lessons introduce algorithms as mathematical “recipes”; and like a recipe, algorithms contain clear steps working towards an established result. " = "فكر في الأمر بهذه الطريقة: تقدم العديد من الدروس التمهيدية الخوارزميات باعتبارها (وصفات) رياضية ؛ ومثل الوصفة ، تحتوي الخوارزميات على خطوات واضحة تعمل على تحقيق نتيجة ثابتة.";
@@ -116,44 +125,50 @@
 "13:Functions are self contained modules of code that accomplish a specific task. Functions usually take in data, process it, and return a result. Once a function is written, it can be used over and over and over again. Functions can be called from the inside of other functions." = "الوظائف هي وحدات قائمة بذاتها من التعليمات البرمجية التي تنجز مهمة محددة. عادةً ما تأخذ الوظائف البيانات وتعالجها و تعيد النتيجة. بمجرد كتابة الوظيفة ، يمكن استخدامها مرارًا وتكرارًا. يمكن استدعاء الوظائف من داخل وظائف أخرى." ;
 
 
-//"OPACITY" = "";
-//"14: CSS, which stands for Cascading Style Sheets, is a language used alongside HTML to separate a webpage's content (the HTML part) from the design and formatting (the CSS part). It defines fonts, colors, margins, lines, height, width, backgrounds, images, positions and other visual aspects of a webpage, something which HTML was not originally designed to do. Simply put, CSS decides how your HTML is displayed." = "" ;
+"OPACITY" = "التعتيم";
+"14: Making an element more or less see through" = "جعل العنصر اكثر او اقل عتامة " ;
+
+"NULL" = "خالي" ;
+"15: empty, no value exists" = "فارغ لا يوجد له قيمة";
+
+"LOOP" = "حلقه" ;
+"16: Doing the same action again and again" = "تكرار نفس الحدث مراراً وتكراراً";
+
+"JAVA SCRIPT" = "جافا سكربت";
+"17: A Programming languge used in most websites" = "لغة برمجة تستخدم في اغلب المواقع الالكترونية";
+
+"IF STATEMENT" = "جملة IF";
+"18: IF true , do this action" = " اذا تحقق الشرط افعل الحدث المطلوب";
+
+"SCALE" = "الحجم";
+"19: Sets the zoom or size of item" = "يضبط حجم العنصر بالتكبير او التصغير";
 //
-//"NULL" = "" ;
-//"15: Think of it this way: many introductory lessons introduce algorithms as mathematical “recipes”; and like a recipe, algorithms contain clear steps working towards an established result. " = "";
+"RUNTIME" = "وقت التشعغيل ";
+"20: The period of time when a program is running " = "دورة الوقت حينما يكون البرنامج قيد التشغيل";
 //
-//"LOOP" = "" ;
-//"16: Booleans are “truth values” — they’re a data type that can represent one of two outcomes: true or false. (In some languages, true and false can be represented as 1 or 0, but the takeaway message is the same.)" = "";
+"RGB COLOR" = "الوانRGB";
+"21: Combines red,green and blue i.e. rgb(0,255,90)" = "يجمع بين اللون الاحمر و  الاخضر و الازرق في تدرج  rgb(0,255,90)";
 //
-//"JAVA SCRIPT" = "";
-//"17: A box's backgrounds, but not its border-image, are clipped to the appropriate curve (as determined by ‘background-clip’). Other effects that clip to the border or padding edge (such as ‘overflow’ other than ‘visible’) also must clip to the curve. The content of replaced elements is always trimmed to the content edge curve. Also, the area outside the curve of the border edge does not accept mouse events on behalf of the element." = "";
+"REFRESH" = "التحديث";
+"22: Relode the content of webpage or window " = "اعادة تحميل محتوى الويب او النافذة ";
 //
-//"IF STATEMENT" = "";
-//"18: In IT, a bug refers to an error, fault or flaw in any computer program or a hardware system. A bug produces unexpected results or causes a system to behave unexpectedly. In short it is any behavior or result that." = "";
+"PIXELS" = "بكسل";
+"23: Units of distance on digital canvas" = "وحدات المسافة على لوحة رقمية
+";
 //
-//"SCALE" = "";
-//"19: CSS, which stands for Cascading Style Sheets, is a language used alongside HTML to separate a webpage's content (the HTML part) from the design and formatting (the CSS part). It defines fonts, colors, margins, lines, height, width, backgrounds, images, positions and other visual aspects of a webpage, something which HTML was not originally designed to do. Simply put, CSS decides how your HTML is displayed." = "";
+"PATH" = "المسار";
+"24: Location of file or folder on your computer or system" = "موقع الملف أو المجلد على جهاز الكمبيوتر أو النظام الخاص بك";
+
+
+"WIDTH" = "العرض" ;
+"25: how wide an elment or object is " = "مدى عرض عنصر او كائن ";
+
+
+"SYNTAX" ="بناء الجملة";
+"26:Rules for how to write a programming language" = "قواعد كتابة لغة البرمجة";
 //
-//"RUNTIME" = "";
-//"20: Think of it this way: many introductory lessons introduce algorithms as mathematical “recipes”; and like a recipe, algorithms contain clear steps working towards an established result. " = "";
-//
-//"RGB COLOR" = "";
-//"21: Booleans are “truth values” — they’re a data type that can represent one of two outcomes: true or false. (In some languages, true and false can be represented as 1 or 0, but the takeaway message is the same.)" = "";
-//
-//"REFRESH" = "";
-//"22: A box's backgrounds, but not its border-image, are clipped to the appropriate curve (as determined by ‘background-clip’). Other effects that clip to the border or padding edge (such as ‘overflow’ other than ‘visible’) also must clip to the curve. The content of replaced elements is always trimmed to the content edge curve. Also, the area outside the curve of the border edge does not accept mouse events on behalf of the element." = "";
-//
-//"PIXELS" = "";
-//"23: In IT, a bug refers to an error, fault or flaw in any computer program or a hardware system. A bug produces unexpected results or causes a system to behave unexpectedly. In short it is any behavior or result that." = "";
-//
-//"PATH" = "";
-//"24: CSS, which stands for Cascading Style Sheets, is a language used alongside HTML to separate a webpage's content (the HTML part) from the design and formatting (the CSS part). It defines fonts, colors, margins, lines, height, width, backgrounds, images, positions and other visual aspects of a webpage, something which HTML was not originally designed to do. Simply put, CSS decides how your HTML is displayed." = "";
-//
-//"SYNTAX" ="";
-//"26: A box's backgrounds, but not its border-image, are clipped to the appropriate curve (as determined by ‘background-clip’). Other effects that clip to the border or padding edge (such as ‘overflow’ other than ‘visible’) also must clip to the curve. The content of replaced elements is always trimmed to the content edge curve. Also, the area outside the curve of the border edge does not accept mouse events on behalf of the element." = "";
-//
-//"STRING" = "";
-//"27: In IT, a bug refers to an error, fault or flaw in any computer program or a hardware system. A bug produces unexpected results or causes a system to behave unexpectedly. In short it is any behavior or result that." = "";
+"STRING" = "نص";
+"27: Text, used inside of quotes i.e. 'text')" = "نص مستخدم داخل علامات الاقتباس او التنصيص ";
 //
 //
 //
