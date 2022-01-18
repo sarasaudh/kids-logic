@@ -97,6 +97,10 @@
 - class SignUpVC
 - class SectionVC
 
+- class SettingHomeVC
+- class ContainerViewController
+- class MenuViewController
+
 - class TabVC
 
 - class Lessons
@@ -141,14 +145,24 @@
 
 ### feature
 - Read Lessons
+- watching videos Lessons
 - evaluation  hem self
-- watching videos
 - trying to answer the Quiz
-- Play games
+- Play games with Music
+- audio interaction
 - increase score
+- Arabic & Englesh Lessons
+- Dark & Light Mode
+
+
  
 ## LogIn
-![Simulator Screen Shot - iPhone 13 Pro - 2022-01-02 at 09 47 49](https://user-images.githubusercontent.com/91429812/148018788-1b6d5587-74a6-4e10-b92a-bf326b53437d.png)
+![Simulator Screen Shot - iPhone 13 Pro - 2022-01-02 at 09 47 49](https://user-images.githubusercontent.com/91429812/148018788-1b6d5587-74a6-4e10-b92a-bf326b53437d.png) ![Untitled 3](https://user-images.githubusercontent.com/91429812/149911823-556972c8-55f8-4426-89c4-563d2c71e71c.png)![Simulator Screen Shot - iPhone 13 - 2022-01-10 at 15 04 53](https://user-images.githubusercontent.com/91429812/149909954-bfa2fe14-5b85-464c-985f-19c11040cf4a.png)![Simulator Screen Shot - iPhone 13 Pro - 2022-01-02 at 09 50 01](https://user-images.githubusercontent.com/91429812/149911801-10bd7e78-be8d-4292-b428-2a308ef39e60.png)![Untitled 5](https://user-images.githubusercontent.com/91429812/149911198-d2325c08-bf1c-4b69-bf69-69335ac116fb.png)
+![Untitled 3](https://user-images.githubusercontent.com/91429812/149912103-dd1565f6-2d92-442b-b9e4-ba48818e7e0a.png)
+
+
+
+
 
 
 # Links 
