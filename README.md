@@ -155,7 +155,8 @@
 - 
  
 ## LogIn
-![Simulator Screen Shot - iPhone 13 Pro - 2022-01-02 at 09 47 49](https://user-images.githubusercontent.com/91429812/148018788-1b6d5587-74a6-4e10-b92a-bf326b53437d.png)
+![Simulator Screen Shot - iPhone 13 Pro - 2022-01-02 at 09 47 49](https://user-images.githubusercontent.com/91429812/148018788-1b6d5587-74a6-4e10-b92a-bf326b53437d.png) ![Simulator Screen Shot - iPhone 13 - 2022-01-10 at 15 04 53](https://user-images.githubusercontent.com/91429812/149909954-bfa2fe14-5b85-464c-985f-19c11040cf4a.png)
+
 
 
 # Links 
