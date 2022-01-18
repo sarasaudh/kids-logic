@@ -39,7 +39,6 @@
 		845B11D22761377600746173 /* NewDayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B11D12761377600746173 /* NewDayVC.swift */; };
 		845B11D42761379000746173 /* DayTasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B11D32761379000746173 /* DayTasksVC.swift */; };
 		845B11D62761379E00746173 /* DaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B11D52761379E00746173 /* DaysVC.swift */; };
-		84730F1E278D6B6A004C5500 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84730F1D278D6B6A004C5500 /* Setting.swift */; };
 		84730F48278EBD2C004C5500 /* MenuSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84730F47278EBD2C004C5500 /* MenuSetting.swift */; };
 		84730F4A278EBE2E004C5500 /* HomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84730F49278EBE2E004C5500 /* HomeSection.swift */; };
 		84730F4C278EBE3D004C5500 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84730F4B278EBE3D004C5500 /* Container.swift */; };
@@ -114,7 +113,6 @@
 		845B11D12761377600746173 /* NewDayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDayVC.swift; sourceTree = "<group>"; };
 		845B11D32761379000746173 /* DayTasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTasksVC.swift; sourceTree = "<group>"; };
 		845B11D52761379E00746173 /* DaysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysVC.swift; sourceTree = "<group>"; };
-		84730F1D278D6B6A004C5500 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		84730F47278EBD2C004C5500 /* MenuSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSetting.swift; sourceTree = "<group>"; };
 		84730F49278EBE2E004C5500 /* HomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSection.swift; sourceTree = "<group>"; };
 		84730F4B278EBE3D004C5500 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
@@ -261,7 +259,6 @@
 		84730F1C278D6B55004C5500 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				84730F1D278D6B6A004C5500 /* Setting.swift */,
 				84730F46278EBD12004C5500 /* SideMenu */,
 			);
 			path = Setting;
@@ -654,7 +651,6 @@
 				845B11C8276136C900746173 /* Day.swift in Sources */,
 				84E53174275407AC00B45CCC /* QuizVC.swift in Sources */,
 				84730F48278EBD2C004C5500 /* MenuSetting.swift in Sources */,
-				84730F1E278D6B6A004C5500 /* Setting.swift in Sources */,
 				84E5312D2753880C00B45CCC /* SceneDelegate.swift in Sources */,
 				845B11D22761377600746173 /* NewDayVC.swift in Sources */,
 				84B4D797277D949D00F40C9E /* LessonsVC.swift in Sources */,

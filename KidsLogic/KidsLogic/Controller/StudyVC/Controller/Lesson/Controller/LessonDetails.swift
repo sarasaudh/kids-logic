@@ -10,7 +10,8 @@ import UIKit
 import SwiftUI
 import AVFoundation
 class LessonDetailVC: UIViewController {
-    
+   
+    var isReadit = Bool()
     var audioPlayer = AVAudioPlayer()
     var lessonImage: String?
     var lessonTitle: String?
@@ -19,16 +20,14 @@ class LessonDetailVC: UIViewController {
     
     
     // MARK: - properties
-    
-    
+
     let bImage: UIImageView =  {
         let image           = UIImageView()
         image.contentMode   = .scaleToFill
         image.clipsToBounds = true
         return image
     }()
-    
-    
+  
     private let bTitle: UILabel = {
         let title = UILabel()
         title.textColor     =  .systemOrange
@@ -65,7 +64,17 @@ class LessonDetailVC: UIViewController {
         return btn
     }()
     
-    
+    var readitBtn: UIButton = {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setImage(UIImage(named:"checkmark.seal"), for: UIControl.State.normal)
+        btn.layer.cornerRadius = 20
+        btn.layer.masksToBounds = true
+        btn.addTarget(self, action: #selector(readChecked), for: .touchUpInside)
+        btn.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+        btn.tintColor = .blue
+        return btn
+    }()
     
 //MARK: - viewDidLoad
     
@@ -77,6 +86,7 @@ class LessonDetailVC: UIViewController {
         self.navigationItem.largeTitleDisplayMode = .never
         
         setupView()
+      
     }
     
     private func setupView() {
@@ -85,6 +95,7 @@ class LessonDetailVC: UIViewController {
         guard let lesTitle = lessonTitle else {return}
         guard let lesDes = lessonDescription else {return}
         guard let lesnum = LessonNumber else {return}
+//        guard let CheckRead = isReadit else {return}
         
         
         //image
@@ -123,8 +134,6 @@ class LessonDetailVC: UIViewController {
         LNum.heightAnchor.constraint(equalToConstant: 40).isActive                            = true
         
         
-        
-        
         bDescription.translatesAutoresizingMaskIntoConstraints                                 = false
         view.addSubview(bDescription)
         bDescription.topAnchor.constraint(equalTo: LNum.bottomAnchor, constant: 10).isActive          = true
@@ -132,12 +141,21 @@ class LessonDetailVC: UIViewController {
         bDescription.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -19).isActive    = true
         bDescription.heightAnchor.constraint(equalToConstant: 400).isActive                             = true
         
+        view.addSubview(readitBtn)
+
+        readitBtn.topAnchor.constraint(equalTo: bImage.bottomAnchor ).isActive        = true
+        readitBtn.leadingAnchor.constraint(equalTo: view.trailingAnchor).isActive     = true
+        readitBtn.trailingAnchor.constraint(equalTo: bTitle.trailingAnchor,constant:-40).isActive  = true
+        readitBtn.heightAnchor.constraint(equalToConstant: 80).isActive                            = true
+        readitBtn.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        
         
         
         bImage.image        = UIImage(named: lesImage)
         bTitle.text         = lesTitle
         bDescription.text   = lesDes
         LNum.text           = lesnum
+    
     }
     
     
@@ -145,6 +163,25 @@ class LessonDetailVC: UIViewController {
     
     //MARK: - func
     
+    
+    @objc func readChecked() {
+        DispatchQueue.main.async {
+            if self.isReadit == false {
+                   let image1 = UIImage(systemName: "checkmark.seal.fill") as UIImage?
+                   self.readitBtn.setImage(image1, for: .normal)
+                   self.isReadit = true
+                   print("readit")
+                   
+               }else {
+                   let image2 = UIImage(systemName: "checkmark.seal") as UIImage?
+                   self.readitBtn.setImage(image2, for: .normal)
+                   self.isReadit = false
+                   print("Unreadit")
+                  
+               }
+        }
+           
+     }
     
     
     @objc func pandaVPressed() {

@@ -7,12 +7,9 @@
 import Foundation
 import UIKit
 class Lessons: UIViewController {
-    
-    
-    
+
     var collectionView: UICollectionView!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(
@@ -26,14 +23,10 @@ class Lessons: UIViewController {
         self.title = (NSLocalizedString("Logic KID", comment: ""))
         self.navigationItem.largeTitleDisplayMode = .automatic
     }
-    
-    
-    
+
     @objc private func dismissSelf(){
         dismiss(animated: true, completion: nil)
     }
-    
-    
     
     private func configureCollectionView(){
         
@@ -67,12 +60,6 @@ class Lessons: UIViewController {
         
     }
 }
-
-
-
-
-
-
 
 //        MARK: - extension
 
@@ -110,6 +97,3 @@ extension Lessons: UICollectionViewDelegate , UICollectionViewDataSource{
     }
     
 }
-
-
-

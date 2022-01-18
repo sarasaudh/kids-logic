@@ -11,6 +11,8 @@ import UIKit
 
 class LogicCell: UICollectionViewCell {
     static let ID = "LogicCellId"
+    var isReadit = Bool()
+    
     
     // MARK: - properties
     
@@ -51,7 +53,20 @@ class LogicCell: UICollectionViewCell {
         //        description.backgroundColor = 
         return description
     }()
-    
+//    checkmark.seal.fill
+    var readitBtn: UIButton = {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setImage(UIImage(named:"checkmark.seal"), for: UIControl.State.normal)
+        btn.setTitleColor(.white, for: .normal)
+//        btn.backgroundColor = UIColor(#colorLiteral(red: 0.3279541135, green: 0.6508837342, blue: 0.8242474198, alpha: 0.8470588235) )
+        btn.layer.cornerRadius = 20
+        btn.layer.masksToBounds = true
+        btn.addTarget(self, action: #selector(readChecked), for: .touchUpInside)
+        btn.titleLabel?.font = .systemFont(ofSize: 20, weight: .medium)
+        btn.tintColor = .blue
+        return btn
+    }()
     
     private let authorImage: UIImageView = {
         let image           = UIImageView()
@@ -95,7 +110,7 @@ class LogicCell: UICollectionViewCell {
         blogDescription.text    = card.desc
         authorImage.image       = UIImage(named: card.author)
         lessonNumb.text         = card.lessonNum
-        
+//        readitBtn.image         = UIImage(named:"checkmark.seal")
     }
     private func setupSizeForCellContent() {
         blogImage.frame = CGRect(x: 2, y: 2, width: self.frame.size.width, height: self.frame.size.height / 1)
@@ -119,9 +134,30 @@ class LogicCell: UICollectionViewCell {
         self.addSubview(blogTitle)
         self.addSubview(authorImage)
         self.addSubview(lessonNumb)
+        self.addSubview(readitBtn)
         self.layer.cornerRadius = 60
         self.layer.masksToBounds = true
         
+    }
+    
+    
+   @objc private func readChecked() {
+       DispatchQueue.main.async {
+           if self.isReadit == false {
+                  let image1 = UIImage(systemName: "checkmark.seal.fill") as UIImage?
+                  self.readitBtn.setImage(image1, for: .normal)
+                  self.isReadit = true
+                  print("readit")
+                  
+              }else {
+                  let image2 = UIImage(systemName: "checkmark.seal") as UIImage?
+                  self.readitBtn.setImage(image2, for: .normal)
+                  self.isReadit = false
+                  print("Unreadit")
+                 
+              }
+       }
+          
     }
 }
 

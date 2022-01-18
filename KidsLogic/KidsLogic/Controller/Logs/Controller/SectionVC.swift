@@ -190,7 +190,7 @@ class SectionVC: UIViewController{
         view.addSubview(settingBtn)
         NSLayoutConstraint.activate([
             
-            settingBtn.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
+            settingBtn.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
             settingBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor,constant: -140),
             settingBtn.heightAnchor.constraint(equalToConstant: 40),
             settingBtn.widthAnchor.constraint(equalToConstant: 40),
