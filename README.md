@@ -97,6 +97,10 @@
 - class SignUpVC
 - class SectionVC
 
+- class SettingHomeVC
+- class ContainerViewController
+- class MenuViewController
+
 - class TabVC
 
 - class Lessons
@@ -141,11 +145,14 @@
 
 ### feature
 - Read Lessons
+- watching videos Lessons
 - evaluation  hem self
-- watching videos
 - trying to answer the Quiz
 - Play games
 - increase score
+- Arabic & Englesh Lessons
+- Dark & Light Mode
+- 
  
 ## LogIn
 ![Simulator Screen Shot - iPhone 13 Pro - 2022-01-02 at 09 47 49](https://user-images.githubusercontent.com/91429812/148018788-1b6d5587-74a6-4e10-b92a-bf326b53437d.png)
