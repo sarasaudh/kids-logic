@@ -180,3 +180,49 @@ He hover effect is the alteration of the appearance of a component of the graphi
 
 
 
+//QuestionBank
+//1
+"ALGORITHM" = "ALGORITHM" ;
+"A. الحلقة" = "A. Loop" ;
+"B. المصفوفة" = "B. Array" ;
+"C.الاخطاء" = "C.Errors" ;
+"D.عملية او مجموعة قواعد يجب اتباعها" = "D. A process or set of rules to be followed.";
+//2
+"BOOLEAN" =  " BOOLEAN" ;
+"A. مربع" = "A. Square" ;
+"B. كود" = "B. code" ;
+"C. القيمة تكون صحيحة او خاطئة" = "C. The value is true or false." ;
+"D. صيغة " = "D. Formula" ;
+
+//3
+"BorderRadius" = "BorderRadius" ;
+"A. الوان" = "A. Colors" ;
+"B. الحدود" = "B. the border" ;
+"C.دائرة " = "C. circle" ;
+"D.شكل " = " D. shape" ;
+
+//4
+
+" BUG" = " BUG" ;
+"A.خطأ برمجي" = "A. software error" ;
+"B. نملة" = "B. ant" ;
+"C. حشرة" = "C. Insect" ;
+"D.خطأ منطقي" = "D. logical error" ;
+
+
+//5
+"CSS" = "CSS" ;
+"A.دالة" = "A. Function" ;
+"B. برمجية" = "B. software" ;
+"C. حلقة" = "C. Loop" ;
+"D.(Cascading Style Sheet)" = "D.(Cascading Style Sheet)" ;
+
+
+//6
+"DEBUG" ="DEBUG";
+"A. تصحيح برمجي" = "A. software correction " ;
+"B. زوايا" = "B. Angles" ;
+"C. خطأ برمجي" = "C. software error " ;
+"D. لعبة" = "D. Game" ;
+
+

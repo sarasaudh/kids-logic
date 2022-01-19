@@ -10,8 +10,9 @@ import UIKit
 import FirebaseAuth
 import Firebase
 import WebKit
+import MessageUI
 
-class ContainerViewController: UIViewController {
+class ContainerViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     lazy var menuView: UIView = {
         let view = UIView()
@@ -43,6 +44,21 @@ class ContainerViewController: UIViewController {
         return imageView
     }()
     
+    let backImg:UIImage? = UIImage(named: "blue")
+    lazy var backBTN: UIButton = {
+            let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle(NSLocalizedString("Back", comment: ""), for: .normal)
+        btn.setBackgroundImage(backImg, for: UIControl.State.normal)
+        btn.titleLabel?.font = UIFont(name:"Copperplate", size: 50)
+        btn.setTitleColor(.systemBlue, for: .normal)
+        btn.layer.cornerRadius = 20
+        btn.layer.masksToBounds = true
+        btn.addTarget(self, action: #selector(back), for: .touchUpInside)
+           
+            return btn
+        }()
+    
   
 //    MARK: - Menu
     
@@ -71,14 +87,22 @@ class ContainerViewController: UIViewController {
         // MARK: - Constraints
         
         view.addSubview(imageView)
-        
+        view.addSubview(backBTN)
         
         NSLayoutConstraint.activate([
             imageView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
             imageView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
             imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 450),
             imageView.widthAnchor.constraint(equalToConstant: 150),
-            imageView.heightAnchor.constraint(equalToConstant: 150),
+            imageView.heightAnchor.constraint(equalToConstant: 180),
+            
+            
+            backBTN.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -100),
+            backBTN.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 100),
+            backBTN.topAnchor.constraint(equalTo: imageView.bottomAnchor),
+            backBTN.widthAnchor.constraint(equalToConstant: 200),
+            backBTN.heightAnchor.constraint(equalToConstant: 70),
+            
         ])
         
     }
@@ -179,11 +203,13 @@ extension ContainerViewController: MenuViewControllerDelegate{
             case .info:
                 self.restToHome()
                 
-            case .back:
-                self.back()
-                let vc = SectionVC()
-                self.present(UINavigationController(rootViewController: vc),animated: true,completion: nil)
+           
                 
+            case .darkMode:
+            DarkMode()
+                
+            case .lightMode:
+                LightMode()
                 
                 
             case .languge:
@@ -198,20 +224,51 @@ extension ContainerViewController: MenuViewControllerDelegate{
                 self.present(UINavigationController(rootViewController: vc),animated: true,completion: nil)
                 
                 
+            case .contact:
+                self.callNumber(phoneNumber: "+966509501148")
+
+
+            case .email:
+                sendMail()
+                
             case .website:
                 LinkPressed()
 
             case .singout:
                 singOutButtonTapped()
 
+        
             }
     }
-    func back() {
+    
+        private func callNumber(phoneNumber:String) {
+           if let phoneCallURL = URL(string: "tel://\(+966509501148)") {
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL)) {
+              application.open(phoneCallURL, options: [:], completionHandler: nil)
+            }
+           }
+          }
+        
+    
+    @objc func back() {
         //add map child
         _ = SectionVC()
         dismiss(animated: true) {
           
         }
+    }
+    
+    func DarkMode() {
+
+                let appDelegate = UIApplication.shared.windows.first
+                  appDelegate?.overrideUserInterfaceStyle = .dark
+               
+    }
+    func LightMode() {
+        let appDelegate = UIApplication.shared.windows.first
+        appDelegate?.overrideUserInterfaceStyle = .light
+      
     }
     func addInfo() {
         //add map child
@@ -223,12 +280,27 @@ extension ContainerViewController: MenuViewControllerDelegate{
         vc.didMove(toParent: homeVC )
         homeVC.title = vc.title
     }
+    
+    func sendMail(){
+        if MFMailComposeViewController.canSendMail() {
+               let mail = MFMailComposeViewController()
+               mail.mailComposeDelegate = self
+               mail.setToRecipients(["sarasaud379@gmail.com"])
+               mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
+
+               present(mail, animated: true)
+           } else {
+               // show failure alert
+           }
+    }
     func restToHome(){
         mapVC.view.removeFromSuperview()
         
         mapVC.didMove(toParent: nil )
         homeVC.title = "Aboute App"
     }
+    
+    
     @objc func singOutButtonTapped() {
         let firebaseAuth = Auth.auth()
         do {
@@ -242,6 +314,7 @@ extension ContainerViewController: MenuViewControllerDelegate{
             print ("Error signing out: \(signOutError.localizedDescription)")
         }
     }
+    
     @objc private func LinkPressed() {
         UIApplication.shared.openURL(NSURL(string: "https://sites.google.com/view/kidslogic/home")! as URL)
     }

@@ -39,7 +39,7 @@ class LessonDetailVC: UIViewController {
     
     private let bDescription: UITextView = {
         let description             = UITextView()
-        description.textColor       =  UIColor.systemGray6
+        description.textColor       =  UIColor.black
         description.font            = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 30, weight: .regular))
         description.textAlignment   = .natural
         description.backgroundColor = UIColor(named: "DarkColor")

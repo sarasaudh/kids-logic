@@ -24,7 +24,7 @@ class QuestionBank{
                              choiceA: (NSLocalizedString("A. مربع",comment: "")),
                              choiceB: (NSLocalizedString("B. كود",comment: "")),
                              choiceC: (NSLocalizedString("C. القيمة تكون صحيحة او خاطئة",comment: "")),
-                             choiceD: (NSLocalizedString("صيغة ",comment: "")),
+                             choiceD: (NSLocalizedString("D. صيغة ",comment: "")),
                              answer: 3))
         
         list.append(Question(image: "3test",
@@ -62,13 +62,13 @@ class QuestionBank{
                              choiceC: (NSLocalizedString("C. خطأ برمجي" ,comment: "")),
                              choiceD: (NSLocalizedString("D. لعبة",comment: "")),
                              answer: 1))
-        
-        list.append(Question(image: "2test",
-                             questionText:(NSLocalizedString( "القيمة المنطقية BOOLEAN ",comment: "")),
-                             choiceA: (NSLocalizedString("A. مربع",comment: "")),
-                             choiceB: (NSLocalizedString("B. كود",comment: "")),
-                             choiceC: (NSLocalizedString("C. القيمة تكون صحيحة او خاطئة",comment: "")),
-                             choiceD: (NSLocalizedString("صيغة ",comment: "")),
-                             answer: 3))
+//
+//        list.append(Question(image: "2test",
+//                             questionText:(NSLocalizedString( "القيمة المنطقية BOOLEAN ",comment: "")),
+//                             choiceA: (NSLocalizedString("A. مربع",comment: "")),
+//                             choiceB: (NSLocalizedString("B. كود",comment: "")),
+//                             choiceC: (NSLocalizedString("C. القيمة تكون صحيحة او خاطئة",comment: "")),
+//                             choiceD: (NSLocalizedString("صيغة ",comment: "")),
+//                             answer: 3))
     }
 }

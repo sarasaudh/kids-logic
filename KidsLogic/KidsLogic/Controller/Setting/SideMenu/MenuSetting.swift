@@ -18,9 +18,13 @@ class MenuViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     //    (NSLocalizedString("GAME 🎮", comment: "")
     enum MenuOption: String, CaseIterable {
         case info // = "info"
-        case back //= "Back"
+      
+        case darkMode
+        case lightMode
         case languge// = "Languge"
         case location //= "Map"
+        case contact
+        case email
         case website //= "Website"
         case singout// = "Sign Out"
         
@@ -28,16 +32,24 @@ class MenuViewController: UIViewController,UITableViewDelegate, UITableViewDataS
             switch self {
             case .info:
                 return NSLocalizedString("info", comment: "")
-            case .back:
-                return NSLocalizedString("Back", comment: "")
+            case .darkMode:
+                return NSLocalizedString("DarkMode", comment: "")
+            case .lightMode:
+                return NSLocalizedString("LightMode", comment: "")
             case .languge:
                 return NSLocalizedString("Languge", comment: "")
             case .location:
-                return NSLocalizedString("Map", comment: "")
+                return NSLocalizedString("Visit Us", comment: "")
+            case .contact:
+                return NSLocalizedString("Connect with us", comment: "")
+                case .email:
+                return NSLocalizedString("Send to us", comment: "")
             case .website:
                 return NSLocalizedString("Website", comment: "")
             case .singout:
                 return NSLocalizedString("Sign Out", comment: "")
+          
+        
             }
         }
         
@@ -47,17 +59,31 @@ class MenuViewController: UIViewController,UITableViewDelegate, UITableViewDataS
                 
             case .info:
                 return "info.circle"
-            case .back:
-                return "chevron.backward.circle"
+            case .darkMode:
+                return "moon.circle"
+                
+            case .lightMode:
+                return "sun.max.circle"
+                
             case .languge:
                 return "character.book.closed.ar"
+                
             case .location:
                 return "map"
+                
+            case .contact:
+                return "phone.circle"
+    
+                  case .email:
+                return "arrow.up.message"
+                
+                
             case .website:
                 return "network"
+                
             case .singout:
                 return "gear"
-                
+            
             }
         }
     }
