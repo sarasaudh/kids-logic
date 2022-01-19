@@ -166,14 +166,18 @@
 
 
 # Links 
-### GitHub Rebo 
 
-  - https://github.com/sarasaudh/kids-logic
+### Wireframes :
+https://drive.google.com/file/d/1OKGkOFmIm77-LVMglXRQQ1XiOiZ_1aSg/view?usp=sharing
+
 
 ### Slides :
 
 My presentation:
 https://docs.google.com/presentation/d/1XZZs9C2o_9z_82oMtjuDNlS440NmJMUTESgB4rBGYMU/edit?usp=sharing
-  - 
+  
+  
+  
+  by: SaraSaudH.Aldawsari
 
 
