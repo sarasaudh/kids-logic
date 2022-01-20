@@ -91,8 +91,8 @@ class LoginVC: UIViewController,UITextFieldDelegate {
         NSLayoutConstraint.activate([
             imgUser.topAnchor.constraint(equalTo: view.topAnchor, constant: 30),
             imgUser.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imgUser.heightAnchor.constraint(equalToConstant: 400),
-            imgUser.widthAnchor.constraint(equalTo: imgUser.heightAnchor,multiplier: 100/100)])
+            imgUser.heightAnchor.constraint(equalToConstant: 200),
+            imgUser.widthAnchor.constraint(equalTo: imgUser.heightAnchor,multiplier: 50/50)])
         
         
         

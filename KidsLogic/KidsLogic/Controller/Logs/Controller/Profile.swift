@@ -140,11 +140,10 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
                     print (error as Any)
                     return
                 }
-                
+
                 self.nameLabel.text = doucument?.data()?["First Name"] as? String
                 self.userScoreLabel.text = "SCORE:\(doucument?.data()?["score"] as? Int ?? 0)"
             
-                
                 let score = doucument?.data()?["score"] as? Int // else {return}
                 
                 switch score {
@@ -167,8 +166,6 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
                     
                 default :
                     self.profileImage.image = UIImage(named: "panda2")
-                    
-                    //
                 }
             }
         
@@ -233,7 +230,7 @@ class MyProfileVC: UIViewController , UIImagePickerControllerDelegate , UINaviga
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
-//            dismiss(animated: true, completion: nil)
+
             let vc = LoginVC()
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)

@@ -299,13 +299,14 @@ extension ContainerViewController: MenuViewControllerDelegate{
         mapVC.didMove(toParent: nil )
         homeVC.title = "Aboute App"
     }
-    
+
     
     @objc func singOutButtonTapped() {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
-            dismiss(animated: true, completion: nil)
+//            dismiss(animated: true, completion: nil)
+            
             let vc = LoginVC()
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)

@@ -295,6 +295,7 @@
 		8479B8C52765F5B800AD8CA7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				84B4D792277B2BA900F40C9E /* RegisterService.swift */,
 				842A15FD2754E22200F505E2 /* UserService.swift */,
 			);
 			path = Service;
@@ -308,7 +309,6 @@
 				84E531642753994400B45CCC /* LogIn.swift */,
 				842B2334275DE086009C888D /* SingUp.swift */,
 				8435ACE9275BFA4D0076F36A /* Profile.swift */,
-				84B4D792277B2BA900F40C9E /* RegisterService.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

@@ -251,7 +251,6 @@ class QuizviewController: UIViewController {
         guard let currentUserID = Auth.auth().currentUser?.uid else {return}
         Firestore.firestore().document("users/\(currentUserID)").updateData([
             "score" : score
-      
         ])
     }
     

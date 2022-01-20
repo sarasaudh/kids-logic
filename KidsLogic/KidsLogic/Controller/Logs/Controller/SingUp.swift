@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 import SwiftUI
 import Firebase
+import FirebaseFirestore
 //import DropDown
 
 class SignUpVC: UIViewController,UITextFieldDelegate {
@@ -54,8 +55,10 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
     }()
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        userName.resignFirstResponder()
         emailTF.resignFirstResponder()
         passwordTF.resignFirstResponder()
+        
         return true
     }
     
@@ -99,6 +102,7 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userName.delegate = self
         emailTF.delegate = self
         passwordTF.delegate = self
         
@@ -110,8 +114,8 @@ class SignUpVC: UIViewController,UITextFieldDelegate {
         NSLayoutConstraint.activate([
             imgUser.topAnchor.constraint(equalTo: view.topAnchor, constant: 30),
             imgUser.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imgUser.heightAnchor.constraint(equalToConstant: 400),
-            imgUser.widthAnchor.constraint(equalTo: imgUser.heightAnchor,multiplier: 100/100)])
+            imgUser.heightAnchor.constraint(equalToConstant: 200),
+            imgUser.widthAnchor.constraint(equalTo: imgUser.heightAnchor,multiplier: 50/50)])
         
         
         view.addSubview(userName)

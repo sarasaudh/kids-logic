@@ -44,7 +44,7 @@ class HoomeLessonsVC: UIViewController {
         
         
         level3.translatesAutoresizingMaskIntoConstraints = false
-        level3.setTitle(NSLocalizedString("WACH 🎞 ", comment: ""), for: .normal)
+        level3.setTitle(NSLocalizedString("WATCH 🎞 ", comment: ""), for: .normal)
         level3.setBackgroundImage(imageNormal2
                                   , for: UIControl.State.normal)
         level3.setTitleColor(.systemBlue, for: .normal)
